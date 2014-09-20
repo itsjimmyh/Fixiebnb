@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920212526) do
+ActiveRecord::Schema.define(version: 20140920223352) do
 
   create_table "users", force: true do |t|
-    t.string   "username",   null: false
-    t.string   "password",   null: false
+    t.string   "username",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest", null: false
   end
 
 end
