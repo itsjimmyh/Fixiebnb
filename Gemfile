@@ -32,6 +32,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'bcrypt'
+
 group :development do
   gem 'pry-rails'
   gem 'better_errors'
