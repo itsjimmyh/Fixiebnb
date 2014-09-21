@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Project</title>
-  <%= stylesheet_link_tag 'application' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render partial: "layouts/header" %>
+  <head>
+    <title>Project</title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
 
-  <div class="flasherrors">
-    <%= render partial: "layouts/flasherrors" %>
-  </div>
+<div class="fullscreen background" style="background-image:url('https://c4.staticflickr.com/4/3855/15135608761_bb36108002_b.jpg');">
+  <body id="top">
+    
+    <div class="content-a">
+      <%= render partial: "layouts/header" %>
 
-  <div class="text-center">
-    <%= yield %>
-  </div>
+        <div class="content-b">
+          <%= yield %>
+        </div>
 
-  <%= render partial: "layouts/footer" %>
+    </div>
+</div>
+
+  <body>
+    <div id="footer">
+      <%= render partial: "layouts/footer" %>
+    </div>
+  </body>
 
 </body>
+
 </html>
