@@ -15,13 +15,35 @@
  *= require bootstrap.min
  */
 
-.sexy {
+// .navbar-header {
+//   background: transparent;
+//   border-bottom: none;
+//   z-index: 1000;
+//   top: 10px;
+//   width: 100%;
+//   position: relative;
+// }
+//
+// .clearfix:after {
+//   content: " ";
+//   visibility: hidden;
+//   display: block;
+//   height: 0;
+//   clear: both;
+// }
+
+div#collapse-sign-in.collapse.navbar-collapse {
+  padding: 5px 5px 5px 5px;
+}
+
+div.navbar-brand {
   font-family: "Shift", sans-serif;
   font-size: 25px;
   font-weight: bold;
   // color: #fff;
   // color: #aaa;
-  padding: 10px 0 10px 10px;
+  padding: 18px 0 200px 15px;
+  float: left;
 }
 
 .navbar {
@@ -31,7 +53,7 @@
 
 .navbar.navbar-default {
   width: 100%;
-  background-color: black;
+  background-color: transparent;
   border: none;
 }
 
@@ -53,4 +75,30 @@
 
 .centered-text {
   text-align: center;
+}
+
+a.btn.btn-special {
+  text-decoration: underline;
+}
+
+a.btn.btn-special.list-ride {
+  background: #007a87;
+  font-size: 14px;
+  font-style: bold;
+  padding: 10px 20px;
+  margin-left: 15px;
+  color: white;
+  border-bottom-color: #004f58;
+  border: 1px solid;
+  text-decoration: none;
+}
+
+
+div#footer.container-brand-dark.footer-surround.footer-container {
+  background-image: url(../images/footer.png);
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
