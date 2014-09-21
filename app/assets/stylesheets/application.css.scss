@@ -14,3 +14,43 @@
  *= require_tree .
  *= require bootstrap.min
  */
+
+.sexy {
+  font-family: "Shift", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  // color: #fff;
+  // color: #aaa;
+  padding: 10px 0 10px 10px;
+}
+
+.navbar {
+  padding-right: 30px;
+  background: transparent;
+}
+
+.navbar.navbar-default {
+  width: 100%;
+  background-color: black;
+  border: none;
+}
+
+#flash {
+  margin: 0 auto;
+  background-color: red;
+  position: relative;
+}
+
+#user_username {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#user_password {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.centered-text {
+  text-align: center;
+}

@@ -7,19 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <%= render partial: "layouts/header" %>
+  <div class="flasherrors">
+    <%= render partial: "layouts/flasherrors" %>
+  </div>
 
-<div class="nav navbar-nav">
-  <% if signed_in? %>
-    <%= current_user.username %>
-    <%= button_to "Sign Out", session_url, method: :delete %>
-  <% else %>
-    <%= link_to "Sign In", new_session_url %>
-    <%= link_to "Sign Up", new_user_url %>
-  <% end %>
-</div>
-
-<br>
-<%= yield %>
-
+  <div class="text-center">
+    <%= yield %>
+  </div>
 </body>
 </html>

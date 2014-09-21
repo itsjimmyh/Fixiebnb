@@ -17,3 +17,9 @@
 //= require backbone
 //= require bootstrap.min
 //= require_tree .
+
+$(function () {
+  $("#flash-errors").on("click", function (event) {
+    $("#flash-errors").hide();
+  });
+});
