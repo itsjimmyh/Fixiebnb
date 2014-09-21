@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.serializejson.js
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery.serializejson.js
+//= require underscore
 //= require backbone
-//= require bootstrap
+//= require bootstrap.min
 //= require_tree .
