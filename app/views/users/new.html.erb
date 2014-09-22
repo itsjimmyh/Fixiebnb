@@ -1,6 +1,5 @@
-<%= render partial: "layouts/flasherrors" %>
 <div class="col-xs-6 col-xs-offset-3">
-
+<%= render partial: "layouts/flasherrors" %>
   <div class="form-group" id="new-session-user">
     <form action="/user" method="post">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

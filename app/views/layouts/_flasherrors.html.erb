@@ -1,13 +1,10 @@
-<div id="flash-errors">
-<% if flash[:errors] %>
-  <div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="alert">
-    <!-- <button type="button" class="close" data-dismiss="alert">
-      <span aria-hidden="true">&times;</span>
-      <span class="sr-only">Close</span>
-    </button> -->
-    <% flash[:errors].each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </div>
-<% end %>
+<div id="flash-messages">
+  <% flash.each do |key, msgs| %>
+    <div class="<%= flash_bootstrap_class(key) %> fade in">
+      <a href="#" data-dismiss="alert" class="close">x</a>
+        <% msgs.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </div>
+  <% end %>
 </div>

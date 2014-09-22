@@ -19,7 +19,7 @@
 //= require_tree .
 
 $(function () {
-  $("#flash-errors").on("click", function (event) {
-    $("#flash-errors").hide();
+  $("#flash-messages").on("click", function (event) {
+    $("#flash-messages").hide();
   });
 });
