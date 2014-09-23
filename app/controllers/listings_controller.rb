@@ -65,5 +65,4 @@ class ListingsController < ApplicationController
       :deposit
     )
   end
-  
 end

@@ -15,7 +15,6 @@
   <div class="collapse navbar-collapse" id="collapse-sign-in">
     <div class="pull-right">
       <ul class="nav navbar-nav">
-
         <% if signed_in? %>
           <li>
             <%= link_to "Sign Out", session_url, method: :delete, class: "btn btn-special" %>
@@ -32,7 +31,7 @@
         <% end %>
 
         <li>
-        <a href="#" class="btn btn-special list-ride">List Your Ride</a>
+        <a href="/listing/new" class="btn btn-special list-ride">List Your Ride</a>
         </li>
 
       </ul>
