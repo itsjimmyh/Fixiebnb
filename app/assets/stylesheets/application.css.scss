@@ -15,14 +15,14 @@
  *= require bootstrap.min
  */
 
-// .navbar-header {
-//   background: transparent;
-//   border-bottom: none;
-//   z-index: 1000;
-//   top: 5px;
-//   width: 100%;
-//   position: absolute;
-// }
+.navbar-header {
+  background: transparent;
+  border-bottom: none;
+  // z-index: 1000;
+  top: 5px;
+  width: 100%;
+  position: absolute;
+}
 
 .clearfix:after {
   content: " ";
@@ -34,15 +34,17 @@
 
 div#collapse-sign-in.collapse.navbar-collapse {
   padding: 10px 10px 10px 10px;
+  width: 100%;
 }
 
 div.fullscreen.background {
   height: 600px;
   width: 100%;
+  // margin: 0 auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-position:50% 50%9 !important;
-  background-size: cover;
+  background-size: center;
 }
 
 div.navbar-brand {
@@ -57,7 +59,7 @@ div.navbar-brand {
 }
 
 .navbar {
-  padding-right: 30px;
+  padding-right: 20px;
   background: transparent;
 }
 
@@ -89,12 +91,14 @@ a.btn.btn-special {
 
 a.btn.btn-special.list-ride {
   background: #007a87;
+  // background: transparent;
   font-size: 14px;
   font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 10px 25px 10px 25px;
   margin-left: 15px;
   color: white;
-  border-bottom-color: #004f58;
+  // color: black;
+  // border-bottom-color: #004f58;
   border: 1px solid;
   text-decoration: none;
 }

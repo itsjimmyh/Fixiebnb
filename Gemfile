@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'cowsay'
+gem 'newrelic_rpm'
 
 gem 'rails', '4.1.4'
 gem 'pg'

@@ -7,18 +7,18 @@
     <%= csrf_meta_tags %>
   </head>
 
-<div class="fullscreen background" style="background-image:url('https://c4.staticflickr.com/4/3855/15135608761_bb36108002_b.jpg');">
-  <body id="top">
 
-    <div class="content-a">
-      <%= render partial: "layouts/header" %>
 
-        <div class="content-b">
-          <%= yield %>
-        </div>
+  <div class="fullscreen background" style="background-image:url('https://c4.staticflickr.com/4/3855/15135608761_bb36108002_b.jpg');">
+    <%= render partial: "layouts/header" %>
+      <div class="container">
+        <%= yield %>
+      </div>
 
-    </div>
-</div>
+  </div>
+
+  <div class="fullscreen background" style="background-image:url('https://spinlister-belvedere-assets.spinlister.com/spinlister/hero-bike-3bd7f74b3e0ddb213747a663fdca0173.jpg')"
+  </div>
 
   <body>
     <div id="footer">
@@ -26,6 +26,5 @@
     </div>
   </body>
 
-</body>
 
 </html>
