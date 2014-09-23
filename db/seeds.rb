@@ -56,10 +56,10 @@ Listing.create!(
 
 Listing.create!(
   user_id: "2",
-  list_title: "eric's bianchi pista concept",
+  list_title: "eric's concept",
   list_desc: "Please describe your ride",
-  frame: "bianchi pista concept",
-  f_wheel: "hed 3",
+  frame: "pista concept",
+  f_wheel: "aerospoke",
   r_wheel: "deep V",
   seat: "san marco regal",
   handlebars: "bullhorns",
@@ -71,17 +71,17 @@ Listing.create!(
 )
 
 Listing.create!(
-  user_id: "1",
-  list_title: "mike's bianchi pista concept",
+  user_id: "3",
+  list_title: "mike's bike",
   list_desc: "Please describe your ride",
-  frame: "bianchi pista concept",
-  f_wheel: "hed 3",
+  frame: "some bike",
+  f_wheel: "deep V",
   r_wheel: "deep V",
-  seat: "san marco regal",
-  handlebars: "bullhorns",
-  brakes: "none",
-  daily: 20,
-  weekly: 100,
+  seat: "brooks",
+  handlebars: "dropbars",
+  brakes: "yes",
+  daily: 10,
+  weekly: 50,
   rules: "Please be careful when riding",
-  deposit: 450
+  deposit: 350
 )

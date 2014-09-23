@@ -23,7 +23,8 @@ class User < ActiveRecord::Base
     :listings,
     class_name: "Listing",
     foreign_key: :user_id,
-    primary_key: :id
+    primary_key: :id,
+    dependent: :destroy
   )
 
   def self.find_by_credentials(user_params)
