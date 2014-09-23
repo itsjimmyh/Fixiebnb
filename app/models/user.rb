@@ -19,6 +19,13 @@ class User < ActiveRecord::Base
 
   after_initialize :ensure_session_token
 
+  has_many(
+    :listings,
+    class_name: "Listing",
+    foreign_key: :user_id,
+    primary_key: :id
+  )
+
   def self.find_by_credentials(user_params)
     user = User.find_by_username(user_params[:username])
     user.try(:is_password?, user_params[:password]) ? user : nil

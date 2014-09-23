@@ -36,7 +36,12 @@ class Listing < ActiveRecord::Base
             :deposit,
             presence: true
 
-  
+  belongs_to(
+    :owner,
+    class_name: "User",
+    foreign_key: :user_id,
+    primary_key: :id
+  )
 
   def new
     @listing = Listing.new
