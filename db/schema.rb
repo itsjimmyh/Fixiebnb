@@ -11,10 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140920225802) do
+ActiveRecord::Schema.define(version: 20140923185648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "listings", force: true do |t|
+    t.integer  "user_id",                                                           null: false
+    t.string   "list_title",                                                        null: false
+    t.text     "list_desc",  default: "Please describe your ride",                  null: false
+    t.string   "frame",      default: "frame",                                      null: false
+    t.string   "f_wheel",    default: "regular wheel",                              null: false
+    t.string   "r_wheel",    default: "regular wheel",                              null: false
+    t.string   "seat",       default: "regular",                                    null: false
+    t.string   "handlebars", default: "dropbars",                                   null: false
+    t.string   "brakes",     default: "regular",                                    null: false
+    t.integer  "daily",      default: 5,                                            null: false
+    t.integer  "weekly",     default: 35,                                           null: false
+    t.text     "rules",      default: "Please do not purposefully damage the bike", null: false
+    t.integer  "deposit",    default: 100,                                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",        null: false
