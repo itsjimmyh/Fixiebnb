@@ -4,7 +4,11 @@ window.FixieBNB = {
   Views: {},
   Routers: {},
   initialize: function() {
+    new PostApp.Routers.Router({
+      $rootEl: $('#content')
+    })
 
+    Backbone.history.start();
   }
 };
 

@@ -37,14 +37,15 @@ div#collapse-sign-in.collapse.navbar-collapse {
   width: 100%;
 }
 
-div.fullscreen.background {
+body > section {
   height: 600px;
   width: 100%;
   // margin: 0 auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-position:50% 50%9 !important;
-  background-size: center;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.navbar-brand {
@@ -103,10 +104,9 @@ a.btn.btn-special.list-ride {
   text-decoration: none;
 }
 
-
-div#footer.container-brand-dark.footer-surround.footer-container {
+body > footer {
   // background-image: url(../images/footer.png);
-  background: grey;
+  background: black;
   height: 150px;
   bottom: 0;
 }
