@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  root to: 'sessions#new'
+  root to: 'staticpages#root'
 
-  resource :user, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show]
   resource :session, only: [:new, :create, :destroy]
 
-  resources :listings
+  namespace :api, defaults: { format: :json } do
+    resources :listings
+
+  end
 end

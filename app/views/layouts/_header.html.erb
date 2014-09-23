@@ -9,13 +9,16 @@
   </div>
 
   <div class="navbar-brand">
-    <a href="https://github.com/itsjimmyh" target="_blank">fixie</a><a href="https://www.linkedin.com/in/itsjimmyh" target="_blank">bnb</a>
+    <a href="/">fixie</a><a href="https://www.linkedin.com/in/itsjimmyh" target="_blank">bnb</a>
   </div>
 
   <div class="collapse navbar-collapse" id="collapse-sign-in">
     <div class="pull-right">
       <ul class="nav navbar-nav">
         <% if signed_in? %>
+          <li>
+            <a href="/" class="btn btn-special">Welcome <%= current_user.username.capitalize %></a>
+          </li>
           <li>
             <%= link_to "Sign Out", session_url, method: :delete, class: "btn btn-special" %>
           </li>
@@ -26,12 +29,12 @@
             <a href="/session/new" class="btn btn-special">Sign In</a>
           </li>
           <li>
-            <a href="/user/new" class="btn btn-special">Sign Up</a>
+            <a href="/users/new" class="btn btn-special">Sign Up</a>
           </li>
         <% end %>
 
         <li>
-        <a href="/listing/new" class="btn btn-special list-ride">List Your Ride</a>
+        <a href="api/listings/new" class="btn btn-special list-ride">List Your Ride</a>
         </li>
 
       </ul>
