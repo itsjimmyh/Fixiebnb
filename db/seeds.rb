@@ -21,7 +21,7 @@
 #  created_at :datetime
 #  updated_at :datetime
 
-User.create!( username: "jimmy", password: "123456")
+User.create!( username: "username", password: "123456")
 User.create!( username: "eric", password: "123456")
 User.create!( username: "mike", password: "123456")
 

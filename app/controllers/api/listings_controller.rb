@@ -54,15 +54,13 @@ module Api
         :user_id,
         :list_title,
         :list_desc,
-        :frame,
-        :f_wheel,
-        :r_wheel,
-        :seat,
-        :handlebars,
-        :brakes,
-        :daily,
-        :weekly,
-        :rules,
+        :price,
+        :lat,
+        :long,
+        :street,
+        :city,
+        :state,
+        :zip,
         :deposit
       )
     end
