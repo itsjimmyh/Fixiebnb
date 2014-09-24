@@ -6,8 +6,9 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
 
   initialize: function () {
     this.listenTo(this.collection, 'sync', this.render)
+    this.listenTo(this.collection, 'add', this.addListing)
     
-    console.log("from FixieBNB.views.listingsIndex CompositeViewssss")
+    this.collection.each(this.addListing.bind(this))
   },
 
   render: function () {
@@ -16,10 +17,16 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
     })
 
     this.$el.html(renderedContent);
+    this.attachSubviews();
     return this;
   },
 
+  addListing: function (listing) {
+    console.log('show me something')
+    var listingIndexItemView = new FixieBNB.Views.ListingsIndexItem ({
+      model: listing
+    })
 
-
-
+    this.addSubview(".listings", listingIndexItemView)
+  },
 });

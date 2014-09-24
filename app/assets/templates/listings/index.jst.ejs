@@ -1,11 +1,14 @@
-<div class="listings-index">
-  <h3>Some Listings</h3>
-</div>
+<div class="row">
 
-  <ul class="listings">
-    <% listings.each(function (listing) { %>
-      <li>
-        <%= listing.escape('list_title') %>
-      </li>
-    <% }); %>
-  </ul>
+  <div class="maps-index col-xs-6">
+    <strong>Put a map here</strong>
+  </div>
+
+
+  <div class="listings-index col-xs-6">
+      <h3>Some Listings</h3>
+
+      <ul class="listings col-xs-6"></ul>
+  </div>
+
+</div>
