@@ -6,33 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  # create_table "listings", force: true do |t|
-  #   t.integer  "user_id",                                                           null: false
-  #   t.string   "list_title",                                                        null: false
-  #   t.text     "list_desc",  default: "Please describe your ride",                  null: false
-  #   t.string   "frame",      default: "frame",                                      null: false
-  #   t.string   "f_wheel",    default: "regular wheel",                              null: false
-  #   t.string   "r_wheel",    default: "regular wheel",                              null: false
-  #   t.string   "seat",       default: "regular",                                    null: false
-  #   t.string   "handlebars", default: "dropbars",                                   null: false
-  #   t.string   "brakes",     default: "regular",                                    null: false
-  #   t.integer  "daily",      default: 5,                                            null: false
-  #   t.integer  "weekly",     default: 35,                                           null: false
-  #   t.text     "rules",      default: "Please do not purposefully damage the bike", null: false
-  #   t.integer  "deposit",    default: 100,                                          null: false
-  #   t.datetime "created_at"
-  #   t.datetime "updated_at"
-  # end
-  #
-  # add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
-  #
-  # create_table "users", force: true do |t|
-  #   t.string   "username",        null: false
-  #   t.datetime "created_at"
-  #   t.datetime "updated_at"
-  #   t.string   "password_digest", null: false
-  #   t.string   "session_token",   null: false
-  # end
+#  id         :integer          not null, primary key
+#  user_id    :integer          not null
+#  list_title :string(255)      not null
+#  list_desc  :text             default("Please describe your ride"), not null
+#  price      :integer          default(5), not null
+#  lat        :float
+#  long       :float
+#  street     :string(255)      not null
+#  city       :string(255)      not null
+#  state      :string(255)
+#  zip        :integer
+#  deposit    :integer          default(100), not null
+#  created_at :datetime
+#  updated_at :datetime
 
 User.create!( username: "jimmy", password: "123456")
 User.create!( username: "eric", password: "123456")
@@ -42,46 +29,37 @@ Listing.create!(
   user_id: "1",
   list_title: "jimmy's bianchi pista concept",
   list_desc: "Please describe your ride",
-  frame: "bianchi pista concept",
-  f_wheel: "hed 3",
-  r_wheel: "deep V",
-  seat: "san marco regal",
-  handlebars: "bullhorns",
-  brakes: "none",
-  daily: 20,
-  weekly: 100,
-  rules: "Please be careful when riding",
-  deposit: 450
+  price: 25,
+  lat: 37.781661,
+  long: -122.411579,
+  street: "1061 Market St",
+  city: "San Francisco",
+  state: "CA",
+  zip: 94103
 )
 
 Listing.create!(
   user_id: "2",
   list_title: "eric's concept",
   list_desc: "Please describe your ride",
-  frame: "pista concept",
-  f_wheel: "aerospoke",
-  r_wheel: "deep V",
-  seat: "san marco regal",
-  handlebars: "bullhorns",
-  brakes: "none",
-  daily: 20,
-  weekly: 100,
-  rules: "Please be careful when riding",
-  deposit: 450
+  price: 25,
+  lat: 37.781661,
+  long: -122.411579,
+  street: "1061 Market St",
+  city: "San Francisco",
+  state: "CA",
+  zip: 94103
 )
 
 Listing.create!(
   user_id: "3",
-  list_title: "mike's bike",
+  list_title: "mike's concept",
   list_desc: "Please describe your ride",
-  frame: "some bike",
-  f_wheel: "deep V",
-  r_wheel: "deep V",
-  seat: "brooks",
-  handlebars: "dropbars",
-  brakes: "yes",
-  daily: 10,
-  weekly: 50,
-  rules: "Please be careful when riding",
-  deposit: 350
+  price: 25,
+  lat: 37.781661,
+  long: -122.411579,
+  street: "1061 Market St",
+  city: "San Francisco",
+  state: "CA",
+  zip: 94103
 )

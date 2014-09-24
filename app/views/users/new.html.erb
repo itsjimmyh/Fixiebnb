@@ -1,5 +1,13 @@
+<section
+  style="background-image:url('https://c4.staticflickr.com/4/3855/15135608761_bb36108002_b.jpg');">
+  <%= render partial: "layouts/header" %>
+
+  <article class="col-xs-6 col-xs-offset-3">
+    <%= render partial: "layouts/flasherrors" %>
+  </article>
+
 <div class="col-xs-6 col-xs-offset-3">
-<%= render partial: "layouts/flasherrors" %>
+
   <div class="form-group" id="new-session-user">
     <form action="/users" method="post">
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -9,8 +17,7 @@
         type="text"
         name="user[username]"
         id="user_username"
-        value="<%= @user.username %>"
-        class="text-lowercase form-control text-center"
+        class="text-downcase form-control text-center"
         placeholder="username"
         onfocus="this.placeholder = ''"
         onblur="this.placeholder = 'username'">
@@ -23,9 +30,11 @@
         class="form-control text-center"
         placeholder="password"
         onfocus="this.placeholder = ''"
-        onblur="this.placeholder = 'password'">
+        onblur="this.placeholder= 'password'">
 
-      <input type="submit" value="Sign Up!" class="btn btn-success col-xs-12">
+      <input type="submit" value="Sign Up!" class="btn btn-primary col-xs-12">
+
     </form>
   </div>
 </div>
+</section>

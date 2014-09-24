@@ -17,19 +17,17 @@ ActiveRecord::Schema.define(version: 20140923185648) do
   enable_extension "plpgsql"
 
   create_table "listings", force: true do |t|
-    t.integer  "user_id",                                                           null: false
-    t.string   "list_title",                                                        null: false
-    t.text     "list_desc",  default: "Please describe your ride",                  null: false
-    t.string   "frame",      default: "frame",                                      null: false
-    t.string   "f_wheel",    default: "regular wheel",                              null: false
-    t.string   "r_wheel",    default: "regular wheel",                              null: false
-    t.string   "seat",       default: "regular",                                    null: false
-    t.string   "handlebars", default: "dropbars",                                   null: false
-    t.string   "brakes",     default: "regular",                                    null: false
-    t.integer  "daily",      default: 5,                                            null: false
-    t.integer  "weekly",     default: 35,                                           null: false
-    t.text     "rules",      default: "Please do not purposefully damage the bike", null: false
-    t.integer  "deposit",    default: 100,                                          null: false
+    t.integer  "user_id",                                          null: false
+    t.string   "list_title",                                       null: false
+    t.text     "list_desc",  default: "Please describe your ride", null: false
+    t.integer  "price",      default: 5,                           null: false
+    t.float    "lat"
+    t.float    "long"
+    t.string   "street",                                           null: false
+    t.string   "city",                                             null: false
+    t.string   "state"
+    t.integer  "zip"
+    t.integer  "deposit",    default: 100,                         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

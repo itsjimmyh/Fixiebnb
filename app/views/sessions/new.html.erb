@@ -1,6 +1,12 @@
-<div class="col-xs-6 col-xs-offset-3">
+<section
+  style="background-image:url('https://c4.staticflickr.com/4/3855/15135608761_bb36108002_b.jpg');">
+  <%= render partial: "layouts/header" %>
 
-  <%= render partial: "layouts/flasherrors" %>
+  <article class="col-xs-6 col-xs-offset-3">
+    <%= render partial: "layouts/flasherrors" %>
+  </article>
+
+<div class="col-xs-6 col-xs-offset-3">
 
   <div class="form-group" id="new-session-user">
     <form action="/session" method="post">
@@ -13,8 +19,8 @@
         id="user_username"
         class="text-lowercase form-control text-center"
         placeholder="username"
-        onfocus="this.placeholder = ''"
-        onblur="this.placeholder = 'username'">
+        value="username"
+        onclick="this.value= ''">
 
       <!-- <label for="user_password" id="password">Password</label> -->
       <input
@@ -23,10 +29,13 @@
         id="user_password"
         class="form-control text-center"
         placeholder="password"
-        onfocus="this.placeholder = ''"
-        onblur="this.placeholder= 'password'">
+        value="password"
+        onclick="this.value= ''">
 
-      <input type="submit" value="Sign In!" class="btn btn-success col-xs-12">
+      <input type="submit" value="Sign In!" class="btn btn-primary col-xs-12" id="static-sign-in">
+      <input type="submit" value="Guest Login!" class="btn btn-success col-xs-12">
+
     </form>
   </div>
 </div>
+</section>
