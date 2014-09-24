@@ -63,3 +63,16 @@ Listing.create!(
   state: "CA",
   zip: 94103
 )
+
+Listing.create!(
+  user_id: "3",
+  list_title: "mike's concept",
+  list_desc: "Please describe your ride",
+  price: 25,
+  lat: 37.781661,
+  long: -122.411579,
+  street: "1061 Market St",
+  city: "San Francisco",
+  state: "CA",
+  zip: 94103
+)
