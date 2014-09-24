@@ -5,7 +5,12 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
 
   routes: {
     '': 'home',
+    'search/index': "index",
 
+  },
+
+  index: function () {
+    console.log("from index function")
   },
 
   home: function () {
