@@ -15,7 +15,9 @@
   <div class="collapse navbar-collapse" id="collapse-sign-in">
     <div class="pull-right">
       <ul class="nav navbar-nav">
+
         <% if signed_in? %>
+
           <li>
             <a href="/" class="btn btn-special">Welcome <%= current_user.username.capitalize %></a>
           </li>
@@ -31,6 +33,7 @@
           <li>
             <a href="/users/new" class="btn btn-special">Sign Up</a>
           </li>
+
         <% end %>
 
         <li>

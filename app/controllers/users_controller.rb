@@ -16,10 +16,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    if current_user.nil?
-      redirect_to new_session_url
-      return
-    end
+    redirect_to root_url unless current_user
+    # if current_user.nil?
+    #   redirect_to new_session_url
+    #   return
+    # end
 
     @user = current_user
     render :show
