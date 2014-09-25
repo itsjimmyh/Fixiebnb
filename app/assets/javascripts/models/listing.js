@@ -1,13 +1,13 @@
 FixieBNB.Models.Listing = Backbone.Model.extend({
   urlRoot: 'api/listings',
 
-  listings: function () {
-    if (!this._listings) {
-      this._listings = new FixieBNB.Collections.Listings([], { listing: this });
-    }
-
-    return this._listings;
-  },
+  // listings: function () {
+  //   if (!this._listings) {
+  //     this._listings = new FixieBNB.Collections.Listings([], { listing: this });
+  //   }
+  //
+  //   return this._listings;
+  // },
 
   // parse: function (response) {
   //   if (response.listings) {
@@ -19,7 +19,13 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
   // },
 
   parse: function (response) {
-    this.set("feature_img", response.feature_img[0].url)
-    this.set("list_title", response.list_title)
+    this.set("feature_img", response.feature_img[0].url);
+    this.set("list_title", response.list_title);
+    this.set("lat", response.lat);
+    this.set("long", response.long);
+    
+    // console.log(this.get('lat') + " parse");
+    // console.log(this.get('long') + " parse");
+    // this.set("long", response.long)
   },
 })

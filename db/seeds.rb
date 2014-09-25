@@ -35,9 +35,9 @@ Listing.create!(
   list_title: "jimmy's bianchi concept",
   list_desc: "Please describe your ride",
   price: 25,
-  lat: 37.781661,
-  long: -122.411579,
-  street: "1061 Market St",
+  lat: 37.777184,
+  long: -122.414215,
+  street: "1256 Mission Street",
   city: "San Francisco",
   state: "CA",
   zip: 94103
@@ -48,9 +48,9 @@ Listing.create!(
   list_title: "eric's njs",
   list_desc: "Please describe your ride",
   price: 25,
-  lat: 37.781661,
-  long: -122.411579,
-  street: "1061 Market St",
+  lat: 37.782043,
+  long: -122.408378,
+  street: "471 Jessie St",
   city: "San Francisco",
   state: "CA",
   zip: 94103
@@ -61,9 +61,9 @@ Listing.create!(
   list_title: "mike's sweet ride",
   list_desc: "Please describe your ride",
   price: 25,
-  lat: 37.781661,
-  long: -122.411579,
-  street: "1061 Market St",
+  lat: 37.782416,
+  long: -122.403443,
+  street: "837 Howard St",
   city: "San Francisco",
   state: "CA",
   zip: 94103
@@ -74,12 +74,12 @@ Listing.create!(
   list_title: "robs's concept",
   list_desc: "Please describe your ride",
   price: 25,
-  lat: 37.781661,
-  long: -122.411579,
-  street: "1061 Market St",
+  lat: 37.784722,
+  long: -122.443397,
+  street: "2601 Sutter St",
   city: "San Francisco",
   state: "CA",
-  zip: 94103
+  zip: 94115
 )
 
 Listing.create!(
@@ -87,12 +87,12 @@ Listing.create!(
   list_title: "jeffrey's concept",
   list_desc: "Please describe your ride",
   price: 25,
-  lat: 37.781661,
-  long: -122.411579,
-  street: "1061 Market St",
+  lat: 37.786554,
+  long: -122.417305,
+  street: "822 Geary St",
   city: "San Francisco",
   state: "CA",
-  zip: 94103
+  zip: 94109
 )
 
 Listing.create!(

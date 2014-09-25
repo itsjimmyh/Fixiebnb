@@ -2,20 +2,21 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   template: JST["listings/map"],
 
   initialize: function (options) {
-    if (typeof options === "undefined" ) {
+    if (options && options.mapOptions) {
+      this.mapOptions = options.mapOptions;
+    } else {
       this.mapOptions = {
         center: { lat: 37.781898, lng: -122.411536 },
         zoom: 14
       }
-    } else {
-      this.mapOptions = options.mapOptions;
     };
+
+    this.listenTo(this.collection, 'sync', this.render)
   },
 
   events: {
 
   },
-
 
   render: function () {
     var renderedContent = this.template();
@@ -23,15 +24,30 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     this.$el.html(renderedContent);
 
     this.map = new google.maps.Map(this.$("#map-canvas")[0], this.mapOptions);
-    var latLngObj = this.map.getCenter();
-    console.log(latLngObj + " latLngObj");
-    console.log(latLngObj.lat() + " latitude");
-    console.log(latLngObj.lng() + " longitude");
+
+    this.collection.each( function (listing) {
+      var latlng = new google.maps.LatLng(listing.get('lat'), listing.get('long'));
+
+      var marker = new google.maps.Marker({
+        position: latlng,
+        map: this.map,
+        title: listing.get('list_title')
+      })
+
+      console.log(marker);
+
+      marker.setMap(this.map);
+
+    }.bind(this))
+
+    // console.log(latlng + " latLngObj");
+    // console.log(latlngObj.lat() + " latitude");
+    // console.log(latlngObj.lng() + " longitude");
 
     return this;
   },
 
   onRender: function () {
-    console.log(this.$el.height());
+    // console.log(this.$el.height());
   },
 })
