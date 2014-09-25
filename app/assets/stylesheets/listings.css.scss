@@ -4,16 +4,27 @@
 
 ul.listings {
   list-style-type: none;
-  position: absolute;
 }
 
-ul.listings li {
-  position: relative;
+.listing-item {
+  overflow: hidden;
+  height: 150px;
 }
 
 img.images {
   // min-width: 235px;
   margin: 3px 0 3px 0;
   background: cover;
-  float: left;
+  // max-height: 100%;
+}
+
+
+div#map-canvas {
+  // max-height: 500px;
+  // max-width: 500px;
+  height: 500px;
+  // width: 500px;
+  margin: 0;
+  padding: 0;
+  // position: absolute;
 }

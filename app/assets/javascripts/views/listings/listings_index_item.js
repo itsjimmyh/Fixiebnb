@@ -2,9 +2,7 @@ FixieBNB.Views.ListingsIndexItem = Backbone.CompositeView.extend({
 
   template: JST['listings/item'],
 
-  className: 'listing-item',
-  tagName: 'li',
-
+  className: 'listing-item col-xs-6',
 
 
   // initialize: function () {
