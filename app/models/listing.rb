@@ -41,7 +41,8 @@ class Listing < ActiveRecord::Base
     :images,
     class_name: "Image",
     foreign_key: :listing_id,
-    primary_key: :id
+    primary_key: :id,
+    dependent: :destroy
   )
 
 end

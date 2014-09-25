@@ -64,15 +64,32 @@ Listing.create!(
   zip: 94103
 )
 
-Listing.create!(
-  user_id: "3",
-  list_title: "mike's concept",
-  list_desc: "Please describe your ride",
-  price: 25,
-  lat: 37.781661,
-  long: -122.411579,
-  street: "1061 Market St",
-  city: "San Francisco",
-  state: "CA",
-  zip: 94103
+# Listing.create!(
+#   user_id: "3",
+#   list_title: "mike's concept",
+#   list_desc: "Please describe your ride",
+#   price: 25,
+#   lat: 37.781661,
+#   long: -122.411579,
+#   street: "1061 Market St",
+#   city: "San Francisco",
+#   state: "CA",
+#   zip: 94103
+# )
+
+Image.create!(
+  listing_id: "1",
+  url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg"
+)
+
+Image.create!(
+  listing_id: "2",
+  url: "http://www.pedalroom.com/p/keirin-style-njs-track-bike-3874_1.jpg"
+)
+
+
+
+Image.create!(
+  listing_id: "3",
+  url: "http://4.bp.blogspot.com/_gTopFkQNeqQ/SKXqfwI9CqI/AAAAAAAABXg/9NK4ZMlHlro/s1600-h/XR3i.jp"
 )
