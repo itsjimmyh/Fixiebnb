@@ -15,6 +15,10 @@
  *= require bootstrap.min
  */
 
+div.row {
+  margin-left: 0px;
+}
+
 .navbar-header {
   background: transparent;
   border-bottom: none;

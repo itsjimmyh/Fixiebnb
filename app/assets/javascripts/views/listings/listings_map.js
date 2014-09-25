@@ -27,22 +27,16 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
     this.collection.each( function (listing) {
       var latlng = new google.maps.LatLng(listing.get('lat'), listing.get('long'));
+      var title = listing.get('list_title')
 
       var marker = new google.maps.Marker({
         position: latlng,
         map: this.map,
-        title: listing.get('list_title')
+        title: title
       })
 
-      console.log(marker);
-
       marker.setMap(this.map);
-
     }.bind(this))
-
-    // console.log(latlng + " latLngObj");
-    // console.log(latlngObj.lat() + " latitude");
-    // console.log(latlngObj.lng() + " longitude");
 
     return this;
   },

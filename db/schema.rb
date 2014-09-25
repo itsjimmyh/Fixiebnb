@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20140924234211) do
     t.string   "list_title",                                       null: false
     t.text     "list_desc",  default: "Please describe your ride", null: false
     t.integer  "price",      default: 5,                           null: false
-    t.float    "lat"
-    t.float    "long"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "street",                                           null: false
     t.string   "city",                                             null: false
     t.string   "state"
