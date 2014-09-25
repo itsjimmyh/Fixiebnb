@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-ul {
+ul.listings {
   list-style-type: none;
+  position: relative;
+}
+
+ul.listings li {
+  position: relative;
+}
+
+img.images {
+  width: 200px;
+  margin: 3px 0 3px 0;
 }
