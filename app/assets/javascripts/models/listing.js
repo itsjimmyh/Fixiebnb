@@ -20,5 +20,6 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
 
   parse: function (response) {
     this.set("feature_img", response.feature_img[0].url)
+    this.set("list_title", response.list_title)
   },
 })

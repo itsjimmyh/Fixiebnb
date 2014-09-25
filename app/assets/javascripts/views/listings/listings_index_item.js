@@ -5,6 +5,8 @@ FixieBNB.Views.ListingsIndexItem = Backbone.CompositeView.extend({
   className: 'listing-item',
   tagName: 'li',
 
+
+
   // initialize: function () {
   //   // console.log(this.model)
   // },
