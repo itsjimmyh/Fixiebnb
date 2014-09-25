@@ -4,7 +4,7 @@
 
 ul.listings {
   list-style-type: none;
-  position: relative;
+  position: absolute;
 }
 
 ul.listings li {
@@ -12,6 +12,8 @@ ul.listings li {
 }
 
 img.images {
-  width: 200px;
+  // min-width: 235px;
   margin: 3px 0 3px 0;
+  background: cover;
+  float: left;
 }

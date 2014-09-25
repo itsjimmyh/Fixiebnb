@@ -9,6 +9,14 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
 
   },
 
+  home: function () {
+    var homeView = new FixieBNB.Views.HomeView({
+
+    })
+
+    this._swapView(homeView);
+  },
+
   index: function () {
     FixieBNB.Collections.listings.fetch();
     var listingIndexView = new FixieBNB.Views.ListingsIndex({
@@ -16,10 +24,6 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
     })
 
     this._swapView(listingIndexView);
-  },
-
-  home: function () {
-
   },
 
   _swapView: function (view) {

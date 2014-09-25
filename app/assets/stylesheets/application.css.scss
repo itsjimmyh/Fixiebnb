@@ -15,6 +15,10 @@
  *= require bootstrap.min
  */
 
+div#map-canvas {
+  height: 600px;
+}
+
 .navbar-header {
   background: transparent;
   border-bottom: none;
@@ -33,19 +37,18 @@
 }
 
 div#collapse-sign-in.collapse.navbar-collapse {
-  padding: 10px 10px 10px 10px;
-  width: 100%;
+  padding: 10px 5px 5px 10px;
+  width: 90%;
 }
 
 body > section {
   height: 600px;
   width: 100%;
-  // margin: 0 auto;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
 }
 
 div.navbar-brand {
@@ -54,21 +57,24 @@ div.navbar-brand {
   font-weight: bold;
   // height: 1050px;
   // color: #fff;
-  // color: #aaa;
-  padding: 23px 0 30px 15px;
+  color: #aaa;
+  padding: 23px 0 30px 10px;
   float: left;
 }
 
 .navbar {
-  padding-right: 20px;
-  background: transparent;
+  padding-right: 10px;
+  // background: transparent;
 }
 
 .navbar.navbar-default {
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
+  margin: 0 10px 0 0;
   background-color: transparent;
   border: none;
-  margin: 0 0 0 0;
+  // margin: 0 0 0 0;
   // height: 100%;
 }
 
@@ -83,9 +89,9 @@ div.navbar-brand {
   margin-bottom: 5px;
 }
 
-.centered-text {
-  text-align: center;
-}
+// .centered-text {
+//   text-align: center;
+// }
 
 a.btn.btn-special {
   text-decoration: underline;
