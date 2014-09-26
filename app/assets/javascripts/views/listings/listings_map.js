@@ -1,6 +1,7 @@
 FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   template: JST["listings/map"],
+  // mapTemplate: JST[]
 
   initialize: function () {
     this.listenTo(this.collection, "sync", this.addMarkers);
@@ -13,17 +14,18 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   addMarkers: function () {
-    var that = this;
+    var that = this,
+        markers = [];
 
     this.collection.each(function (listing) {
       var lat = listing.get('lat');
       var lng = listing.get('long')
       var mark = new google.maps.LatLng(lat, lng);
 
-      placeMarker(listing, mark);
+      addMark(listing, mark);
     });
 
-    function placeMarker(listing, location) {
+    function addMark(listing, location) {
       var marker = new google.maps.Marker({
         position: location,
         title: listing.get('list_title'),
@@ -42,7 +44,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
                  + '"></img></div>'
       });
 
-      google.maps.event.addListener(marker, 'click', function () {
+      google.maps.event.addListener(marker, "click", function () {
         infowindow.open(that.map, marker);
       });
 
@@ -58,10 +60,31 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
 
-    google.maps.event.addListener(this.map, 'bounds_changed', function () {
-      this.trigger('map_moved', this.map);
-      console.log("moved")
-    }.bind(this))
+    google.maps.event.addListener(this.map, "bounds_changed", this._handleMapUpdate.bind(this));
+    // google.maps.event.addListener(this.map, "zoom_changed", this._handleMapUpdate.bind(this));
+    // google.maps.event.addListener(this.map, "dragend", this._handleMapUpdate.bind(this));
   },
 
-  });
+
+  _handleMapUpdate: _.throttle(function () {
+    var bounds = this.map.getBounds();
+
+
+    this.collection.fetch({
+      data: {
+        top_right_lat: bounds.getNorthEast().lat(),
+        top_right_long: bounds.getNorthEast().lng(),
+        bottom_left_lat: bounds.getSouthWest().lat(),
+        bottom_left_long: bounds.getSouthWest().lng()
+      },
+      success: function (data) {
+        console.log(data)
+
+      }.bind(this)
+    })
+
+  }, 2000)
+
+
+
+});

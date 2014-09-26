@@ -87,6 +87,18 @@ Listing.create!(
   zip: 94103
 )
 
+Listing.create!(
+  user_id: 1,
+  list_title: "yusef's concept",
+  list_desc: "Please describe your ride",
+  price: 25,
+  # latitude: 37.781661,
+  # longitude: -122.411579,
+    address: "110, Taiwan, Taipei City, Xinyi District",
+  city: "Taipei City",
+  zip: 99999
+)
+
 Image.create!(
   listing_id: 1,
   url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg"
