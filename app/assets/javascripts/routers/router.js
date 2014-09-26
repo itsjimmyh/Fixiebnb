@@ -5,19 +5,18 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
 
   routes: {
     '': 'home',
-    'search/index': "index",
+    'search/index': "searchIndex",
 
   },
 
   home: function () {
     var homeView = new FixieBNB.Views.HomeView({
-
     })
 
     this._swapView(homeView);
   },
 
-  index: function () {
+  searchIndex: function () {
     FixieBNB.Collections.listings.fetch();
     var listingIndexView = new FixieBNB.Views.ListingsIndex({
       collection: FixieBNB.Collections.listings

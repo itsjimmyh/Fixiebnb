@@ -15,6 +15,24 @@
  *= require bootstrap.min
  */
 
+
+.search-area {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  min-width: 1045px;
+}
+
+#search_form input {
+  height: 44px;
+}
+
+#submit_location {
+  height: 44px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 div.row {
   margin-left: 0px;
 }

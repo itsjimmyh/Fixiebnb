@@ -23,6 +23,7 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
     this.set("list_title", response.list_title);
     this.set("lat", response.latitude);
     this.set("long", response.longitude);
+    //TODO include city 
 
     // console.log(this.get('lat') + " parse");
     // console.log(this.get('long') + " parse");

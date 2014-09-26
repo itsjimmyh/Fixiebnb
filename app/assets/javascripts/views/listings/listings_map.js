@@ -1,4 +1,5 @@
 FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
+
   template: JST["listings/map"],
 
   initialize: function (options) {
@@ -10,12 +11,8 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
         zoom: 14
       }
     };
-
+    
     this.listenTo(this.collection, 'sync', this.render)
-  },
-
-  events: {
-
   },
 
   render: function () {
@@ -26,8 +23,10 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     this.map = new google.maps.Map(this.$("#map-canvas")[0], this.mapOptions);
 
     this.collection.each( function (listing) {
-      var latlng = new google.maps.LatLng(listing.get('lat'), listing.get('long'));
       var title = listing.get('list_title')
+      var lat = listing.get('lat');
+      var long = listing.get('long')
+      var latlng = new google.maps.LatLng(lat, long);
 
       var marker = new google.maps.Marker({
         position: latlng,
@@ -43,5 +42,6 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   onRender: function () {
     // console.log(this.$el.height());
-  },
-})
+  }
+
+});

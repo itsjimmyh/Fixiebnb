@@ -1,50 +1,46 @@
 <div class="page-container page-container-responsive row-full-height">
-  <strong>Something Here</strong>
 
   <div class="intro-area row row-table row-full-height">
 
-    <div class="col-12 col-middle">
-      <h1 id="tagline" class="h4 text-contrast row-space-4">
+    <div class="text-center">
+      <h1 id="tagline" class="uppercase text-jumbo text-contrast row-space-1">
         Welcome Rider
       </h1>
-      <div id="subtitle" class="h4 text-contrast row-space-4">
-        Rent awesome rides from all around the biggest fixed gear communities
-      </div>
-
     </div>
 
+    <div id="subtitle" class="h4 text-center">
+      Rent awesome rides from the biggest fixed gear communities
+    </div>
 
-
-    <div class="col-12">
-      <form action="search/index" id="search_form">
-        <div class="location-wrapper">
-          <input
-              type="text"
-              class="form-inline location input-large input-contrast"
-              autocomplete="off"
-              id="location"
-              name="location"
-              placeholder="Where do you want to ride?">
-        </div>
-
+    <div class="col-md-12 col-md-offset-4">
+      <form action="#search/index" id="search_form">
         <input
+            type="text"
+            class="form-inline location input-large input-contrast col-xs-3"
+            autocomplete="on"
+            id="location"
+            name="location"
+            placeholder="Where would you like to ride?"
+            onfocus="this.value = 'San Francisco'">
+
+        <!-- <input
             type="text"
             id="checkin"
-            class="form-inline checkin search-option input-large input-contrast ui-datepicker-target"
+            class="form-inline checkin search-option input-large input-contrast ui-datepicker-target col-xs-3"
             name="checkin"
-            placeholder="Start Rent">
+            placeholder="Start Date"> -->
 
-        <input
+        <!-- <input
             type="text"
             id="checkout"
-            class="form-inline checkin search-option input-large input-contrast ui-datepicker-target"
+            class="form-inline checkin search-option input-large input-contrast ui-datepicker-target col-xs-3"
             name="checkout"
-            placeholder="Return Ride">
-
+            placeholder="End Ride"> -->
+<!--
         <input
             type="hidden"
             name="source"
-            value="something here?">
+            value="something here?"> -->
 
         <button
             type="submit"
@@ -52,6 +48,7 @@
             id="submit_location">
             Search
         </button>
+
       </form>
     </div>
 

@@ -4,11 +4,6 @@ FixieBNB.Views.ListingsIndexItem = Backbone.CompositeView.extend({
 
   className: 'listing-item col-xs-6',
 
-
-  // initialize: function () {
-  //   // console.log(this.model)
-  // },
-
   render: function () {
     var renderedContent = this.template({
       listing: this.model

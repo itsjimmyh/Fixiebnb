@@ -1,18 +1,18 @@
-FixieBNB.Views.HomeView = Backbone.CompositeView.extend({
+FixieBNB.Views.TopView = Backbone.CompositeView.extend({
 
   template: JST['homes/top'],
 
+  className: 'home-top',
+
   initialize: function () {
-    console.log("homeView");
+    console.log("topView");
   },
 
   render: function () {
     var renderedContent = this.template({
-
     })
 
     this.$el.html(renderedContent);
-    this.attachSubviews();
     return this;
   },
 
