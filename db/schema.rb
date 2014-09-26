@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20140924234211) do
     t.integer  "price",      default: 5,                           null: false
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "street",                                           null: false
+    t.string   "address",                                          null: false
     t.string   "city",                                             null: false
     t.string   "state"
     t.integer  "zip"

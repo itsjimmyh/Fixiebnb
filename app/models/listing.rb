@@ -7,9 +7,9 @@
 #  list_title :string(255)      not null
 #  list_desc  :text             default("Please describe your ride"), not null
 #  price      :integer          default(5), not null
-#  lat        :float
-#  long       :float
-#  street     :string(255)      not null
+#  latitude   :float
+#  longitude  :float
+#  address    :string(255)      not null
 #  city       :string(255)      not null
 #  state      :string(255)
 #  zip        :integer
@@ -23,7 +23,7 @@ class Listing < ActiveRecord::Base
             :list_title,
             :list_desc,
             :price,
-            :street,
+            :address,
             :city,
             :state,
             :zip,

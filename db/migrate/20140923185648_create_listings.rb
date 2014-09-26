@@ -7,7 +7,7 @@ class CreateListings < ActiveRecord::Migration
       t.integer :price, null: false, default: 5
       t.float :latitude
       t.float :longitude
-      t.string :street, null: false
+      t.string :address, null: false
       t.string :city, null: false
       t.string :state
       t.integer :zip
