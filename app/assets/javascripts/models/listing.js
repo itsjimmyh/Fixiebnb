@@ -20,10 +20,11 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
 
   parse: function (response) {
     this.set("feature_img", response.feature_img[0].url);
+    this.set("user_id", response.user_id);
     this.set("list_title", response.list_title);
     this.set("lat", response.latitude);
     this.set("long", response.longitude);
-    //TODO include city 
+    //TODO include city
 
     // console.log(this.get('lat') + " parse");
     // console.log(this.get('long') + " parse");
