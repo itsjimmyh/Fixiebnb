@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20140924234211) do
     t.float    "longitude"
     t.string   "address",                                          null: false
     t.string   "city",                                             null: false
-    t.string   "state"
     t.integer  "zip"
     t.integer  "deposit",    default: 100,                         null: false
     t.datetime "created_at"
