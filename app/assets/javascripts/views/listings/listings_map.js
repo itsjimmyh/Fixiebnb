@@ -1,7 +1,7 @@
 FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   template: JST["listings/map"],
-  // mapTemplate: JST[]
+  mapTemplate: JST["listings/map_template_view"],
 
   initialize: function () {
     this.listenTo(this.collection, "sync", this.addMarkers);
@@ -33,15 +33,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       });
 
       var infowindow = new google.maps.InfoWindow({
-        content: '<a href="#/listings/'
-                 + listing.get('user_id')
-                 + '">'
-                 + listing.get("list_title")
-                 + '</a>'
-                 + '<div class="infoBox" style=" visiblity: visible; z-index: 330; width: 150px; height: 150px;">'
-                 + '<img class="img-responsive img-thumbnail" src="'
-                 + listing.get('feature_img')
-                 + '"></img></div>'
+        content: that.mapTemplate({ listing: listing })
       });
 
       google.maps.event.addListener(marker, "click", function () {
@@ -79,7 +71,6 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       },
       success: function (data) {
         console.log(data)
-
       }.bind(this)
     })
 
