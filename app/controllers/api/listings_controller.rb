@@ -11,7 +11,7 @@ module Api
         @listings = Listing.includes(:images).where(
         "latitude >= ? AND latitude <= ?
         AND
-        longitude >= ? AND longitude <= ?", 
+        longitude >= ? AND longitude <= ?",
         params["bottom_left_lat"], params["top_right_lat"], params["bottom_left_long"], params["top_right_long"])
       else
         @listings = Listing.includes(:images).all
@@ -28,7 +28,9 @@ module Api
 
     def show
       @listing = Listing.find(params[:id])
-      render json: @listing
+      @images = @listing.images
+      @owner = @listing.owner
+      render :show
     end
 
     def create

@@ -7,7 +7,9 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
   initialize: function (options) {
     this.listenTo(this.collection, 'sync', this.addListings)
     this.listenTo(this.collection, 'sync', this.render)
+
     this.listenTo(this.collection, 'add reset', this.addListingView)
+
     this.collection.each(this.addListingView.bind(this))
     this.addMapView();
   },
@@ -23,7 +25,7 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
     var renderedContent = this.template({
       listings: this.collection
     })
-
+    console.log("rendering");
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;

@@ -14,8 +14,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   addMarkers: function () {
-    var that = this,
-        markers = [];
+    var that = this;
 
     this.collection.each(function (listing) {
       var lat = listing.get('lat');
@@ -51,16 +50,12 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     };
 
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
-
     google.maps.event.addListener(this.map, "bounds_changed", this._handleMapUpdate.bind(this));
-    // google.maps.event.addListener(this.map, "zoom_changed", this._handleMapUpdate.bind(this));
-    // google.maps.event.addListener(this.map, "dragend", this._handleMapUpdate.bind(this));
   },
 
 
   _handleMapUpdate: _.throttle(function () {
     var bounds = this.map.getBounds();
-
 
     this.collection.fetch({
       data: {
@@ -70,7 +65,6 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
         bottom_left_long: bounds.getSouthWest().lng()
       },
       success: function (data) {
-        console.log(data)
       }.bind(this)
     })
 

@@ -35,3 +35,26 @@ div#map-canvas {
   // width: 500px;
   // position: absolute;
 }
+
+.infoBox {
+  visiblity: visible;
+  z-index: 330;
+  width: 280px;
+}
+
+div.infoBox-Price-Container {
+  visibility: visible;
+  z-index: 350;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background-color: #ADD8E6;
+}
+
+div.infoBox-Price {
+  padding: 1px 0 0 1px;
+  border: 1px solid;
+  color: white;
+  bottom: 6px;
+  right: 0px;
+}

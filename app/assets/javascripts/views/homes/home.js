@@ -8,15 +8,11 @@ FixieBNB.Views.HomeView = Backbone.CompositeView.extend({
 
   addTop: function () {
     var topView = new FixieBNB.Views.TopView({});
-
     this.addSubview("div.home-top", topView);
   },
 
-
   render: function () {
-    var renderedContent = this.template({
-    })
-
+    var renderedContent = this.template({})
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;

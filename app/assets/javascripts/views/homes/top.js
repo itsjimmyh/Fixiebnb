@@ -9,8 +9,7 @@ FixieBNB.Views.TopView = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template({
-    })
+    var renderedContent = this.template({})
 
     this.$el.html(renderedContent);
     return this;

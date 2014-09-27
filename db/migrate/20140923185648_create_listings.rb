@@ -16,5 +16,7 @@ class CreateListings < ActiveRecord::Migration
     end
 
     add_index :listings, :user_id
+    add_index :listings, :latitude
+    add_index :listings, :longitude
   end
 end

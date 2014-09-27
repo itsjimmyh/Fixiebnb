@@ -1,10 +1,11 @@
-<a href="/#/listings/"<%= listing.escape("user_id") %>"><%= listing.escape("list_title").slice(0, 20) %>...</a>
+<a href="/#/listing/<%= listing.escape('id') %>"><%= listing.escape("list_title") %></a>
 
-<div class="infoBox img-responsive" style="visiblity: visible; z-index: 330; width: 130px;">
+<div class="infoBox img-responsive">
+  <img class="img-responsive img-thumbnail" src="<%= listing.get('feature_img') %>"></img>
+</div>
 
-  <img class="img-responsive img-thumbnail" src="<%= listing.get('feature_img') %>"></img></div>
-
-<div class="infoBox-Price"
-     style="visibility: visible; z-index: 350; width: 20px; height: 20px; position: relative; background-color: #ADD8E6;">
-     <div style="padding: 1px 0 0 1px; border: 1px solid; color: white; bottom: 6px; right: 0px;"><%= listing.escape("price") %></div>
+<div class="infoBox-Price-Container">
+  <div class="infoBox-Price">
+    <%= listing.escape("price") %>
+  </div>
 </div>

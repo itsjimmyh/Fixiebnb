@@ -99,6 +99,10 @@ Listing.create!(
   zip: 99999
 )
 
+Image.create!( listing_id: 1, url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg")
+Image.create!( listing_id: 1, url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg")
+Image.create!( listing_id: 1, url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg")
+
 Image.create!(
   listing_id: 1,
   url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg"
