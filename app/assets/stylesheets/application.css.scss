@@ -15,6 +15,13 @@
  *= require bootstrap.min
  */
 
+div.well {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  bottom: 0;
+  position: relative;
+}
+
 div.home-top {
   height: 600px;
   background-image: url("http://i.imgur.com/Q3PQUic.jpg");
@@ -29,7 +36,6 @@ div.home-top {
   width: 100%;
   min-width: 1045px;
 }
-
 
 
 #search_form input {

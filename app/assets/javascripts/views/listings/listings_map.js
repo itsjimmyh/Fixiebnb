@@ -45,8 +45,8 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   onRender: function () {
     var mapOptions = {
-      zoom: 14,
-      center: { lat: 37.781898, lng: -122.411536 }
+      zoom: 12,
+      center: { lat: 37.77056, lng: -122.42694 }
     };
 
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);

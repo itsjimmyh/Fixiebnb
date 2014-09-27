@@ -11,11 +11,21 @@
   // overflow: hidden;
   height: 200px;
   margin: 3px 0 3px 0;
+  padding: 0;
 }
 
 .listings-index {
   min-height: 750px;
   height: 100%;
+  width: 100%;
+  padding: 0;
+  border: 3px ridge;
+  background: transparent;
+}
+
+.no-results {
+  background-repeat: repeat;
+  background-position: center;
 }
 
 img.images {
@@ -34,14 +44,16 @@ img.listing-image {
 }
 
 div.map {
-  height: 586px;
-  // width: 528px;
+  padding: 0;
+  border: 2px outset;
 }
 
 div #map-canvas {
   // height: 100%;
   // width: 100%;
-  height: 586px;
+  height: 621px;
+  padding: 0 0 0 0;
+  // height: 586px;
   // width: 528px;
   // margin: 30px 30px 0 0;
   // padding: 0;
