@@ -18,8 +18,18 @@
 div.well {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  bottom: 0;
   position: relative;
+  border: none;
+}
+
+div#tagline > h1 {
+  margin-top: 5px;
+  font-size: 75px;
+}
+
+div#subtitle > :first-child {
+  margin-bottom: 10px;
+  font-size: 25px;
 }
 
 div.home-top {
