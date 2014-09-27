@@ -23,6 +23,10 @@
 //   min-width: 1045px;
 // }
 
+div.home-top {
+  height: 500px;
+}
+
 #search_form input {
   height: 44px;
 }
@@ -133,7 +137,7 @@ a.btn.btn-special.list-ride {
 .footer {
   color: white;
   // background-image: url(../images/footer.png);
-  background: grey;
+  // background: grey;
   height: 200px;
   width: 100%;
   bottom: 0;
