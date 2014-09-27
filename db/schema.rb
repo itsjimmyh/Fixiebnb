@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(version: 20140924234211) do
     t.datetime "updated_at"
   end
 
+  add_index "listings", ["latitude"], name: "index_listings_on_latitude", using: :btree
+  add_index "listings", ["longitude"], name: "index_listings_on_longitude", using: :btree
   add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
 
   create_table "users", force: true do |t|

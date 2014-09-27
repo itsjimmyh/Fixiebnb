@@ -17,7 +17,7 @@ User.create!( username: "nguyen", password: "123456" )
 
 Listing.create!(
   user_id: 1,
-  list_title: "jimmy's bianchi concept",
+  list_title: "jimmy's concept",
   list_desc: "Please describe your ride",
   price: 25,
   latitude: 37.777184,
@@ -88,47 +88,30 @@ Listing.create!(
 )
 
 Listing.create!(
-  user_id: 1,
+  user_id: 7,
   list_title: "yusef's concept",
   list_desc: "Please describe your ride",
   price: 25,
   # latitude: 37.781661,
   # longitude: -122.411579,
-    address: "110, Taiwan, Taipei City, Xinyi District",
+    address: "110 Taiwan, Taipei City, Xinyi District",
   city: "Taipei City",
   zip: 99999
 )
 
-Image.create!( listing_id: 1, url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg")
-Image.create!( listing_id: 1, url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg")
-Image.create!( listing_id: 1, url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg")
+Image.create!( listing_id: 1, url: "http://www.infobarrel.com/media/image/50497.png")
+Image.create!( listing_id: 1, url: "http://www.infobarrel.com/media/image/50497.png")
+Image.create!( listing_id: 1, url: "http://www.infobarrel.com/media/image/50497.png")
+Image.create!( listing_id: 1, url: "http://www.infobarrel.com/media/image/50497.png")
 
-Image.create!(
-  listing_id: 1,
-  url: "http://www.pedalroom.com/p/2005-bianchi-pista-concept-6184_1.jpg"
-)
+Image.create!( listing_id: 2, url: "http://i.imgur.com/z5fjJ2m.jpg?1?2605")
 
-Image.create!(
-  listing_id: 2,
-  url: "http://www.pedalroom.com/p/keirin-style-njs-track-bike-3874_1.jpg"
-)
+Image.create!( listing_id: 3, url: "http://www.infobarrel.com/media/image/50497.png")
 
-Image.create!(
-  listing_id: 3,
-  url: "http://www.infobarrel.com/media/image/50497.png"
-)
+Image.create!( listing_id: 4, url: "http://www.pedalroom.com/p/cinelli-mash-parallax-2014-19265_1.jpg")
 
-Image.create!(
-  listing_id: 4,
-  url: "http://www.pedalroom.com/p/cinelli-mash-parallax-2014-19265_1.jpg"
-)
+Image.create!( listing_id: 5, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")
 
-Image.create!(
-  listing_id: 5,
-  url: "http://38.media.tumblr.com/tumblr_lztf6igro61qzlu6jo1_500.png"
-)
+Image.create!( listing_id: 6, url: "http://i.imgur.com/HpRqD1v.png?1?4023")
 
-Image.create!(
-  listing_id: 6,
-  url: "http://www.infobarrel.com/media/image/50063.png"
-)
+Image.create!( listing_id: 7, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")

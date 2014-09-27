@@ -20,7 +20,6 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
     if (response.feature_img && response.feature_img.length >= 1) {
       this.set("feature_img", response.feature_img[0].url);
     }
-
     this.set("images", response.images)
     this.set("id", response.id);
     this.set("user_id", response.user_id);

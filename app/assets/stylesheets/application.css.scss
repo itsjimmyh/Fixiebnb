@@ -15,17 +15,22 @@
  *= require bootstrap.min
  */
 
-
-// .search-area {
-//   position: relative;
-//   height: 550px;
-//   width: 100%;
-//   min-width: 1045px;
-// }
-
 div.home-top {
-  height: 500px;
+  height: 600px;
+  background-image: url("http://i.imgur.com/Q3PQUic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
 }
+
+.search-area {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  min-width: 1045px;
+}
+
+
 
 #search_form input {
   height: 44px;
