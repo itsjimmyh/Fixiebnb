@@ -19,8 +19,8 @@ User.create!( username: "fixed girl taiwan", password: "123456" )
 
 Listing.create!(
   user_id: 1,
-  list_title: "jimmy's concept",
-  list_desc: "Hello fellow enthusiast.  This is my HLF Folk NJS Fixed Gear  It was built with the rarest NJS parts I coudl find.  Comfy San Marco saddle.  Nitto RB-021 Bullhorns.  None of that overdone crap.  Pure riding enthusiast.",
+  list_title: "guests concept",
+  list_desc: "Hello fellow enthusiast.  This is my 8Bar Fixed Gear.  It's my sweet blue baby that I coast around town.  Great for sight-seeing in SF.",
   price: 40,
   latitude: 37.777184,
   longitude: -122.414215,
@@ -31,8 +31,8 @@ Listing.create!(
 
 Listing.create!(
   user_id: 2,
-  list_title: "eric's njs",
-  list_desc: "This is for the purist of enthusiasts.  You know what you're looking at.  This 54-14 ratio will definitely give you a workout in the city",
+  list_title: "eric's get-a-round",
+  list_desc: "This is for the minimalists.  This gear ratio will definitely give you a pleasant ride in the city",
   price: 30,
   latitude: 37.782043,
   longitude: -122.408378,
@@ -55,8 +55,8 @@ Listing.create!(
 
 Listing.create!(
   user_id: 4,
-  list_title: "robs's concept",
-  list_desc: "Cinelli Mash.  Great commuter and all around city exploration.  Meet me up and take her out for a spin",
+  list_title: "robs's bomber",
+  list_desc: "Leader Frame.  Great commuter and all around city exploration.  Meet me up and take her out for a spin",
   price: 15,
   address: "2601 Sutter St, San Francisco",
   city: "San Francisco",
@@ -75,8 +75,8 @@ Listing.create!(
 
 Listing.create!(
   user_id: 6,
-  list_title: "yusef's concept",
-  list_desc: "My sweet green baby.  I've only been here in SF for a short little bit, I'm still exploring on foot a lot, so don't be shy.  Make an appointment and explore SF while I'm busy.",
+  list_title: "yusef's machine",
+  list_desc: "This baby is sure to turn heads.  I've only been here in SF for a short little bit, I'm still exploring on foot a lot, so don't be shy.  Make an appointment and explore SF while I'm busy.",
   price: 20,
   address: "1061 Market St, San Francisco, CA",
   city: "San Francisco",
@@ -85,7 +85,7 @@ Listing.create!(
 
 Listing.create!(
   user_id: 7,
-  list_title: "yusef's concept",
+  list_title: "Roxy's spare",
   list_desc: "Taiwan Baby.  Just my spare bike I have lying around.  Come rent it out and join us on our weekly night ride",
   price: 25,
   address: "110 Taiwan, Taipei City, Xinyi District",
@@ -145,6 +145,6 @@ Image.create!( listing_id: 8, url: "http://i.imgur.com/mWXfpk4.jpg" )
 Image.create!( listing_id: 8, url: "http://i.imgur.com/3nRf9bi.jpg" )
 Image.create!( listing_id: 8, url: "http://i.imgur.com/qjnmm9o.jpg" )
 
-Image.create!( listing_id: 9, url: "http://i.imgur.com/GxDFoWq.jpg?1?4518" )
 Image.create!( listing_id: 9, url: "http://i.imgur.com/eGlvOz0.jpg?1?5818" )
+Image.create!( listing_id: 9, url: "http://i.imgur.com/GxDFoWq.jpg?1?4518" )
 Image.create!( listing_id: 9, url: "http://i.imgur.com/xaecGwP.jpg?1?6323" )

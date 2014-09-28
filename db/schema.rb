@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140924234211) do
+ActiveRecord::Schema.define(version: 20140928172131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(version: 20140924234211) do
   add_index "listings", ["latitude"], name: "index_listings_on_latitude", using: :btree
   add_index "listings", ["longitude"], name: "index_listings_on_longitude", using: :btree
   add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
+
+  create_table "requests", force: true do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "listing_id", null: false
+    t.date     "start_date", null: false
+    t.date     "end_date",   null: false
+    t.string   "status",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "requests", ["end_date"], name: "index_requests_on_end_date", using: :btree
+  add_index "requests", ["listing_id"], name: "index_requests_on_listing_id", using: :btree
+  add_index "requests", ["start_date"], name: "index_requests_on_start_date", using: :btree
+  add_index "requests", ["user_id"], name: "index_requests_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",        null: false

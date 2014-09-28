@@ -7,21 +7,19 @@ module Api
     end
 
     def index
-      if params["bottom_left_lat"]
+      if params["bounds"]
         @listings = Listing.includes(:images).where(
         "latitude >= ? AND latitude <= ?
         AND
         longitude >= ? AND longitude <= ?",
-        params["bottom_left_lat"], params["top_right_lat"], params["bottom_left_long"], params["top_right_long"])
+        params["bounds"]["bottom_left_lat"],
+        params["bounds"]["top_right_lat"],
+        params["bounds"]["bottom_left_long"],
+        params["bounds"]["top_right_long"])
       else
         @listings = Listing.includes(:images).all
       end
 
-      #use the :bounds from params
-      #to make a Listing.where(...)
-      # that only returns listings within bounds
-
-      # @images = @listings.first.images
       render :index
       # render json: @images
     end

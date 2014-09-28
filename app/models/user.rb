@@ -27,6 +27,14 @@ class User < ActiveRecord::Base
     dependent: :destroy
   )
 
+  has_many(
+    :requests,
+    class_name: "Request",
+    foreign_key: :user_id,
+    primary_key: :id,
+    dependent: :destroy
+  )
+
   def self.find_by_credentials(user_params)
     user = User.find_by_username(user_params[:username])
     user.try(:is_password?, user_params[:password]) ? user : nil

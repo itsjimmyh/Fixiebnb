@@ -28,7 +28,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       var marker = new google.maps.Marker({
         position: location,
         title: listing.get('list_title'),
-        map: that.map
+        map: that.map,
       });
 
       var infowindow = new google.maps.InfoWindow({
@@ -59,17 +59,17 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
     this.collection.fetch({
       data: {
-        top_right_lat: bounds.getNorthEast().lat(),
-        top_right_long: bounds.getNorthEast().lng(),
-        bottom_left_lat: bounds.getSouthWest().lat(),
-        bottom_left_long: bounds.getSouthWest().lng()
+        bounds: {
+          top_right_lat: bounds.getNorthEast().lat(),
+          top_right_long: bounds.getNorthEast().lng(),
+          bottom_left_lat: bounds.getSouthWest().lat(),
+          bottom_left_long: bounds.getSouthWest().lng()
+        }
       },
       success: function (data) {
+
       }.bind(this)
     })
 
   }, 2000)
-
-
-
 });

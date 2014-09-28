@@ -1,17 +1,17 @@
 FixieBNB.Models.Listing = Backbone.Model.extend({
   urlRoot: 'api/listings',
 
-  // images: function () {
-  //   this._images = this._images ||
-  //     new FixieBNB.Collections.Images([], { image: this });
-  //   return this._images;
+  // requests: function () {
+  //   this._requests = this._requests ||
+  //     new FixieBNB.Collections.Requests([], { reqeust: this });
+  //   return this._requests;
   // },
 
   // parse: function(response) {
   //
-  //   if (response.images) {
-  //     this.images().set(response.images, {parse: true});
-  //     delete response.images;
+  //   if (response.requests) {
+  //     this.requests().set(response.requests, {parse: true});
+  //     delete response.requests;
   //   }
   //   return response;
   // }

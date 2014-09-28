@@ -17,6 +17,13 @@ class Listing < ActiveRecord::Base
   )
 
   has_many(
+    :requests,
+    class_name: "Request",
+    foreign_key: :listing_id,
+    primary_key: :id
+  )
+
+  has_many(
     :images,
     class_name: "Image",
     foreign_key: :listing_id,
