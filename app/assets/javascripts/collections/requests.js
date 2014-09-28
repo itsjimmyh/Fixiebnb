@@ -7,7 +7,7 @@ FixieBNB.Collections.ListingRequests = Backbone.Collection.extend({
 
   initialize: function (models, options) {
     this.request = options.request
-  }
+  },
 
   getOrFetch: function (id) {
     var request = this.get(id);
