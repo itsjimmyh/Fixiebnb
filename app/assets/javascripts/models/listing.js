@@ -29,6 +29,7 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
     this.set("lat", response.latitude);
     this.set("long", response.longitude);
     this.set("price", response.price);
+    this.set("address", response.address);
     //TODO include city for search
   },
 })

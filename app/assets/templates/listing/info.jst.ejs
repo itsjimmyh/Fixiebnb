@@ -1,2 +1,10 @@
-<strong>Show Something for Info</strong>
-<%= console.log(this.model.attributes) %>
+<strong><%= listing.escape('list_title') %></strong>
+<br>
+<br>
+<h7><%= listing.escape('list_desc') %></h7>
+<br>
+<br>
+<h7>Rent this ride for $<%= listing.escape('price') %> per day!</h7>
+<br>
+<br>
+<h7>Pick it up now at: <%= listing.escape('address') %></h7>
