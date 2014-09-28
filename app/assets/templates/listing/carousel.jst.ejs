@@ -1,4 +1,4 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="carousel-example-generic" class="carousel slide img-responsive" data-ride="carousel" style="min-height: 500px; max-height: 480px;">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -7,12 +7,16 @@
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="max-height: inherit; max-width: 100%; margin: 0 auto; overflow: hidden;">
     <div class="item active">
-      <% listing.images().each(function (image) { %>
-        <img src="<%= image.escape('url') %>">
-      <% }); %>
+      <div class="img-responsive"><img src="<%= images[0] %>"></img></div>
      </div>
+    <div class="item">
+      <div class="img-responsive"><img src="<%= images[1] %>" alt=""></img></div>
+     </div>
+    <div class="item">
+      <div class="img-responsive"><img src="<%= images[2] %>"  alt=""></img></div>
+    </div>
   </div>
 
   <!-- Controls -->

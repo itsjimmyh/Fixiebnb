@@ -105,13 +105,25 @@ Image.create!( listing_id: 1, url: "http://www.infobarrel.com/media/image/50497.
 Image.create!( listing_id: 1, url: "http://www.infobarrel.com/media/image/50497.png")
 
 Image.create!( listing_id: 2, url: "http://i.imgur.com/z5fjJ2m.jpg?1?2605")
+Image.create!( listing_id: 2, url: "http://i.imgur.com/z5fjJ2m.jpg?1?2605")
+Image.create!( listing_id: 2, url: "http://i.imgur.com/z5fjJ2m.jpg?1?2605")
 
+Image.create!( listing_id: 3, url: "http://www.infobarrel.com/media/image/50497.png")
+Image.create!( listing_id: 3, url: "http://www.infobarrel.com/media/image/50497.png")
 Image.create!( listing_id: 3, url: "http://www.infobarrel.com/media/image/50497.png")
 
 Image.create!( listing_id: 4, url: "http://www.pedalroom.com/p/cinelli-mash-parallax-2014-19265_1.jpg")
+Image.create!( listing_id: 4, url: "http://www.pedalroom.com/p/cinelli-mash-parallax-2014-19265_1.jpg")
+Image.create!( listing_id: 4, url: "http://www.pedalroom.com/p/cinelli-mash-parallax-2014-19265_1.jpg")
 
+Image.create!( listing_id: 5, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")
+Image.create!( listing_id: 5, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")
 Image.create!( listing_id: 5, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")
 
 Image.create!( listing_id: 6, url: "http://i.imgur.com/HpRqD1v.png?1?4023")
+Image.create!( listing_id: 6, url: "http://i.imgur.com/HpRqD1v.png?1?4023")
+Image.create!( listing_id: 6, url: "http://i.imgur.com/HpRqD1v.png?1?4023")
 
+Image.create!( listing_id: 7, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")
+Image.create!( listing_id: 7, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")
 Image.create!( listing_id: 7, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750")

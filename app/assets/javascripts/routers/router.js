@@ -26,9 +26,8 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
   },
 
   listingShow: function (id) {
-    console.log("listingShow fired")
     var listing = FixieBNB.Collections.listings.getOrFetch(id)
-
+    
     var listingShowView = new FixieBNB.Views.ListingShow({
       model: listing
     })

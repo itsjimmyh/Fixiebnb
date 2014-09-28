@@ -21,16 +21,6 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
     this.addSubview("div.map", mapView);
   },
 
-  render: function () {
-    var renderedContent = this.template({
-      listings: this.collection
-    })
-    console.log("rendering");
-    this.$el.html(renderedContent);
-    this.attachSubviews();
-    return this;
-  },
-
   addListingView: function (listing) {
     var listingIndexItemView = new FixieBNB.Views.ListingsIndexItem ({
       model: listing
@@ -41,5 +31,14 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
   addListings: function () {
     this.removeSubviews(".listings");
     this.collection.each(this.addListingView.bind(this))
+  },
+
+  render: function () {
+    var renderedContent = this.template({
+      // listings: this.collection
+    })
+    this.$el.html(renderedContent);
+    this.attachSubviews();
+    return this;
   },
 });

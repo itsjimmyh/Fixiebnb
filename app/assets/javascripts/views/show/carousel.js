@@ -6,8 +6,16 @@ FixieBNB.Views.CarouselView = Backbone.CompositeView.extend({
   },
 
   render: function () {
+    var images = this.model.get('images'),
+        arrImages = [];
+
+
+    images.forEach(function (image) {
+      arrImages.push(image.url)
+    })
+
     var renderedContent = this.template({
-      listing: this.model
+      images: arrImages
     })
 
     this.$el.html(renderedContent);

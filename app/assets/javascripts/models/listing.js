@@ -1,11 +1,11 @@
 FixieBNB.Models.Listing = Backbone.Model.extend({
   urlRoot: 'api/listings',
 
-  images: function () {
-    this._images = this._images ||
-      new FixieBNB.Collections.Images([], { image: this });
-    return this._images;
-  },
+  // images: function () {
+  //   this._images = this._images ||
+  //     new FixieBNB.Collections.Images([], { image: this });
+  //   return this._images;
+  // },
 
   // parse: function(response) {
   //

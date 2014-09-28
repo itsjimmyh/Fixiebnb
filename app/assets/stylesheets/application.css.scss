@@ -34,7 +34,7 @@ div#subtitle > :first-child {
 
 div.home-top {
   height: 600px;
-  background-image: url("http://i.imgur.com/Q3PQUic.jpg");
+  background-image: url("../images/homebg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -157,11 +157,17 @@ a.btn.btn-special.list-ride {
 
 .footer {
   color: white;
+  text-decoration: underline;
   // background-image: url(../images/footer.png);
   // background: grey;
-  height: 200px;
+  padding: 0 0 10px 0;
+  height: 210px;
   width: 100%;
   bottom: 0;
+}
+
+.footer a {
+  color: white;
 }
 
 button.language {
