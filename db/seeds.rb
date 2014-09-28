@@ -133,9 +133,9 @@ Image.create!( listing_id: 5, url: "http://i.imgur.com/SMlkDqj.jpg?1?3750" )
 Image.create!( listing_id: 5, url: "http://i.imgur.com/0EGyl0B.jpg?1?1068" )
 Image.create!( listing_id: 5, url: "http://i.imgur.com/hpQmPUd.jpg?1?3486" )
 
-Image.create!( listing_id: 6, url: "http://i.imgur.com/HpRqD1v.png?1?4023" )
-Image.create!( listing_id: 6, url: "http://i.imgur.com/HpRqD1v.png?1?4023" )
-Image.create!( listing_id: 6, url: "http://i.imgur.com/HpRqD1v.png?1?4023" )
+Image.create!( listing_id: 6, url: "http://i.imgur.com/y91TBGc.jpg?1?9907" )
+Image.create!( listing_id: 6, url: "http://i.imgur.com/a1zbCvB.jpg?1?5888" )
+Image.create!( listing_id: 6, url: "http://i.imgur.com/R29s96D.jpg?1?3593" )
 
 Image.create!( listing_id: 7, url: "http://i.imgur.com/y91TBGc.jpg?1?9907" )
 Image.create!( listing_id: 7, url: "http://i.imgur.com/a1zbCvB.jpg?1?5888" )

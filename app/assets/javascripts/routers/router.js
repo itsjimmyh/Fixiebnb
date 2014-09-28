@@ -11,13 +11,15 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
   },
 
   home: function () {
-    var homeView = new FixieBNB.Views.HomeView({})
+    FixieBNB.Collections.listings.fetch();
+    var homeView = new FixieBNB.Views.HomeView({
+      collection: FixieBNB.Collections.listings
+    })
     this._swapView(homeView);
   },
 
   searchIndex: function () {
     FixieBNB.Collections.listings.fetch();
-
     var listingIndexView = new FixieBNB.Views.ListingsIndex({
       collection: FixieBNB.Collections.listings
     })
@@ -27,7 +29,6 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
 
   listingShow: function (id) {
     var listing = FixieBNB.Collections.listings.getOrFetch(id)
-    
     var listingShowView = new FixieBNB.Views.ListingShow({
       model: listing
     })

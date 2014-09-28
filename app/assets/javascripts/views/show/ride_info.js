@@ -13,5 +13,4 @@ FixieBNB.Views.ListingInfoView = Backbone.CompositeView.extend({
     this.$el.html(renderedContent);
     return this;
   }
-
 });
