@@ -20,7 +20,6 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
 
   searchIndex: function (city) {
     var searchCity = city;
-    console.log(searchCity);
     FixieBNB.Collections.listings.fetch();
     var listingIndexView = new FixieBNB.Views.ListingsIndex({
       collection: FixieBNB.Collections.listings,

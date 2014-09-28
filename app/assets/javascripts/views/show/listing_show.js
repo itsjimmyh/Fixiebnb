@@ -16,7 +16,7 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
 
   submit: function (event) {
     event.preventDefault();
-    console.log("prevented");
+    console.log("prevented from listing/show submit");
 
   },
 

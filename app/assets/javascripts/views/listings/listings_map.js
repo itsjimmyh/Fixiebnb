@@ -7,7 +7,6 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     this.city = options.city
     this.moveToCenter();
 
-    console.log(this.city + " from ListingsMap baby")
     this.listenTo(this.collection, "sync", this.addMarkers);
   },
 
@@ -60,13 +59,11 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   onRender: function () {
     var mapOptions = {
-      zoom: 12,
-      center: { lat: 37.77056, lng: -122.42694 }
+      zoom: 13,
     };
 
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
     google.maps.event.addListener(this.map, "bounds_changed", this._handleMapUpdate.bind(this));
-
   },
 
 
