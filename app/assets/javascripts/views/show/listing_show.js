@@ -7,7 +7,7 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, 'sync', this.render)
     this.listenTo(this.model, 'sync', this.addCarousel)
 
-    this.addReserveThisRide();
+    this.addRequestThisRide();
   },
 
   events: {
@@ -28,11 +28,11 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     this.addSubview("div.carousel", carouselView);
   },
 
-  addReserveThisRide: function () {
-    var reserveView = new FixieBNB.Views.ReserveView({
+  addRequestThisRide: function () {
+    var requestView = new FixieBNB.Views.RequestView({
     })
 
-    this.addSubview("div.reserve-this-ride", reserveView);
+    this.addSubview("div.reserve-this-ride", requestView);
   },
 
   render: function () {

@@ -1,9 +1,9 @@
-FixieBNB.Views.ReserveView = Backbone.CompositeView.extend({
+FixieBNB.Views.RequestView = Backbone.CompositeView.extend({
 
-  template: JST["listing/reserve"],
+  template: JST["listing/request"],
 
   initialize: function () {
-    console.log("reserveView")
+    console.log("requestView")
   },
 
   render: function () {
