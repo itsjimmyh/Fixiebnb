@@ -10,6 +10,18 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     this.addReserveThisRide();
   },
 
+  events: {
+    "submit": "submit"
+  },
+
+  submit: function (event) {
+    event.preventDefault();
+    console.log("prevented");
+    debugger
+    var reservationInfo = $()
+
+  },
+
   addCarousel: function () {
     var carouselView = new FixieBNB.Views.CarouselView({
       model: this.model
