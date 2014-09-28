@@ -24,6 +24,8 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
     this.set("id", response.id);
     this.set("user_id", response.user_id);
     this.set("list_title", response.list_title);
+    this.set("list_desc", response.list_desc);
+    this.set("deposit", response.deposit);
     this.set("lat", response.latitude);
     this.set("long", response.longitude);
     this.set("price", response.price);

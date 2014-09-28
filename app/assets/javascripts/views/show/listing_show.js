@@ -3,10 +3,10 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
   template: JST["listing/show"],
 
   initialize: function () {
-    console.log(" from listing/show")
+    console.log("finish form submission for listing/show")
     this.listenTo(this.model, 'sync', this.render)
     this.listenTo(this.model, 'sync', this.addCarousel)
-
+    this.listenTo(this.model, 'sync', this.addListingInfo)
     this.addRequestThisRide();
   },
 
@@ -33,6 +33,14 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     })
 
     this.addSubview("div.reserve-this-ride", requestView);
+  },
+
+  addListingInfo: function () {
+    var listingInfoView = new FixieBNB.Views.ListingInfoView({
+      model: this.model
+    })
+
+    this.addSubview("div.ride-info", listingInfoView)
   },
 
   render: function () {
