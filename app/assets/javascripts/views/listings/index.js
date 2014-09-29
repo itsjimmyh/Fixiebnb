@@ -17,7 +17,7 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
 
   addSliderView: function () {
     var sliderView = new FixieBNB.Views.SliderView({})
-    this.addSubview(".search-slider", sliderView);
+    this.addSubview("div.search-box-index", sliderView);
   },
 
   addMapView: function () {

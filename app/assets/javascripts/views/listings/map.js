@@ -15,7 +15,6 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     var center = { lat: 31.1310, lng: 29.9769 }
     var mapOptions = {
       zoom: 4,
-      // center: { lat: 31.1310, lng: 29.9769 }
       center: { lat: 0, lng: 0 }
     };
 
