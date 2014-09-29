@@ -74,6 +74,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
 
   _handleMapUpdate: _.throttle(function () {
+    console.log("dsads")
     var bounds = this.map.getBounds();
     var searchCity = this.city
     this.collection.fetch({
@@ -90,6 +91,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
         }
       },
       success: function (data) {
+
       }.bind(this)
     })
 
