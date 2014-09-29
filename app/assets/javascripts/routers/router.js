@@ -5,9 +5,14 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "": "home",
+    "users/dashboard/:id": "userDashBoard",
     "search/index/:city": "searchIndex",
     "listing/:id": "listingShow",
 
+  },
+
+  userDashBoard: function () {
+    
   },
 
   home: function () {

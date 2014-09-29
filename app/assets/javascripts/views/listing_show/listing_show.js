@@ -10,16 +10,6 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     this.addRequestThisRide();
   },
 
-  events: {
-    "submit": "submit"
-  },
-
-  submit: function (event) {
-    event.preventDefault();
-    console.log("prevented from listing/show submit now send data to rails to make request");
-
-  },
-
   addCarousel: function () {
     var carouselView = new FixieBNB.Views.CarouselView({
       model: this.model
@@ -30,6 +20,7 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
 
   addRequestThisRide: function () {
     var requestView = new FixieBNB.Views.RequestView({
+      model: this.model
     })
 
     this.addSubview("div.reserve-this-ride", requestView);
