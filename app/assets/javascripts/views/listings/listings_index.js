@@ -35,9 +35,7 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template({
-      // listings: this.collection
-    })
+    var renderedContent = this.template({});
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;

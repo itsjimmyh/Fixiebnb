@@ -18,13 +18,14 @@
       <form action="#" class="form-inline"  id="search_form">
         <input
             type="text"
-            class="form-control location input-large input-contrast col-xs-3"
+            class="form-control location input-large input-contrast col-xs-12 col-xs-offset-2"
             autocomplete="off"
             id="location"
             name="location"
             placeholder="Where would you like to ride?"
-            size="45">
-        <input
+            onfocus="this.placeholder = 'Any City or State or Address Here'"
+            size="50">
+        <!-- <input
             type="text"
             class="form-control datepicker"
             onfocus="this.value = ''"
@@ -34,7 +35,7 @@
             class="form-control datepicker"
             onfocus="this.value= ''"
             placeholder="Return Date"
-            size="20"><button
+            size="20"> --><button
             type="submit"
             class="form-control btn btn-danger"
             id="submit_location">

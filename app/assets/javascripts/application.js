@@ -13,9 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.serializejson.js
+//= require jquery.jscroll.min
 //= require underscore
 //= require backbone
 //= require bootstrap.min
+//= require bootstrap-datepicker.js
 //= require underscore
 //= require backbone
 //= require fixie_bnb
@@ -32,3 +34,6 @@ $(function () {
     $("#flash-messages").hide();
   });
 });
+
+
+// $('div.jscroll').jscroll();

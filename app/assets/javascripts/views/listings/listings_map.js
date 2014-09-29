@@ -5,13 +5,12 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.city = options.city
-    this.moveToCenter();
+    this.moveToSearchCenter();
 
     this.listenTo(this.collection, "sync", this.addMarkers);
   },
 
-  moveToCenter: function () {
-    // var that = this;
+  moveToSearchCenter: function () {
     var geocoder = new google.maps.Geocoder();
 
     geocoder.geocode( { 'address': this.city }, function(results, status) {
@@ -69,7 +68,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   _handleMapUpdate: _.throttle(function () {
     var bounds = this.map.getBounds();
-
+    var searchCity = this.city
     this.collection.fetch({
       data: {
         bounds: {
@@ -77,10 +76,13 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
           top_right_long: bounds.getNorthEast().lng(),
           bottom_left_lat: bounds.getSouthWest().lat(),
           bottom_left_long: bounds.getSouthWest().lng()
+        },
+
+        city: {
+          city: searchCity
         }
       },
       success: function (data) {
-
       }.bind(this)
     })
 
