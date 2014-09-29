@@ -59,6 +59,10 @@ div.home-top {
   height: 44px;
 }
 
+#search_form input:focus {
+  box-shadow: 2px 3px 4px 5px rgba(81, 203, 238, 1);
+}
+
 #submit_location {
   height: 44px;
   width: 100px;

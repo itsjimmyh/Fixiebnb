@@ -12,10 +12,18 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
   moveToSearchCenter: function () {
     var geocoder = new google.maps.Geocoder();
+    var center = { lat: 31.1310, lng: 29.9769 }
+    var mapOptions = {
+      zoom: 4,
+      // center: { lat: 31.1310, lng: 29.9769 }
+      center: { lat: 0, lng: 0 }
+    };
 
     geocoder.geocode( { 'address': this.city }, function(results, status) {
-      if (status == google.maps.GeocoderStatus.OK) {
+      if (status == google.maps.GeocoderStatus.OK && status !== "ZERO_RESULTS") {
         this.map.setCenter(results[0].geometry.location);
+      } else {
+        this.map.setOptions( { options: mapOptions } )
       }
     }.bind(this))
   },
