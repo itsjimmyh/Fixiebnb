@@ -16,7 +16,12 @@ FixieBNB.Views.SliderView = Backbone.CompositeView.extend({
   render: function () {
     var renderedContent = this.template({});
     this.$el.html(renderedContent);
+    this.addGeoComplete();
     return this;
+  },
+
+  addGeoComplete: function () {
+    this.$('#location').geocomplete();
   }
 
 });

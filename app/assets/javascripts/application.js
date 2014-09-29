@@ -21,6 +21,7 @@
 //= require underscore
 //= require backbone
 //= require fixie_bnb
+//= require jquery.geocomplete.min
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
@@ -34,6 +35,3 @@ $(function () {
     $("#flash-messages").hide();
   });
 });
-
-
-// $('div.jscroll').jscroll();

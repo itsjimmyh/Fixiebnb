@@ -7,16 +7,20 @@
     <%= csrf_meta_tags %>
 
     <style type="text/css">
-      
+
     </style>
     <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHm63ButGEH2IMAJky9dgrp9cDQNkA68A">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHm63ButGEH2IMAJky9dgrp9cDQNkA68A&libraries=places">
     </script>
 
   </head>
 
   <body>
+
     <%= yield %>
+    <input type="text" id="geocomplete">
+    <script>
+    </script>
   </body>
 
 </html>

@@ -21,6 +21,7 @@ FixieBNB.Views.TopView = Backbone.CompositeView.extend({
     var renderedContent = this.template({})
 
     this.$el.html(renderedContent);
+    this.$('#location').geocomplete();
     return this;
   },
 
