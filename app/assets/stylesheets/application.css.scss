@@ -14,6 +14,10 @@
  *= require_tree .
  *= require bootstrap.min
  */
+// 
+// body {
+//   width: 100%;
+// }
 
 div a img.img-responsive.img-thumbnail {
   height: 100%;
@@ -106,7 +110,8 @@ div#collapse-sign-in.collapse.navbar-collapse {
 }
 
 body > section {
-  height: 600px;
+  min-height: 600px;
+  // height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
