@@ -3,10 +3,11 @@ FixieBNB.Views.SliderView = Backbone.CompositeView.extend({
   template: JST["listings/slider"],
 
   events: {
-    "submit": "submit",
+    "submit form": "submit",
   },
 
   submit: function (event) {
+    console.log("submit from SliderView")
     event.preventDefault();
     var searchQuery = $('#location').val()
 

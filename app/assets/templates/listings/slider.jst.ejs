@@ -1,6 +1,6 @@
 <div class="well listings-index-search-bar">
   <div class="col-xs-10 col-xs-offset-2">
-    <form action="/" class="form-inline"  id="search_form">
+    <form class="form-inline" id="search_form">
       <input
           type="text"
           class="form-control location input-large input-contrast col-xs-12 col-xs-offset-2"
@@ -9,10 +9,12 @@
           name="location"
           placeholder="Where would you like to ride?"
           onfocus="this.placeholder = 'Any City or State or Address Here'"
-          size="50"></input><button
+          size="50">
+        <input
+          type="submit"
           class="form-control btn btn-danger"
+          value="Search"
           id="submit_location">
-          Search</button>
     </form>
   </div>
 </div>
