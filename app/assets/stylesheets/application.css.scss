@@ -15,6 +15,16 @@
  *= require bootstrap.min
  */
 
+div a img.img-responsive.img-thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
+div.center-piece-row {
+  height: 100%;
+  width: 100%;
+}
+
 .home-center div.row {
   height: 100%;
   width: 100%;
