@@ -1,10 +1,14 @@
-<strong><%= listing.escape('list_title') %></strong>
-<br>
-<br>
-<h7><%= listing.escape('list_desc') %></h7>
-<br>
-<br>
-<h7>Rent this ride for $<%= listing.escape('price') %> per day!</h7>
-<br>
-<br>
-<h7>Pick it up now at: <%= listing.escape('address') %></h7>
+<div class="row text-align-left" style="margin: 0 auto;">
+  <div class="col-xs-8 col-xs-offset-1">
+    <br>
+      <h4><%= listing.escape('list_title').toUpperCase() %></h4>
+    <hr>
+      <h7><%= listing.escape('list_desc') %></h7>
+    <hr>
+    <br>
+      <h7>Rent this ride for $<%= listing.escape('price') %> per day!</h7>
+    <hr>
+    <br>
+      <h7>Pick it up now at: <%= listing.escape('address') %></h7>
+  </div>
+</div>
