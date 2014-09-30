@@ -27,9 +27,13 @@ div.search-box-index {
   min-height: 750px;
   height: 100%;
   width: 100%;
-  padding: 0;
+  padding: 0 0 0 0;
   border: 3px ridge;
   background: transparent;
+}
+
+div.listings-index .listings {
+  padding: 0 0 0 0;
 }
 
 img.images {
