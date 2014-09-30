@@ -6,8 +6,12 @@ Rails.application.routes.draw do
   resource :session, only: [:new, :create, :destroy]
 
   namespace :api, defaults: { format: :json } do
+
     resources :listings
     resources :requests
+
+    get "user_listings", to: "listings#current_user_listings"
   end
+
 
 end

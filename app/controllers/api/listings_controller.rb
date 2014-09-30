@@ -6,6 +6,14 @@ module Api
       render json: @listing
     end
 
+    def current_user_listings
+      if current_user
+        @listings = current_user.listings
+      end
+      
+      render :user_listings
+    end
+
     def index
       if params["bounds"]
         @listings = Listing.includes(:images).where(
@@ -21,7 +29,6 @@ module Api
       end
 
       render :index
-      # render json: @images
     end
 
     def show
