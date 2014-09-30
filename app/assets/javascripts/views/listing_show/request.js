@@ -22,9 +22,11 @@ FixieBNB.Views.RequestView = Backbone.CompositeView.extend({
 
     console.log("submitted, you still need to navigate to the right page")
     //TODO navigate to your own requests page
+
     request.save({}, {
       success: function () {
-        Backbone.history.navigate("", { trigger: true })
+        Backbone.history.navigate("#/users/dashboard/", { trigger: true })
+        console.log("success")
       }
     })
   },
