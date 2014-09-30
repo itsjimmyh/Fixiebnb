@@ -193,4 +193,4 @@ Image.create!( listing_id: 11, url: "http://i.imgur.com/BwrC1j9.jpg?1?2693" )
 
 Image.create!( listing_id: 12, url: "http://i.imgur.com/9mu2TRE.jpg?1?1122" )
 Image.create!( listing_id: 12, url: "http://i.imgur.com/A4Nnk7R.jpg" )
-Image.create!( listing_id: 12, url: "http://i.imgur.com/jupdM8H.jpg?1?1168" )
+Image.create!( listing_id: 12, url: "http://i.imgur.com/eiigU6k.jpg?1?2861" )
