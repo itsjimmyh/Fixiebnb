@@ -7,14 +7,21 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, 'sync', this.render)
     this.listenTo(this.model, 'sync', this.addCarousel)
     this.listenTo(this.model, 'sync', this.addListingInfo)
+    this.listenTo(this.model, 'sync', this.addFeatureImg)
     this.addRequestThisRide();
+  },
+
+  addFeatureImg: function () {
+    var featureImgView = new FixieBNB.Views.ImgView({
+      model: this.model
+    })
+    this.addSubview("div.feature-img-view", featureImgView)
   },
 
   addCarousel: function () {
     var carouselView = new FixieBNB.Views.CarouselView({
       model: this.model
     })
-
     this.addSubview("div.carousel", carouselView);
   },
 
@@ -22,7 +29,6 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     var requestView = new FixieBNB.Views.RequestView({
       model: this.model
     })
-
     this.addSubview("div.reserve-this-ride", requestView);
   },
 
@@ -30,7 +36,6 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     var listingInfoView = new FixieBNB.Views.ListingInfoView({
       model: this.model
     })
-
     this.addSubview("div.ride-info", listingInfoView)
   },
 

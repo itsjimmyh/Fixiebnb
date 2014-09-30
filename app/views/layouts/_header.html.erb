@@ -19,17 +19,17 @@
             <% current_user.username = 'Guest User' %>
           <% end %>
 
-          <li><a href="#/users/dashboard/<%= current_user.id %>" class="btn btn-special">Welcome <%= current_user.username.titleize %></a></li>
-          <li><%= link_to "Sign Out", session_url, method: :delete, class: "btn btn-special" %></li>
+          <li><a href="#/users/dashboard/" class="btn btn-special grow">Welcome <%= current_user.username.titleize %></a></li>
+          <li><%= link_to "Sign Out", session_url, method: :delete, class: "btn btn-special grow" %></li>
 
         <% else %>
 
-          <li><a href="/session/new" class="btn btn-special">Sign In</a></li>
-          <li><a href="/users/new" class="btn btn-special">Sign Up</a></li>
+          <li><a href="/session/new" class="btn btn-special grow">Sign In</a></li>
+          <li><a href="/users/new" class="btn btn-special grow">Sign Up</a></li>
 
         <% end %>
 
-        <li><a href="#" class="btn btn-special list-ride">List Your Ride</a></li>
+        <li><a href="#" class="btn btn-special list-ride pulse-grow">List Your Ride</a></li>
       </ul>
     </div>
   </div>

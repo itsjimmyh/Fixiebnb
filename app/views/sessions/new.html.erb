@@ -1,12 +1,11 @@
-
 <section
+  class="wobble-skew"
   style="background-image:url('../images/splash.png');">
   <%= render partial: "layouts/header" %>
 
   <article class="col-xs-6 col-xs-offset-3">
     <%= render partial: "layouts/flasherrors" %>
   </article>
-
 <div class="col-xs-6 col-xs-offset-3">
 
   <div class="form-group" id="new-session-user">
@@ -33,15 +32,17 @@
         value="123456"
         onclick="this.value= ''">
 
-      <!-- <input type="submit" value="Sign In!" class="btn btn-primary col-xs-12" id="static-sign-in"> -->
-      <input
-        type="submit"
-        value="Guest Login!"
-        class="btn btn-success col-xs-6 col-xs-offset-3">
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="row">
+        <div class="col-xs-12 col-xs-offset-4">
+          <input
+            type="submit"
+            value="Guest Login!"
+            class="guest-login btn btn-success pulse-grow">
+        </div>
+      </div>
     </form>
   </div>
 </div>
 </section>
-
 <%= render partial: "layouts/footer" %>
