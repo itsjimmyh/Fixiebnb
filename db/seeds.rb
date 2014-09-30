@@ -19,6 +19,10 @@ User.create!( username: "fixed girl taiwan", password: "123456" )
 User.create!( username: "richard", password: "123456" )
 User.create!( username: "christine", password: "123456" )
 User.create!( username: "andrew", password: "123456" )
+User.create!( username: "yen", password: "123456" )
+User.create!( username: "jessica", password: "123456" )
+User.create!( username: "amy", password: "123456" )
+User.create!( username: "julie", password: "123456" )
 
 Listing.create!(
   user_id: 1,
@@ -146,6 +150,45 @@ Listing.create!(
   zip: 95113
 )
 
+Listing.create!(
+  user_id: 13,
+  list_title: "Yen's Silver Ride",
+  list_desc: "Hello.  This is my spare bike.  Been busy traveling, so this has been hanging on the wall.  Take it out for some exercise!",
+  price: 30,
+  address: "12220 Venice Blvd, Los Angeles",
+  city: "Los Angelos",
+  zip: 90066
+)
+
+Listing.create!(
+  user_id: 14,
+  list_title: "Jessica's Ride",
+  list_desc: "Hello.  This is my spare bike.  Been busy traveling to LA for work.  Hanging on the wall.  Take it out for some exercise!",
+  price: 30,
+  address: "1 Washington Sq, San Jose, CA",
+  city: "San Jose",
+  zip: 95192
+)
+
+Listing.create!(
+  user_id: 15,
+  list_title: "Amy's Ride",
+  list_desc: "Hello.  This is my spare bike.  Been busy traveling to LA for work.  Hanging on the wall.  Take it out for some exercise!",
+  price: 30,
+  address: "19620 Stevens Creek Blvd #180, Cupertino, CA",
+  city: "San Jose",
+  zip: 95014
+)
+
+Listing.create!(
+  user_id: 16,
+  list_title: "Julie's Ride",
+  list_desc: "Hello.  This is my spare bike.  Been busy traveling to LA for work.  Hanging on the wall.  Take it out for some exercise!",
+  price: 30,
+  address: "940 Great Mall Dr, Milpitas, CA",
+  city: "Milpitas",
+  zip: 95035
+)
 
 Image.create!( listing_id: 1, url: "http://i.imgur.com/FLs46Vs.jpg" )
 Image.create!( listing_id: 1, url: "http://i.imgur.com/HCdeU3z.jpg?1?3656" )
@@ -193,4 +236,20 @@ Image.create!( listing_id: 11, url: "http://i.imgur.com/BwrC1j9.jpg?1?2693" )
 
 Image.create!( listing_id: 12, url: "http://i.imgur.com/9mu2TRE.jpg?1?1122" )
 Image.create!( listing_id: 12, url: "http://i.imgur.com/A4Nnk7R.jpg" )
-Image.create!( listing_id: 12, url: "http://i.imgur.com/eiigU6k.jpg?1?2861" )
+Image.create!( listing_id: 12, url: "http://i.imgur.com/eiigU6k.jpg?2?1749" )
+
+Image.create!( listing_id: 13, url: "http://i.imgur.com/8PVaehl.jpg?1?8019" )
+Image.create!( listing_id: 13, url: "http://i.imgur.com/8oneHeX.jpg?1?6924" )
+Image.create!( listing_id: 13, url: "http://i.imgur.com/L1kokwL.jpg?1?5470" )
+
+Image.create!( listing_id: 14, url: "http://i.imgur.com/Slthm0H.jpg" )
+Image.create!( listing_id: 14, url: "http://i.imgur.com/3sK0nYw.jpg" )
+Image.create!( listing_id: 14, url: "http://i.imgur.com/o9EEYPH.jpg" )
+
+Image.create!( listing_id: 15, url: "http://i.imgur.com/kPWV78G.jpg" )
+Image.create!( listing_id: 15, url: "http://i.imgur.com/Jq4hKPN.jpg?1?1142" )
+Image.create!( listing_id: 15, url: "http://i.imgur.com/CuY4o5E.jpg?1?3622" )
+
+Image.create!( listing_id: 16, url: "http://i.imgur.com/4lDP0ki.jpg" )
+Image.create!( listing_id: 16, url: "http://i.imgur.com/AlVbeym.jpg" )
+Image.create!( listing_id: 16, url: "http://i.imgur.com/CuY4o5E.jpg?1?3622" )
