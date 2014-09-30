@@ -1,21 +1,6 @@
 FixieBNB.Models.Listing = Backbone.Model.extend({
   urlRoot: 'api/listings',
 
-  // requests: function () {
-  //   this._requests = this._requests ||
-  //     new FixieBNB.Collections.Requests([], { reqeust: this });
-  //   return this._requests;
-  // },
-
-  // parse: function(response) {
-  //
-  //   if (response.requests) {
-  //     this.requests().set(response.requests, {parse: true});
-  //     delete response.requests;
-  //   }
-  //   return response;
-  // }
-
   parse: function (response) {
     if (response.feature_img && response.feature_img.length >= 1) {
       this.set("feature_img", response.feature_img[0].url);
