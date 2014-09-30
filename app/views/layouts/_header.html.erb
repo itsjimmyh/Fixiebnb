@@ -12,8 +12,6 @@
       </div>
     </div>
 
-
-
     <div class="collapse navbar-collapse" id="collapse-sign-in">
       <ul class="nav navbar-nav navbar-right">
         <% if signed_in? %>
@@ -25,12 +23,8 @@
 
         <% else %>
 
-          <li>
-            <a href="/session/new" class="btn btn-special">Sign In</a>
-          </li>
-          <li>
-            <a href="/users/new" class="btn btn-special">Sign Up</a>
-          </li>
+          <li><a href="/session/new" class="btn btn-special">Sign In</a></li>
+          <li><a href="/users/new" class="btn btn-special">Sign Up</a></li>
 
         <% end %>
 
