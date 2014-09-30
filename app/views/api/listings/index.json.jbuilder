@@ -3,4 +3,6 @@ json.array! @listings do |listing|
 
   json.feature_img listing.images, :url
 
+  json.images listing.images, :url
+
 end
