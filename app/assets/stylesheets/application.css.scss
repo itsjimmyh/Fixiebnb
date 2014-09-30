@@ -83,19 +83,6 @@ div.home-top {
   border-bottom-left-radius: 50;
 }
 
-// div.row {
-//   margin-left: 0px;
-// }
-
-.navbar-header {
-  background: transparent;
-  border-bottom: none;
-  // z-index: 1000;
-  top: 5px;
-  width: 100%;
-  position: absolute;
-}
-
 .clearfix:after {
   content: " ";
   visibility: hidden;
@@ -104,47 +91,25 @@ div.home-top {
   clear: both;
 }
 
-div#collapse-sign-in.collapse.navbar-collapse {
-  padding: 10px 5px 5px 10px;
-  width: 90%;
-}
-
 body > section {
   min-height: 600px;
-  // height: 100%;
   width: 100%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  // margin-left: auto;
-  // margin-right: auto;
 }
 
 div.navbar-brand {
   font-family: "Bello", sans-serif;
   font-size: 25px;
-  font-weight: bold;
-  // height: 1050px;
-  // color: #fff;
   color: #aaa;
-  padding: 23px 0 30px 10px;
-  float: left;
-}
-
-.navbar {
-  padding-right: 10px;
-  // background: transparent;
 }
 
 .navbar.navbar-default {
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
-  margin: 0 10px 0 0;
+  margin: 0 0 0 0;
   background-color: transparent;
   border: none;
-  // margin: 0 0 0 0;
-  // height: 100%;
 }
 
 
@@ -167,25 +132,26 @@ a.btn.btn-special {
 }
 
 a.btn.btn-special.list-ride {
+  margin: 0 auto;
   background: #007a87;
   // background: transparent;
   font-size: 14px;
   font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding: 10px 25px 10px 25px;
-  margin-left: 15px;
+  padding: 7px 25px 10px 22px;
+  margin-top: 6px;
   color: white;
-  // color: black;
-  // border-bottom-color: #004f58;
+  border-bottom-color: #004f58;
   border: 1px solid;
   text-decoration: none;
+  width: 135px;
+  height: 35px;
 }
 
 .footer {
   color: white;
   text-decoration: underline;
-  // background-image: url(../images/footer.png);
-  // background: grey;
-  padding: 0 0 10px 0;
+  background-image: url(../images/footer.png);
+  padding: 0 0 0 0;
   height: 210px;
   width: 100%;
   bottom: 0;
@@ -194,6 +160,7 @@ a.btn.btn-special.list-ride {
 .footer a {
   color: white;
 }
+
 
 button.language {
   margin: 0 0 2px 0;
