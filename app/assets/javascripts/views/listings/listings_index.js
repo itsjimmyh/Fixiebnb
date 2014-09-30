@@ -6,7 +6,6 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.city = options.city
-    // this.collection.each(this.addListingView.bind(this))
 
     this.listenTo(this.collection, "add", this.addListingView)
     this.listenTo(this.collection, "remove", this.removeListing)

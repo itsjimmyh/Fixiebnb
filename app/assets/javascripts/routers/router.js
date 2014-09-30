@@ -12,7 +12,12 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
   },
 
   userDashBoard: function () {
-    
+    FixieBNB.Collections.listings.fetch();
+    var userView = new FixieBNB.Views.UserView({
+      collection: FixieBNB.Collections.listings
+    })
+
+    this._swapView(userView);
   },
 
   home: function () {

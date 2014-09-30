@@ -94,5 +94,5 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       }.bind(this)
     })
 
-  }, 2000)
+  }, 3000)
 });
