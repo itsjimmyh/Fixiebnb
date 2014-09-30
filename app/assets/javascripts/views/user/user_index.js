@@ -1,15 +1,42 @@
 FixieBNB.Views.UserView = Backbone.CompositeView.extend({
 
   template: JST["users/dashboard"],
+  profileTemplate: JST["users/profile"],
+  listingsTemplate: JST["users/listings"],
+  requestsTemplate: JST["users/requests"],
 
   initialize: function () {
-    console.log("usersDashBort");
     this.addSideBar();
     this.addUserContent();
+    this.listenTo(this.sideBarView, "profileView", this.profileView);
+    this.listenTo(this.sideBarView, "myListings", this.listingsView);
+    this.listenTo(this.sideBarView, "myRequests", this.requestsView);
+  },
+
+  profileView: function () {
+    var $userContent = $('.user-content')
+    $userContent.empty();
+    var profileContent = this.profileTemplate({})
+    $userContent.html(profileContent)
+  },
+
+  listingsView: function () {
+    var $userContent = $('.user-content')
+    $userContent.empty();
+    var listingsContent = this.listingsTemplate({})
+    $userContent.html(listingsContent);
+  },
+
+  requestsView: function () {
+    var $userContent = $('.user-content')
+    $userContent.empty();
+    var requestsTemplate = this.requestsTemplate({})
+    $userContent.html(requestsTemplate);
   },
 
   addSideBar: function () {
     var sideBarView = new FixieBNB.Views.SideBar({})
+    this.sideBarView = sideBarView;
     this.addSubview("div.side-bar", sideBarView)
   },
 
@@ -26,6 +53,6 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;
-  }
+  },
 
 })
