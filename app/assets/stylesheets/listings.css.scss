@@ -33,7 +33,7 @@ div.search-box-index {
 }
 
 div.listings-index .listings {
-  padding: 0 0 0 0;
+  // padding: 0 0 0 0;
 }
 
 img.images {
@@ -79,17 +79,18 @@ div #map-canvas {
 }
 
 div.infoBox-Price-Container {
+  margin: 0 auto;
   visibility: visible;
   z-index: 350;
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.6);
+  // background-color: rgba(0, 0, 0, 0.6);
 }
 
 div.infoBox-Price {
   padding: 1px 0 0 1px;
-  color: white;
+  // color: white;
 }
 
 div.item.active > img {

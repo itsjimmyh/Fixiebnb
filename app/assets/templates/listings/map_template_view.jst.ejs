@@ -1,11 +1,17 @@
-<a href="/#/listing/<%= listing.escape('id') %>"><%= listing.escape("list_title") %></a>
+<div class="container-fluid">
+  <div class="row infoBox img-responsive">
+    <a href="/#/listing/<%= listing.escape('id') %>">
+      <img class="img-responsive img-thumbnail wobble-skew" src="<%= listing.get('feature_img') %>"></img>
+    </a>
+  </div>
+<br>
+  <div class="row pull-left">
+    <a href="/#/listing/<%= listing.escape('id') %>"><%= listing.escape("list_title").toUpperCase() %></a>
 
-<div class="infoBox img-responsive">
-  <img class="img-responsive img-thumbnail wobble-skew" src="<%= listing.get('feature_img') %>"></img>
-</div>
-
-<div class="infoBox-Price-Container">
-  <div class="infoBox-Price">
-    <strong>Rent This Ride For $<%= listing.escape("price") %> A Day</strong>
+    <div class="infoBox-Price-Container">
+      <div class="infoBox-Price">
+        <strong>Rent This Ride For $<%= listing.escape("price") %> A Day</strong>
+      </div>
+    </div>
   </div>
 </div>
