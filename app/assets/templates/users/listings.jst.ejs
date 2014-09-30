@@ -3,9 +3,12 @@
 
   <div class="container-fluid">
     <div class="row" style="position: relative;">
-      <div class="col-xs-6" style="width: 400px;">
-        <img src="<%= images[0].escape('feature_img') %>" class="img-responsive"></img>
-      </div>
-
+      <% images.forEach(function (image) { %>
+        <div class="col-xs-6" style="width: 400px;">
+          <a href="/#/listing/<%= image.escape('id') %>">
+            <img src="<%= image.escape('feature_img') %>" class="img-responsive"></img>
+          </a>
+        </div>
+      <% }) %>
     </div>
 </div>

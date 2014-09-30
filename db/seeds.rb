@@ -190,6 +190,36 @@ Listing.create!(
   zip: 95035
 )
 
+Listing.create!(
+  user_id: 1,
+  list_title: "guests second concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 45,
+  address: "3251 20th Ave, San Francisco, CA",
+  city: "San Francisco",
+  zip: 94132
+)
+
+Listing.create!(
+  user_id: 1,
+  list_title: "guests third concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 55,
+  address: "3667 Las Vegas Blvd S, Las Vegas",
+  city: "Las Vegas",
+  zip: 89109
+)
+
+Listing.create!(
+  user_id: 1,
+  list_title: "guests fourth concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 65,
+  address: " 3121 S Las Vegas Blvd, Las Vegas",
+  city: "Las Vegas",
+  zip: 89109
+)
+
 Image.create!( listing_id: 1, url: "http://i.imgur.com/FLs46Vs.jpg" )
 Image.create!( listing_id: 1, url: "http://i.imgur.com/HCdeU3z.jpg?1?3656" )
 Image.create!( listing_id: 1, url: "http://i.imgur.com/nQZfQaU.jpg" )
@@ -253,3 +283,15 @@ Image.create!( listing_id: 15, url: "http://i.imgur.com/CuY4o5E.jpg?1?3622" )
 Image.create!( listing_id: 16, url: "http://i.imgur.com/4lDP0ki.jpg" )
 Image.create!( listing_id: 16, url: "http://i.imgur.com/AlVbeym.jpg" )
 Image.create!( listing_id: 16, url: "http://i.imgur.com/CuY4o5E.jpg?1?3622" )
+
+Image.create!( listing_id: 17, url: "http://i.imgur.com/ln7jTtq.jpg?1?9052" )
+Image.create!( listing_id: 17, url: "http://i.imgur.com/8V3KA2a.jpg?1?3031" )
+Image.create!( listing_id: 17, url: "http://i.imgur.com/doUNroR.jpg?1?4168" )
+
+Image.create!( listing_id: 18, url: "http://i.imgur.com/pgO9gdL.jpg?1?9628" )
+Image.create!( listing_id: 18, url: "http://i.imgur.com/ln7jTtq.jpg?1?9052" )
+Image.create!( listing_id: 18, url: "http://i.imgur.com/wKZTwsq.jpg?1?3979" )
+
+Image.create!( listing_id: 19, url: "http://i.imgur.com/PoQJnnm.jpg?1?6507" )
+Image.create!( listing_id: 19, url: "http://i.imgur.com/Vh9TcqN.jpg?1?1660" )
+Image.create!( listing_id: 19, url: "http://i.imgur.com/i4e9hsF.jpg?1?7839" )
