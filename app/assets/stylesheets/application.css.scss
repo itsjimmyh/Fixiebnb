@@ -172,6 +172,11 @@ button.language {
   margin: 0 0 2px 0;
 }
 
+button.usd {
+  background-color: #007a87;
+  border-color: #007a87
+}
+
 #static-sign-in {
   margin-bottom: 1px;
 }
@@ -513,8 +518,8 @@ button.language {
   z-index: -1;
   content: 'Search Anywhere! ';
   border-style: solid;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: 1.5s;
+  transition-duration: 1.5s;
   -webkit-transition-property: left;
   transition-property: left;
   top: calc(50% - 10px);
@@ -523,6 +528,14 @@ button.language {
   border-color: transparent #e1e1e1 transparent transparent;
 }
 
-.bubble-left:hover:before, .bubble-left:focus:before, .bubble-left:active:before {
-  left: -500px;
+// .bubble-left:hover:before, .bubble-left:focus:before, .bubble-left:active:before {
+//   left: -500px;
+// }
+
+.bubble-left:hover:before {
+  left: -25px;
+}
+
+.bubble-left:active:before {
+  left: -5000px;
 }

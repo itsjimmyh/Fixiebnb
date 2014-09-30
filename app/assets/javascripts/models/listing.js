@@ -17,6 +17,6 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
     this.set("price", response.price);
     this.set("address", response.address);
 
-    //TODO include city for search
+    //TODO include city by search
   },
 })

@@ -21,9 +21,22 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
   },
 
   listingsView: function () {
+    console.log(this.collection + " from listingsView")
+    var arrImages = [];
+
+    this.collection.each(function (listing) {
+      arrImages.push(listing)
+    })
+
+    console.log(arrImages);
+
+    debugger
+
     var $userContent = $('.user-content')
     $userContent.empty();
-    var listingsContent = this.listingsTemplate({})
+    var listingsContent = this.listingsTemplate({
+      images: arrImages
+    })
     $userContent.html(listingsContent);
   },
 
