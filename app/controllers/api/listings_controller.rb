@@ -7,11 +7,10 @@ module Api
     end
 
     def current_user_listings
-      if current_user
-        @listings = current_user.listings
+      if current_user && current_user.listings
+        @listings = current_user.listings.includes(:images)
       end
-      
-      render :user_listings
+      render :index
     end
 
     def index

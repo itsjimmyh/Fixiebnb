@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :listings
     resources :requests
 
-    get "user_listings", to: "listings#current_user_listings"
+    get "current_user_listings", to: "listings#current_user_listings"
   end
 
 
