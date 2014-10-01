@@ -22,6 +22,7 @@ form#search_index_form {
   margin: 0 auto;
   padding: 5px 0 5px 0;
   border: 2px outset;
+  white-space: nowrap;
 }
 
 div.search-box-index {
@@ -38,8 +39,9 @@ div.search-box-index {
 
 .listings-index {
   min-height: 553px;
+  // max-height: px;
   height: 100%;
-  width: 100%;
+  // min-width: 500px;
   padding: 0 0 0 0;
   border: 3px ridge;
   background: transparent;
