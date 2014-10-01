@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
 
     resources :listings
-    resources :requests
+    resources :requests, only: [:create, :destroy]
 
     get "current_user_listings", to: "listings#current_user_listings"
   end

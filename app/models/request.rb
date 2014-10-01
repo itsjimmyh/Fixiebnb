@@ -30,9 +30,12 @@ class Request < ActiveRecord::Base
 
   def approve!
     raise "not pending" unless self.status == "PENDING"
-    self.status = "APPROVED"
-    self.save!
-    overlapping_pending_requests.update_all(status: "DENIED")
+
+    transaction do
+      self.status = "APPROVED"
+      self.save!
+      overlapping_pending_requests.update_all(status: "DENIED")
+    end
   end
 
   def approved?
@@ -61,12 +64,10 @@ class Request < ActiveRecord::Base
   def overlapping_requests
     Request
     .where("(:id IS NULL) OR (id != :id)", id: self.id)
-    .where(user_id: user_id)
+    .where(listing_id: listing_id)
     .where(<<-SQL, start_date: start_date, end_date: end_date)
-      ((start_date BETWEEN :start_date AND :end_date) OR
-        (end_date BETWEEN :start_date AND :end_date)) OR
-      ((:start_date BETWEEN start_date AND end_date) OR
-        (:end_date BETWEEN start_date AND end_date))
+      ((start_date < :end_date) AND
+      (end_date > :start_date))
     SQL
   end
 

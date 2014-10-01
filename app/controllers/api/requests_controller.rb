@@ -1,13 +1,5 @@
 module Api
   class RequestsController < ApplicationController
-    def index
-      
-    end
-
-    def new
-      @request = Request.new
-      render json: @request
-    end
 
     def create
       @request = current_user.requests.new(request_params)
