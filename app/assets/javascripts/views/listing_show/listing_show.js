@@ -8,6 +8,7 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
     this.listenTo(this.model, 'sync', this.addListingInfo)
     this.listenTo(this.model, 'sync', this.addFeatureImg)
     this.addRequestThisRide();
+    this.addFooter();
   },
 
   addFeatureImg: function () {
@@ -36,6 +37,11 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
       model: this.model
     })
     this.addSubview("div.ride-info", listingInfoView)
+  },
+
+  addFooter: function () {
+    var footerView = new FixieBNB.Views.FooterView({})
+    this.addSubview("div.show-footer", footerView);
   },
 
   render: function () {

@@ -6,6 +6,7 @@ FixieBNB.Views.HomeView = Backbone.CompositeView.extend({
     this.listenTo(this.collection, 'sync', this.addCenter);
     this.listenTo(this.collection, 'sync', this.render);
     this.addTop();
+    this.addFooter();
   },
 
   addTop: function () {
@@ -23,6 +24,11 @@ FixieBNB.Views.HomeView = Backbone.CompositeView.extend({
       collection: arrayListings
     });
     this.addSubview("div.home-center", centerView);
+  },
+
+  addFooter: function () {
+    var footerView = new FixieBNB.Views.FooterView({})
+    this.addSubview("div.home-footer", footerView);
   },
 
   render: function () {
