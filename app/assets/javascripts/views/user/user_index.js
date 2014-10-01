@@ -10,7 +10,7 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
     this.currentUserRequests = options.requests;
     this.addSideBar();
     this.addUserContent();
-    this.addFooter();
+    // this.addFooter();
     this.listenTo(this.sideBarView, "profileView", this.profileView);
     this.listenTo(this.sideBarView, "myListings", this.listingsView);
     this.listenTo(this.sideBarView, "myRequests", this.requestsView);
@@ -40,17 +40,16 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
   },
 
   requestsView: function () {
-    var arrImages = [];
-    console.log(this.currentUserRequests);
-    this.currentUserRequests.each(function (listing) {
-      arrImages.push(listing)
+    var arrModels = [];
+    this.currentUserRequests.each(function (listingModel) {
+      arrModels.push(listingModel)
     })
 
     var $userContent = $('.user-content')
     $userContent.empty();
 
     var requestsTemplate = this.requestsTemplate({
-      images: arrImages
+      models: arrModels
     })
 
     $userContent.html(requestsTemplate);

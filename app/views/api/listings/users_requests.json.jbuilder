@@ -1,4 +1,4 @@
 json.array! @listings do |listing|
-  json.extract! listing, :id
-  json.images listing.images, :url
+  json.extract! listing, :listing_id
+  json.images listing.images[0], :url
 end

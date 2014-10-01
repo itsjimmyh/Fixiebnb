@@ -2,9 +2,10 @@
   <div class='row float-left'>
     <h2>Your Requests</h2>
   </div>
-    <% images.forEach(function (image) { %>
-      <a href="/#/listing/<%= image.escape('id') %>">
-        <img src="<%= image.escape('feature_img') %>" class="img-responsive img-thumbnail" id="your-listings"></img>
+    <% models.forEach(function (model) { %>
+      <a href="/#/listing/<%= model.get('listing_id') %>">
+        <%= console.log(model) %>
+        <img src="<%= model.get('images').url %>" class="img-responsive img-thumbnail" id="your-listings" style="height: 500px"></img>
       </a>
     <% }) %>
 </div>
