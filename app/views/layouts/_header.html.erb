@@ -19,7 +19,7 @@
             <% current_user.username = 'Guest User' %>
           <% end %>
 
-          <li><a href="#/users/dashboard/" class="btn btn-special grow">Welcome <%= current_user.username.titleize %></a></li>
+          <li><a href="#/users/dashboard/" class="btn btn-special grow" id="welcome-username">Welcome <%= current_user.username.titleize %></a></li>
           <li><%= link_to "Sign Out", session_url, method: :delete, class: "btn btn-special grow" %></li>
 
         <% else %>

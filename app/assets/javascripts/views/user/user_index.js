@@ -10,6 +10,7 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
     this.currentUserRequests = options.requests;
     this.addSideBar();
     this.addUserContent();
+    this.profileView();
     // this.addFooter();
     this.listenTo(this.sideBarView, "profileView", this.profileView);
     this.listenTo(this.sideBarView, "myListings", this.listingsView);
