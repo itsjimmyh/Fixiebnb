@@ -12,7 +12,6 @@ FixieBNB.Views.TopView = Backbone.CompositeView.extend({
   },
 
   submit: function (event) {
-    console.log("ZOMBIEVIEWSSS??? no if only shows up once")
     event.preventDefault();
     var input = $('input[name]').val();
     Backbone.history.navigate("#/search/index/" + input, { trigger: true })

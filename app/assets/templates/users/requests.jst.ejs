@@ -3,7 +3,7 @@
     <h2>Your Requests</h2>
   </div>
     <% images.forEach(function (image) { %>
-      <a href="/#/listing/requests/<%= image.escape('id') %>">
+      <a href="/#/listing/<%= image.escape('id') %>">
         <img src="<%= image.escape('feature_img') %>" class="img-responsive img-thumbnail" id="your-listings"></img>
       </a>
     <% }) %>

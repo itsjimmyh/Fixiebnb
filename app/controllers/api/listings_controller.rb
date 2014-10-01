@@ -14,10 +14,10 @@ module Api
     end
 
     def current_user_requests
-      if current_user && current_user.requests
+      if current_user
         @listings = current_user.requests.includes(:images)
       end
-      render :index
+      render :users_requests
     end
 
     def index
