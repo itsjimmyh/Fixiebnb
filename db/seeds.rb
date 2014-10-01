@@ -215,9 +215,39 @@ Listing.create!(
   list_title: "guests fourth concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 65,
-  address: " 3121 S Las Vegas Blvd, Las Vegas",
+  address: "3121 S Las Vegas Blvd, Las Vegas",
   city: "Las Vegas",
   zip: 89109
+)
+
+Listing.create!(
+  user_id: 1,
+  list_title: "guests fifth concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "1454 46th Ave, San Francisco",
+  city: "Las Vegas",
+  zip: 94122
+)
+
+Listing.create!(
+  user_id: 1,
+  list_title: "guests sixth concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "2257 Market St, San Francisco, CA",
+  city: "San Francisco",
+  zip: 94114
+)
+
+Listing.create!(
+  user_id: 1,
+  list_title: "guests seventh concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "145 Jefferson St #400, San Francisco",
+  city: "San Francisco",
+  zip: 94133
 )
 
 Image.create!( listing_id: 1, url: "http://i.imgur.com/FLs46Vs.jpg" )
@@ -295,3 +325,15 @@ Image.create!( listing_id: 18, url: "http://i.imgur.com/wKZTwsq.jpg?1?3979" )
 Image.create!( listing_id: 19, url: "http://i.imgur.com/PoQJnnm.jpg?1?6507" )
 Image.create!( listing_id: 19, url: "http://i.imgur.com/Vh9TcqN.jpg?1?1660" )
 Image.create!( listing_id: 19, url: "http://i.imgur.com/i4e9hsF.jpg?1?7839" )
+
+Image.create!( listing_id: 20, url: "http://i.imgur.com/u6pAo6A.jpg?1?2312" )
+Image.create!( listing_id: 20, url: "http://i.imgur.com/xf6agx8.jpg?1?5638" )
+Image.create!( listing_id: 20, url: "http://i.imgur.com/Nrzg1L5.jpg" )
+
+Image.create!( listing_id: 21, url: "http://i.imgur.com/ao031TK.jpg?1?6180" )
+Image.create!( listing_id: 21, url: "http://i.imgur.com/IHexozw.jpg" )
+Image.create!( listing_id: 21, url: "http://i.imgur.com/8GGAecb.jpg?1?6405" )
+
+Image.create!( listing_id: 22, url: "http://i.imgur.com/OIHunHA.jpg?1?5045" )
+Image.create!( listing_id: 22, url: "http://i.imgur.com/Uz7NkhP.jpg?1?9551" )
+Image.create!( listing_id: 22, url: "http://i.imgur.com/2q5aDOm.jpg?1?4731" )
