@@ -5,4 +5,6 @@ json.array! @listings do |listing|
 
   json.images listing.images, :url
 
+  json.requests listing.requests
+
 end

@@ -1,19 +1,13 @@
 <div class="container-fluid" style="width: 300px;">
-  <div class='text-center float-left'>
+  <div class='row float-left'>
     <h2>Your Listings</h2>
-
+  </div>
     <div class="row" style="position: relative; height: 300px; width: 100%;">
       <% images.forEach(function (image) { %>
-
-        <div class="col-xs-6" style="height: 100%; width: inherit;">
-          <a href="/#/listing/<%= image.escape('id') %>">
-        
+          <a href="/#/listing/requests/<%= image.escape('id') %>">
             <img src="<%= image.escape('feature_img') %>" class="img-responsive img-thumbnail float-left"></img>
-
           </a>
-        </div>
 
       <% }) %>
     </div>
-  </div>
 </div>

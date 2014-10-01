@@ -18,7 +18,6 @@ FixieBNB.Views.SideBar = Backbone.CompositeView.extend({
   myListings: function (event) {
     event.preventDefault();
     this.trigger("myListings");
-    console.log("myListings")
   },
 
   myRequests: function (event) {

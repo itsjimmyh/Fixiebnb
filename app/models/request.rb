@@ -82,8 +82,7 @@ class Request < ActiveRecord::Base
     return if self.denied?
 
     unless overlapping_approved_requests.empty?
-      errors[:base] <<
-        "Request conflicts with existing approved request"
+      errors[:base] << "Request conflicts with existing approved request"
     end
   end
 end

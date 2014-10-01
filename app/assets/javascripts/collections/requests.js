@@ -1,8 +1,8 @@
 FixieBNB.Collections.ListingRequests = Backbone.Collection.extend({
-  model: FixieBNB.Models.Reservation,
+  model: FixieBNB.Models.Request,
 
   url: function () {
-    return this.request.url() + "/comments";
+    return this.request.url() + "/requests";
   },
 
   initialize: function (models, options) {

@@ -1,5 +1,9 @@
 module Api
   class RequestsController < ApplicationController
+    def index
+      
+    end
+
     def new
       @request = Request.new
       render json: @request
@@ -7,7 +11,7 @@ module Api
 
     def create
       @request = current_user.requests.new(request_params)
-      
+
       if @request.save
         render json: @request
       else
