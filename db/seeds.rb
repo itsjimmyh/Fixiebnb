@@ -201,8 +201,8 @@ Listing.create!(
 )
 
 Listing.create!(
-  user_id: 1,
-  list_title: "guests third concept",
+  user_id: 9,
+  list_title: "jimmy's spares",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 55,
   address: "3667 Las Vegas Blvd S, Las Vegas",
@@ -211,8 +211,8 @@ Listing.create!(
 )
 
 Listing.create!(
-  user_id: 1,
-  list_title: "guests fourth concept",
+  user_id: 9,
+  list_title: "jimmy's second concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 65,
   address: "3121 S Las Vegas Blvd, Las Vegas",
@@ -221,8 +221,8 @@ Listing.create!(
 )
 
 Listing.create!(
-  user_id: 1,
-  list_title: "guests fifth concept",
+  user_id: 9,
+  list_title: "jimmy's third concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 85,
   address: "1454 46th Ave, San Francisco",
@@ -231,8 +231,8 @@ Listing.create!(
 )
 
 Listing.create!(
-  user_id: 1,
-  list_title: "guests sixth concept",
+  user_id: 9,
+  list_title: "guests fourth concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 85,
   address: "2257 Market St, San Francisco, CA",
@@ -241,8 +241,8 @@ Listing.create!(
 )
 
 Listing.create!(
-  user_id: 1,
-  list_title: "guests seventh concept",
+  user_id: 9,
+  list_title: "guests fifth concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 85,
   address: "145 Jefferson St #400, San Francisco",

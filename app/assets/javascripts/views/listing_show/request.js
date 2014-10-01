@@ -20,13 +20,18 @@ FixieBNB.Views.RequestView = Backbone.CompositeView.extend({
       end_date: endDate
     })
 
-    console.log("submitted, you still need to navigate to the right page")
+    console.log("submitted from Listing_show, you still need to navigate to the right page")
     //TODO navigate to your own requests page
 
     request.save({}, {
       success: function () {
         Backbone.history.navigate("#/users/dashboard/", { trigger: true })
-        console.log("success")
+        alert("request successful")
+      },
+      error: function () {
+        Backbone.history.navigate("#/users/dashboard/", { trigger: true} )
+        alert("request overlaps with approved request or it's your own bike")
+        //TODO render an error on the screen
       }
     })
   },
