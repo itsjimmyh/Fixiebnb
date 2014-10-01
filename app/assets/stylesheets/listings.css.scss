@@ -6,14 +6,18 @@
 //   list-style-type: none;
 // }
 
+
+
 .listings {
-  height: 698px;
+  max-height: 553px;
   overflow-y: scroll;
+  padding: 0 0 0 0;
 }
 
-.listings-index-search-bar {
-  height: 100px;
+form#search_form {
   margin: 0 auto;
+  padding: 5px 0 5px 0;
+  border: 2px outset;
 }
 
 div.search-box-index {
@@ -29,7 +33,7 @@ div.search-box-index {
 }
 
 .listings-index {
-  min-height: 750px;
+  min-height: 553px;
   height: 100%;
   width: 100%;
   padding: 0 0 0 0;
@@ -47,6 +51,8 @@ img.listing-image {
 div.map {
   padding: 0;
   border: 2px outset;
+  height: 617px;
+  overflow: hidden;
 }
 
 div #map-canvas {
