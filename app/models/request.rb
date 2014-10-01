@@ -27,6 +27,8 @@ class Request < ActiveRecord::Base
     primary_key: :id
   )
 
+  has_many :images, through: :listing
+
 
   def approve!
     raise "not pending" unless self.status == "PENDING"

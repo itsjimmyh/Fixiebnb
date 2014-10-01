@@ -5,7 +5,8 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
   listingsTemplate: JST["users/listings"],
   requestsTemplate: JST["users/requests"],
 
-  initialize: function () {
+  initialize: function (options) {
+    this.currentUserListings = options.listings;
     this.addSideBar();
     this.addUserContent();
     this.listenTo(this.sideBarView, "profileView", this.profileView);
@@ -22,10 +23,10 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
 
   listingsView: function () {
     var arrImages = [];
-    this.collection.each(function (listing) {
+    this.currentUserListings.each(function (listing) {
       arrImages.push(listing)
     })
-    
+
     var $userContent = $('.user-content');
     $userContent.empty();
 

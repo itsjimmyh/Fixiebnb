@@ -1,4 +1,10 @@
-<div class='span8 main text-center'>
-  <h2>User's Requests</h2>
-  <p>user's requests<p>
+<div class="container-fluid">
+  <div class='row float-left'>
+    <h2>Your Requests</h2>
+  </div>
+    <% images.forEach(function (image) { %>
+      <a href="/#/listing/requests/<%= image.escape('id') %>">
+        <img src="<%= image.escape('feature_img') %>" class="img-responsive img-thumbnail" id="your-listings"></img>
+      </a>
+    <% }) %>
 </div>

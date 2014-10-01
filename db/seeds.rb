@@ -232,7 +232,7 @@ Listing.create!(
 
 Listing.create!(
   user_id: 9,
-  list_title: "guests fourth concept",
+  list_title: "jimmy's fourth concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 85,
   address: "2257 Market St, San Francisco, CA",
@@ -242,7 +242,7 @@ Listing.create!(
 
 Listing.create!(
   user_id: 9,
-  list_title: "guests fifth concept",
+  list_title: "jimmy's fifth concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 85,
   address: "145 Jefferson St #400, San Francisco",
@@ -250,9 +250,39 @@ Listing.create!(
   zip: 94133
 )
 
-Image.create!( listing_id: 1, url: "http://i.imgur.com/FLs46Vs.jpg" )
-Image.create!( listing_id: 1, url: "http://i.imgur.com/HCdeU3z.jpg?1?3656" )
-Image.create!( listing_id: 1, url: "http://i.imgur.com/nQZfQaU.jpg" )
+Listing.create!(
+  user_id: 9,
+  list_title: "jimmy's sixth concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "420 Mason St, San Francisco",
+  city: "San Francisco",
+  zip: 94102
+)
+
+Listing.create!(
+  user_id: 9,
+  list_title: "jimmy's seventh concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "980 Market St, San Francisco, CA",
+  city: "San Francisco",
+  zip: 94102
+)
+
+Listing.create!(
+  user_id: 16,
+  list_title: "julie's seventh concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "1631 E Capitol Expy #101, San Jose",
+  city: "San Jose",
+  zip: 95121
+)
+
+Image.create!( listing_id: 1, url: "http://i.imgur.com/OUTwK5G.jpg?1?5610" )
+Image.create!( listing_id: 1, url: "http://i.imgur.com/GrMhkd4.jpg?1?6240" )
+Image.create!( listing_id: 1, url: "http://i.imgur.com/EIez2hv.jpg?1?6895" )
 
 Image.create!( listing_id: 2, url: "http://i.imgur.com/r5jWeU7.jpg?1?1382" )
 Image.create!( listing_id: 2, url: "http://i.imgur.com/vAww9aX.jpg?1?6623" )
@@ -331,9 +361,21 @@ Image.create!( listing_id: 20, url: "http://i.imgur.com/xf6agx8.jpg?1?5638" )
 Image.create!( listing_id: 20, url: "http://i.imgur.com/Nrzg1L5.jpg" )
 
 Image.create!( listing_id: 21, url: "http://i.imgur.com/ao031TK.jpg?1?6180" )
-Image.create!( listing_id: 21, url: "http://i.imgur.com/IHexozw.jpg" )
+Image.create!( listing_id: 21, url: "http://i.imgur.com/83g2uAm.jpg?1?1699" )
 Image.create!( listing_id: 21, url: "http://i.imgur.com/8GGAecb.jpg?1?6405" )
 
 Image.create!( listing_id: 22, url: "http://i.imgur.com/OIHunHA.jpg?1?5045" )
 Image.create!( listing_id: 22, url: "http://i.imgur.com/Uz7NkhP.jpg?1?9551" )
 Image.create!( listing_id: 22, url: "http://i.imgur.com/2q5aDOm.jpg?1?4731" )
+
+Image.create!( listing_id: 23, url: "http://i.imgur.com/lmxP6lN.jpg?1?4414" )
+Image.create!( listing_id: 23, url: "http://i.imgur.com/12EElGE.jpg?1?4175" )
+Image.create!( listing_id: 23, url: "http://i.imgur.com/yjoBJFi.jpg?1?5647" )
+
+Image.create!( listing_id: 24, url: "http://i.imgur.com/3EkMFvl.jpg?1?6445" )
+Image.create!( listing_id: 24, url: "http://i.imgur.com/zoKjury.jpg?1?2134" )
+Image.create!( listing_id: 24, url: "http://i.imgur.com/oVUzZj1.jpg?1?3002" )
+
+Image.create!( listing_id: 25, url: "http://i.imgur.com/FLs46Vs.jpg" )
+Image.create!( listing_id: 25, url: "http://i.imgur.com/HCdeU3z.jpg?1?3656" )
+Image.create!( listing_id: 25, url: "http://i.imgur.com/nQZfQaU.jpg" )
