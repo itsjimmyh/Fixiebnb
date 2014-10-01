@@ -1,3 +1,5 @@
-<a href="/#/listing/<%= listing.id %>">
-  <img class="images img-responsive img-thumbnail listing-image round-corners" src="<%= listing.escape('feature_img') %>"></img>
+<a href="/#/listing/<%= listing.id %>"
+  style="background-image: url('<%= listing.escape('feature_img') %>');"
+  class="round-corners">
+
 </a>

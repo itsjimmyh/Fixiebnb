@@ -269,6 +269,7 @@ button.usd {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  border-radius: .25em;
 }
 .round-corners:hover, .round-corners:focus, .round-corners:active {
   border-radius: 1em;
