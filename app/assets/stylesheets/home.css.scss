@@ -1,0 +1,60 @@
+div.home-top {
+  height: 600px;
+  background-image: url("../images/homebg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+div.row.center-row.center-piece-row {
+  height: 300px;
+}
+
+div#home-center-pictures {
+  height: 100%;
+}
+
+div a img.img-responsive.img-thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
+
+div.well {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  position: relative;
+  border: none;
+}
+
+div#tagline > h1 {
+  margin-top: 5px;
+  font-size: 75px;
+}
+
+div#subtitle > :first-child {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.search-area {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  min-width: 1045px;
+}
+
+#search_form input {
+  height: 44px;
+}
+
+#search_form input:focus {
+  box-shadow: 2px 3px 4px 5px rgba(81, 203, 238, 1);
+}
+
+#submit_location {
+  height: 44px;
+  width: 100px;
+  border-top-left-radius: 50;
+  border-bottom-left-radius: 50;
+}

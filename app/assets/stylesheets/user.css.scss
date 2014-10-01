@@ -1,1 +1,22 @@
+div.side-bar {
+  height: 600px;
+  border: 2px outset;
+  background-color: #eee;
+  position: relative;
+}
 
+div.user-content {
+  overflow-y: scroll;
+  height: 600px;
+  border: 3px outset;
+  position: inherit;
+  background-color: #eee;
+}
+
+#your-listings {
+  max-width: 100%;
+}
+
+#user-control-panel {
+  color: rgba(155, 155, 155, 0.6);
+}

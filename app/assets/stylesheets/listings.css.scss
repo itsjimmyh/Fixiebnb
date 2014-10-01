@@ -6,6 +6,11 @@
 //   list-style-type: none;
 // }
 
+.listings {
+  height: 698px;
+  overflow-y: scroll;
+}
+
 .listings-index-search-bar {
   height: 100px;
   margin: 0 auto;
@@ -32,18 +37,6 @@ div.search-box-index {
   background: transparent;
 }
 
-div.listings-index .listings {
-  // padding: 0 0 0 0;
-}
-
-img.images {
-  // margin: 3px 0 3px 0;
-  // display: block;
-  // min-width: 235px;
-  // margin: 0 auto;
-  // background: cover;
-  // max-height: 100%;
-}
 
 img.listing-image {
   height: 100%;
@@ -76,6 +69,7 @@ div #map-canvas {
   visiblity: visible;
   z-index: 330;
   width: 280px;
+  margin: 0 auto;
 }
 
 div.infoBox-Price-Container {
@@ -91,8 +85,4 @@ div.infoBox-Price-Container {
 div.infoBox-Price {
   padding: 1px 0 0 1px;
   // color: white;
-}
-
-div.item.active > img {
-
 }
