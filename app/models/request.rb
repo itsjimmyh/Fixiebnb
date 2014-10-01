@@ -1,13 +1,12 @@
 class Request < ActiveRecord::Base
+  STATUS_STATES = %w(APPROVE DENIED PENDING)
+
   validates :user_id,
             :listing_id,
             :start_date,
             :end_date,
             :status,
             presence: true
-
-  # validates :user_id, uniqueness: { scope: :listing_id,
-  #                                   message: "Sorry Requesting Multiple Times" }
 
   after_initialize :assign_pending_status
 
@@ -29,5 +28,7 @@ class Request < ActiveRecord::Base
   def assign_pending_status
     self.status ||= "PENDING"
   end
+
+
 
 end
