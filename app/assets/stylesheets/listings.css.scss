@@ -9,7 +9,8 @@
 
 
 .listings {
-  max-height: 604px;
+  // max-height: 604px;
+  height: 604px;
   overflow-y: scroll;
   padding: 0 0 0 0;
   border: 2px inset;
@@ -39,7 +40,7 @@ div.listing-item {
 
 .listing-item {
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   height: 200px;
   margin: 3px 0 3px 0;
   padding: 0;

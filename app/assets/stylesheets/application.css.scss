@@ -487,17 +487,17 @@ button.usd {
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  content: 'Search Anywhere! ';
+  content: 'Search or Drag/Zoom the Map!';
   // border-style: solid;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: top;
   transition-property: top;
-  left: calc(50% - 10px);
-  top: 0;
+  left: calc(22%);
+  top: 10px;
   border-width: 0 10px 10px 10px;
   border-color: transparent transparent #e1e1e1 transparent;
 }
 .bubble-top:hover:before, .bubble-top:focus:before, .bubble-top:active:before {
-  top: -10px;
+  top: -25px;
 }
