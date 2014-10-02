@@ -34,7 +34,10 @@ body > section {
 div.navbar-brand {
   font-family: "Bello", sans-serif;
   font-size: 25px;
-  color: #aaa;
+
+  a {
+    color: #777;
+  }
 }
 
 .navbar.navbar-default {
@@ -450,7 +453,7 @@ button.usd {
   position: relative;
   z-index: -1;
   content: 'Search Anywhere! ';
-  border-style: solid;
+  // border-style: solid;
   -webkit-transition-duration: 1.5s;
   transition-duration: 1.5s;
   -webkit-transition-property: left;
