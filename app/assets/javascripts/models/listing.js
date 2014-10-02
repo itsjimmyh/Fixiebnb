@@ -1,8 +1,19 @@
 FixieBNB.Models.Listing = Backbone.Model.extend({
   urlRoot: 'api/listings',
 
+  requests: function () {
+    if(!this._requests) {
+      this._requests = new FixieBNB.Collections.ListingRequests([], { listing: this })
+    }
+    return this._requests;
+  },
 
   parse: function (response) {
+    if(response.requests) {
+      this.requests().set(response.requests, { parse: true });
+      delete response.requests;
+    }
+
     if (response.feature_img && response.feature_img.length >= 1) {
       this.set("feature_img", response.feature_img[0].url);
     }
@@ -18,8 +29,10 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
     this.set("long", response.longitude);
     this.set("price", response.price);
     this.set("address", response.address);
+
     this.set("requests", response.requests);
 
-    //TODO include city by search
+    // TODO include city by search
+    // return response;
   },
 })

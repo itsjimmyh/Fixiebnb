@@ -38,7 +38,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
 
     this.collection.each(function (listing) {
       var lat = listing.get('lat');
-      var lng = listing.get('long')
+      var lng = listing.get('long');
       var mark = new google.maps.LatLng(lat, lng);
 
       addMark(listing, mark);

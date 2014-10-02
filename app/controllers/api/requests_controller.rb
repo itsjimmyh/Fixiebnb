@@ -18,7 +18,7 @@ module Api
     end
 
     def update
-      @request = Request.find_by(params[:id])
+      @request = Request.find(params[:id])
 
       if @request.update_attributes(request_params)
         render json: @request
@@ -28,6 +28,16 @@ module Api
     end
 
     private
+
+    def current_request
+      if params[:id]
+        @request = Request.find_by(params[:id])
+        @listing = @request.listing
+      elsif params[:request]
+        @listing = Listing.find(params[:request][:listing_id])
+      end
+    end
+
 
     def request_params
       params.require(:request).permit(

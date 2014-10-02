@@ -1,8 +1,30 @@
-FixieBNB.Views.ListingIndexView = Backbone.CompositeView.extend({
+FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
   template: JST["requests/index"],
 
+  className: "list-group-item",
+
+  initialize: function (options) {
+    this.listing = options.listing;
+
+    this.addRequestsItems();
+  },
+
+  addRequestsItems: function () {
+    var requests = this.listing.requests();
+
+    requests.each(function (request) {
+      var requestItem = new FixieBNB.Views.listingRequestItems({
+        request: request
+      })
+
+      this.addSubview(".requests", requestItem)
+    }.bind(this))
+  },
+
   render: function () {
-    var renderedContent = this.template({})
+    var renderedContent = this.template({
+
+    })
     this.$el.html(renderedContent);
     return this;
   }

@@ -1,0 +1,22 @@
+User Name: <%= request.escape("user_id") %>
+<br>
+Start Date: <%= request.escape("start_date") %>
+<br>
+End Date: <%= request.escape("end_date") %>
+<br>
+Status: <%= request.escape("status") %>
+
+<div class="row">
+  <div class="col-xs-6">
+    <button
+      data-status="APPROVED"
+      class="form-control btn btn-success"
+      size="20">Approve</button>
+  </div>
+  <div class="col-xs-6">
+    <button
+      data-status="DENIED"
+      class="form-control btn btn-danger"
+      size="20">Deny</button>
+  </div>
+</div>
