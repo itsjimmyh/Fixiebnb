@@ -17,6 +17,15 @@ module Api
       render json: {}
     end
 
+    def update
+      @request = Request.find_by(params[:id])
+
+      if @request.update_attributes(request_params)
+        render json: @request
+      else
+        render json: @request.errors.full_messages, status: :unprocessable_entity
+      end
+    end
 
     private
 
@@ -26,6 +35,7 @@ module Api
         :listing_id,
         :start_date,
         :end_date,
+        :status
       )
     end
 
