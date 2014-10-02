@@ -1,0 +1,15 @@
+<div class="container-fluid" id="requests-index">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="img-responsive" id="requested-listing">
+        <% if (typeof listing.get('images') !== "undefined") { %>
+          <img src="<%= listing.get('images')[0].url %>"></img>
+        <% } %>
+      </div>
+    </div>
+
+    <div class="col-xs-8">
+      <div class="listing-requests-index"></div>
+    </div>
+  </div>
+</div>

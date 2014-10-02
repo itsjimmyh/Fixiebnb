@@ -64,14 +64,11 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   onRender: function () {
-    var mapOptions = {
-      zoom: 13,
-    };
+    var mapOptions = { zoom: 13 };
 
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
     google.maps.event.addListener(this.map, "bounds_changed", this._handleMapUpdate.bind(this));
   },
-
 
   _handleMapUpdate: _.throttle(function () {
     var bounds = this.map.getBounds();
@@ -84,15 +81,12 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
           bottom_left_lat: bounds.getSouthWest().lat(),
           bottom_left_long: bounds.getSouthWest().lng()
         },
-
         city: {
           city: searchCity
         }
       },
       success: function (data) {
-
       }.bind(this)
     })
-
   }, 3000)
 });

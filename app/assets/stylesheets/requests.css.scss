@@ -11,3 +11,20 @@ input[type=date]:focus {
   // margin: 5px 1px 3px 0px;
   border: 1px solid rgba(81, 203, 238, 0.6);
 }
+
+div#requests-index {
+  height: 670px;
+  width: 100%;
+  border: 2px outset;
+}
+
+div#requested-listing img {
+  border: 2px outset;
+  max-width: 500px;
+  min-width: 500px;
+  min-height: 600px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}

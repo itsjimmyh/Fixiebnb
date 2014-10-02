@@ -41,6 +41,7 @@ module Api
       @listing = Listing.find(params[:id])
       @images = @listing.images
       @owner = @listing.owner
+      @requests = @listing.requests
       render :show
     end
 
