@@ -8,10 +8,11 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
   initialize: function (options) {
     this.currentUserListings = options.listings;
     this.currentUserRequests = options.requests;
+
     this.addSideBar();
     this.addUserContent();
     this.profileView();
-    // this.addFooter();
+
     this.listenTo(this.sideBarView, "profileView", this.profileView);
     this.listenTo(this.sideBarView, "myListings", this.listingsView);
     this.listenTo(this.sideBarView, "myRequests", this.requestsView);
@@ -73,10 +74,7 @@ FixieBNB.Views.UserView = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template({
-
-    })
-
+    var renderedContent = this.template({})
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;

@@ -14,7 +14,7 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
   listingRequests: function (id) {
     var listing = FixieBNB.Collections.listings.getOrFetch(id)
     var listingRequestsView = new FixieBNB.Views.ListingRequestsView({
-      listing: listing
+      model: listing
     })
     this._swapView(listingRequestsView);
   },
