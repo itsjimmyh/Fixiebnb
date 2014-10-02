@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'lol_dba'
 gem 'cowsay'
 gem 'newrelic_rpm'
 gem 'unicorn'

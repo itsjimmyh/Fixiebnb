@@ -9,6 +9,10 @@ FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
     this.addRequestsItems();
   },
 
+  events: {
+    // "click "
+  },
+
   addRequestsItems: function () {
     var requests = this.listing.requests();
 
@@ -26,6 +30,7 @@ FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
 
     })
     this.$el.html(renderedContent);
+    this.attachSubviews();
     return this;
   }
 });

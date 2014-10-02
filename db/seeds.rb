@@ -280,6 +280,36 @@ Listing.create!(
   zip: 95121
 )
 
+Listing.create!(
+  user_id: 9,
+  list_title: "jimmy's eigth concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "Tokyo, Japan",
+  city: "Tokyo",
+  zip: 99999
+)
+
+Listing.create!(
+  user_id: 1,
+  list_title: "guest's concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "Paris, France",
+  city: "Paris",
+  zip: 99999
+)
+
+Listing.create!(
+  user_id: 1,
+  list_title: "guest's concept",
+  list_desc: "Too many bikes, come take this one away and go on a ride!",
+  price: 85,
+  address: "Los Angelos, California",
+  city: "Los Angelos",
+  zip: 99999
+)
+
 Image.create!( listing_id: 1, url: "http://i.imgur.com/OUTwK5G.jpg?1?5610" )
 Image.create!( listing_id: 1, url: "http://i.imgur.com/GrMhkd4.jpg?1?6240" )
 Image.create!( listing_id: 1, url: "http://i.imgur.com/EIez2hv.jpg?1?6895" )
@@ -379,3 +409,15 @@ Image.create!( listing_id: 24, url: "http://i.imgur.com/oVUzZj1.jpg?1?3002" )
 Image.create!( listing_id: 25, url: "http://i.imgur.com/FLs46Vs.jpg" )
 Image.create!( listing_id: 25, url: "http://i.imgur.com/HCdeU3z.jpg?1?3656" )
 Image.create!( listing_id: 25, url: "http://i.imgur.com/nQZfQaU.jpg" )
+
+Image.create!( listing_id: 26, url: "http://i.imgur.com/OIHunHA.jpg?1?5045" )
+Image.create!( listing_id: 26, url: "http://i.imgur.com/Uz7NkhP.jpg?1?9551" )
+Image.create!( listing_id: 26, url: "http://i.imgur.com/2q5aDOm.jpg?1?4731" )
+
+Image.create!( listing_id: 27, url: "http://i.imgur.com/lmxP6lN.jpg?1?4414" )
+Image.create!( listing_id: 27, url: "http://i.imgur.com/12EElGE.jpg?1?4175" )
+Image.create!( listing_id: 27, url: "http://i.imgur.com/yjoBJFi.jpg?1?5647" )
+
+Image.create!( listing_id: 28, url: "http://i.imgur.com/lmxP6lN.jpg?1?4414" )
+Image.create!( listing_id: 28, url: "http://i.imgur.com/12EElGE.jpg?1?4175" )
+Image.create!( listing_id: 28, url: "http://i.imgur.com/yjoBJFi.jpg?1?5647" )

@@ -1,14 +1,16 @@
 div.home-top {
-  height: 650px;
+  min-height: 800px;
+  min-width: 1200px;
   background-image: url("../images/homebg.png");
   background-repeat: no-repeat;
   background-position: center;
   background: cover;
-  background-size: 98% 100%;
+  background-size: 100% 100%;
 }
 
 div.row.center-row.center-piece-row {
   height: 300px;
+  min-width: 1200px;
 }
 
 div#home-center-pictures {
@@ -20,7 +22,7 @@ div a img.img-responsive.img-thumbnail {
   width: 100%;
 }
 
-div.well {
+div.well.home-page {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   position: relative;
@@ -57,4 +59,8 @@ div#subtitle > :first-child {
   width: 100px;
   border-top-left-radius: 50;
   border-bottom-left-radius: 50;
+}
+
+.footer {
+  min-width: 1200px;
 }

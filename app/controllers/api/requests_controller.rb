@@ -1,6 +1,8 @@
 module Api
   class RequestsController < ApplicationController
 
+    
+
     def create
       @request = current_user.requests.new(request_params)
 
