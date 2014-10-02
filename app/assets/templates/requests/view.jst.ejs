@@ -1,16 +1,11 @@
 <div class="container-fluid" id="requests-index">
   <div class="row">
     <div class="col-xs-6">
-    <div id="requested-bike">
-      <div class="img-responsive" id="requested-listing">
-        <% if (typeof listing.get('images') !== "undefined") { %>
-          <img src="<%= listing.get('images')[0].url %>"></img>
-        <% } %>
-      </div>
+      <% if (typeof listing.get('images') !== "undefined") { %>
+        <img class="img-responsive" src="<%= listing.get('images')[0].url %>"></img>
+      <% } %>
     </div>
 
-    <div class="col-xs-6">
-      <div class="listing-requests-index"></div>
-    </div>
+    <div class="col-xs-6 listing-requests-index"></div>
   </div>
 </div>
