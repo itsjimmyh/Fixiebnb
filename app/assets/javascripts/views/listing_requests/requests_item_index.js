@@ -10,7 +10,7 @@ FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
   },
 
   events: {
-    // "click "
+    
   },
 
   addRequestsItems: function () {

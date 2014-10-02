@@ -5,6 +5,7 @@ gem 'cowsay'
 gem 'newrelic_rpm'
 gem 'unicorn'
 gem 'geocoder'
+gem 'bullet'
 
 gem 'rails', '4.1.4'
 gem 'pg'

@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row infoBox img-responsive">
     <a href="/#/listing/<%= listing.escape('id') %>">
-      <img class="img-responsive img-thumbnail wobble-skew" src="<%= listing.get('feature_img') %>"></img>
+      <img class="img-responsive img-thumbnail wobble-skew" src="<%= listing.get('images')[0].url %>"></img>
     </a>
   </div>
 <br>

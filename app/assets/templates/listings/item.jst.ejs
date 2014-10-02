@@ -1,4 +1,4 @@
 <a href="/#/listing/<%= listing.id %>"
-  style="background-image: url('<%= listing.escape('feature_img') %>');"
+  style="background-image: url('<%= listing.get('images')[0].url %>');"
   class="round-corners">
 </a>

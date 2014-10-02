@@ -4,7 +4,7 @@
   </div>
     <% images.forEach(function (image) { %>
       <a href="/#/listing/requests/<%= image.escape('id') %>">
-        <img src="<%= image.escape('feature_img') %>" class="img-responsive img-thumbnail" id="your-listings"></img>
+        <img src="<%= image.get('images')[0].url %>" class="img-responsive img-thumbnail" id="your-listings"></img>
       </a>
     <% }) %>
 </div>

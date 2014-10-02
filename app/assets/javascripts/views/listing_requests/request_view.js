@@ -11,6 +11,7 @@ FixieBNB.Views.ListingRequestsView = Backbone.CompositeView.extend({
   },
 
   addRequestsIndexView: function () {
+    debugger
     var requestsView = new FixieBNB.Views.RequestIndexView({
       listing: this.listing
     })
