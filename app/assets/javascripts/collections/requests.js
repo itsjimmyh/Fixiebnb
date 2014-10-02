@@ -6,5 +6,5 @@ FixieBNB.Collections.ListingRequests = Backbone.Collection.extend({
   initialize: function (models, options) {
     this.request = options.request
   }
-  
+
 });

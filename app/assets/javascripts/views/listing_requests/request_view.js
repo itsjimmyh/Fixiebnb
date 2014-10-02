@@ -4,16 +4,15 @@ FixieBNB.Views.ListingRequestsView = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.listing = options.listing
-
+    this.requests = options.listing.requests();
     this.listenTo(this.listing, 'sync', this.render);
     this.listenTo(this.listing, 'sync', this.addRequestsIndexView);
 
   },
 
   addRequestsIndexView: function () {
-    debugger
     var requestsView = new FixieBNB.Views.RequestIndexView({
-      listing: this.listing
+      collection: this.requests
     })
     this.addSubview(".listing-requests-index", requestsView)
   },

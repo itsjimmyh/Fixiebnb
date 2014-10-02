@@ -4,21 +4,14 @@ FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
   className: "list-group-item",
 
   initialize: function (options) {
-    this.listing = options.listing;
-
     this.addRequestsItems();
   },
 
-  events: {
-    
-  },
-
   addRequestsItems: function () {
-    var requests = this.listing.requests();
 
-    requests.each(function (request) {
+    this.collection.each(function (request) {
       var requestItem = new FixieBNB.Views.listingRequestItems({
-        request: request
+        model: request
       })
 
       this.addSubview(".requests", requestItem)

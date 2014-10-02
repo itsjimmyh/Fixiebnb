@@ -8,10 +8,10 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
     "users/dashboard/": "userDashBoard",
     "search/index/:city": "searchIndex",
     "listing/:id": "listingShow",
-    "listing/requests/:id": "listingRequest"
+    "listing/requests/:id": "listingRequests"
   },
 
-  listingRequest: function (id) {
+  listingRequests: function (id) {
     var listing = FixieBNB.Collections.listings.getOrFetch(id)
     var listingRequestsView = new FixieBNB.Views.ListingRequestsView({
       listing: listing
