@@ -20,6 +20,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     }
 
     console.log(this.arrMarkers)
+    console.log(" removing");
   },
 
   moveToSearchCenter: function () {
@@ -46,7 +47,8 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   addMarkers: function () {
-    var that = this;
+    var that = this,
+        marker;
 
     this.collection.each(function (listing) {
       var lat = listing.get('latitude');
@@ -57,7 +59,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     });
 
     function addMark(listing, location) {
-      var marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
         position: location,
         title: listing.get('list_title'),
         map: that.map
@@ -67,13 +69,12 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
         content: that.mapTemplate({ listing: listing })
       });
 
-      that.arrMarkers.push(marker);
-
       google.maps.event.addListener(marker, "click", function () {
         infowindow.open(that.map, marker);
       });
 
       marker.setMap(that.map);
+      that.arrMarkers.push(marker);
     }
   },
 
