@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20140928172131) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "address",                                          null: false
-    t.string   "city",                                             null: false
-    t.integer  "zip"
+    t.string   "city",       default: "San Francisco",             null: false
+    t.integer  "zip",        default: 99999,                       null: false
     t.integer  "deposit",    default: 100,                         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -45,11 +45,11 @@ ActiveRecord::Schema.define(version: 20140928172131) do
   add_index "listings", ["user_id"], name: "index_listings_on_user_id", using: :btree
 
   create_table "requests", force: true do |t|
-    t.integer  "user_id",    null: false
-    t.integer  "listing_id", null: false
-    t.date     "start_date", null: false
-    t.date     "end_date",   null: false
-    t.string   "status",     null: false
+    t.integer  "user_id",                        null: false
+    t.integer  "listing_id",                     null: false
+    t.date     "start_date",                     null: false
+    t.date     "end_date",                       null: false
+    t.string   "status",     default: "PENDING", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

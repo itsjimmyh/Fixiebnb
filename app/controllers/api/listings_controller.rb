@@ -46,11 +46,23 @@ module Api
     end
 
     def create
+
+      image1 = params[:image1]
+      image2 = params[:image2]
+      image3 = params[:image3]
+
       @listing = current_user.listings.new(listing_params)
 
       if @listing.save
+
+        @listing.images.new(url: image1)
+        @listing.images.new(url: image2)
+        @listing.images.new(url: image3)
+
         render json: @listing
       else
+
+        p @listing.errors.full_messages
         render json: @listing.errors.full_messages, status: :unprocessable_entity
       end
     end
@@ -79,18 +91,12 @@ module Api
     private
 
     def listing_params
+      print params
       params.require(:listing).permit(
-        :user_id,
         :list_title,
         :list_desc,
         :price,
-        :lat,
-        :long,
-        :street,
-        :city,
-        :state,
-        :zip,
-        :deposit
+        :address
       )
     end
   end
