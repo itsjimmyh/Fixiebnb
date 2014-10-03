@@ -6,17 +6,16 @@ End Date: <%= request.escape("end_date") %>
 <br>
 Status: <%= request.escape("status") %>
 
-<div class="row">
-  <div class="col-xs-6">
+<div class="row text-center">
+  <div class="col-xs-3">
     <button
       data-status="APPROVED"
-      class="form-control btn btn-success"
-      size="20">Approve</button>
+      class="form-control btn-success">Approve</button>
   </div>
-  <div class="col-xs-6">
+  <div class="col-xs-3">
     <button
       data-status="DENIED"
-      class="form-control btn btn-danger"
-      size="20">Deny</button>
+      class="form-control btn-danger">Deny</button>
   </div>
 </div>
+<hr>

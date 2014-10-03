@@ -1,11 +1,10 @@
 div.home-top {
-  min-height: 800px;
+  min-height: 600px;
   min-width: 1200px;
   background-image: url("../images/homebg.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background: cover;
-  background-size: 100% 100%;
+  background-position: 50% auto;
+  // background-size: contain;
 }
 
 div.row.center-row.center-piece-row {

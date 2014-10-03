@@ -302,7 +302,7 @@ Listing.create!(
 
 Listing.create!(
   user_id: 1,
-  list_title: "guest's concept",
+  list_title: "concept",
   list_desc: "Too many bikes, come take this one away and go on a ride!",
   price: 85,
   address: "Los Angelos, California",
@@ -418,6 +418,6 @@ Image.create!( listing_id: 27, url: "http://i.imgur.com/lmxP6lN.jpg?1?4414" )
 Image.create!( listing_id: 27, url: "http://i.imgur.com/12EElGE.jpg?1?4175" )
 Image.create!( listing_id: 27, url: "http://i.imgur.com/yjoBJFi.jpg?1?5647" )
 
-Image.create!( listing_id: 28, url: "http://i.imgur.com/lmxP6lN.jpg?1?4414" )
-Image.create!( listing_id: 28, url: "http://i.imgur.com/12EElGE.jpg?1?4175" )
-Image.create!( listing_id: 28, url: "http://i.imgur.com/yjoBJFi.jpg?1?5647" )
+Image.create!( listing_id: 28, url: "http://i.imgur.com/u6pAo6A.jpg?1?2312" )
+Image.create!( listing_id: 28, url: "http://i.imgur.com/xf6agx8.jpg?1?5638" )
+Image.create!( listing_id: 28, url: "http://i.imgur.com/Nrzg1L5.jpg" )

@@ -1,7 +1,7 @@
 FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
   template: JST["requests/index"],
 
-  className: "list-group-item",
+  // className: "list-group-item",
 
   initialize: function (options) {
     this.addRequestsItems();
@@ -14,7 +14,7 @@ FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
         model: request
       })
 
-      this.addSubview(".requests", requestItem)
+      this.addSubview(".requests-index", requestItem)
     }.bind(this))
   },
 

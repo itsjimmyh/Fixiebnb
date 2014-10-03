@@ -12,11 +12,11 @@ input[type=date]:focus {
   border: 1px solid rgba(81, 203, 238, 0.6);
 }
 
-div#requests-index {
-  height: 650px;
-  // width: 100%;
-  border: 2px outset;
-}
+// div#requests-index {
+//   height: 650px;
+//   // width: 100%;
+//   border: 2px outset;
+// }
 
 div#requested-listing img {
   border: 2px outset;
@@ -27,6 +27,10 @@ div#requested-listing img {
   // left: 0;
 }
 
-div#requested-bike {
-  // width: 500px;
+.requests-index {
+  white-space: nowrap;
+  height: 500px;
+  overflow-y: scroll;
+  min-height: 400px;
+  background: transparent;
 }

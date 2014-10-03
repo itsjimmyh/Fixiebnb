@@ -12,14 +12,9 @@ FixieBNB.Views.listingRequestItems = Backbone.CompositeView.extend({
 
   _handleRequest: function (event) {
     event.preventDefault();
-    console.log("clicked")
     var $approveOrDeny = $(event.target).data().status;
-    this.model.set( { status: $approveOrDeny });
-
-    this.model.save({}, function () {
-      console.log("do I get in here?")
-      success: alert.log("success")
-    })
+    this.model.set({ status: $approveOrDeny });
+    this.model.save()
   },
 
   render: function () {
