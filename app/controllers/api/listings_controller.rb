@@ -55,9 +55,9 @@ module Api
 
       if @listing.save
 
-        @listing.images.new(url: image1)
-        @listing.images.new(url: image2)
-        @listing.images.new(url: image3)
+        @listing.images.new(url: image1).save!
+        @listing.images.new(url: image2).save!
+        @listing.images.new(url: image3).save!
 
         render json: @listing
       else
