@@ -14,13 +14,14 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   removeMarkers: function (map) {
-    var that = this;
-    for (var i = 0; i < this.arrMarkers.length; i++) {
-      that.arrMarkers[i].setMap(null)
-    }
+    var markersToRemove = [];
+    var currentMarkers = this.collection.pluck("marker")
 
-    console.log(this.arrMarkers)
-    console.log(" removing");
+    for (var i = 0; i < this.arrMarkers.length; i++) {
+      if (currentMarkers.indexOf(this.arrMarkers[i]) === -1) {
+        this.arrMarkers[i].setMap(null)
+      }
+    }
   },
 
   moveToSearchCenter: function () {
@@ -55,32 +56,37 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       var lng = listing.get('longitude');
       var mark = new google.maps.LatLng(lat, lng);
 
-      addMark(listing, mark);
+      if (!listing.get("marker")) {
+        listing.set("marker", that._addMark(listing, mark));
+      }
     });
 
-    function addMark(listing, location) {
-      marker = new google.maps.Marker({
-        position: location,
-        title: listing.get('list_title'),
-        map: that.map
-      });
-
-      var infowindow = new google.maps.InfoWindow({
-        content: that.mapTemplate({ listing: listing })
-      });
-
-      google.maps.event.addListener(marker, "click", function () {
-        infowindow.open(that.map, marker);
-      });
-
-      marker.setMap(that.map);
-      that.arrMarkers.push(marker);
-    }
   },
+
+  _addMark: function (listing, location) {
+    var marker = new google.maps.Marker({
+      position: location,
+      title: listing.get('list_title'),
+      map: this.map,
+      animation: google.maps.Animation.DROP
+    });
+
+    var infowindow = new google.maps.InfoWindow({
+      content: this.mapTemplate({ listing: listing })
+    });
+
+    google.maps.event.addListener(marker, "click", function () {
+      infowindow.open(this.map, marker);
+    });
+
+    marker.setMap(this.map);
+    this.arrMarkers.push(marker);
+    return marker;
+  },
+
 
   onRender: function () {
     var mapOptions = { zoom: 13 };
-
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
     google.maps.event.addListener(this.map, "bounds_changed", this._handleMapUpdate.bind(this));
   },
