@@ -8,7 +8,7 @@ class CreateListings < ActiveRecord::Migration
       t.float :latitude
       t.float :longitude
       t.string :address, null: false
-      t.string :city, null: false
+      t.string :city, null: false, default: 'San Francisco'
       t.integer :zip
       t.integer :deposit, null: false, default: 100
 

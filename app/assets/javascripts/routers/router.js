@@ -8,7 +8,16 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
     "users/dashboard/": "userDashBoard",
     "search/index/:city": "searchIndex",
     "listing/:id": "listingShow",
-    "listing/requests/:id": "listingRequests"
+    "listing/requests/:id": "listingRequests",
+    "listYourRide/": "listYourRide"
+  },
+
+  listYourRide: function () {
+    var listing = new FixieBNB.Models.Listing();
+    var listYourRideForm = new FixieBNB.Views.CreateListing({
+      model: listing
+    })
+    this._swapView(listYourRideForm);
   },
 
   listingRequests: function (id) {
