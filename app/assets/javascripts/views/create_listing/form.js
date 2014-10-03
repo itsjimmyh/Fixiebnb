@@ -2,7 +2,8 @@ FixieBNB.Views.CreateListing = Backbone.CompositeView.extend({
 
   template: JST["listings/form"],
 
-
+  initialize: function () {
+  },
 
   events: {
     "submit": "submit"
@@ -17,8 +18,6 @@ FixieBNB.Views.CreateListing = Backbone.CompositeView.extend({
     listing.set($data);
     listing.save({}, {
       success: function (model, data) {
-        console.log(model);
-        console.log(data);
         Backbone.history.navigate("#/search/index/" + $address, { trigger: true })
       }, error: function (model, data) {
         alert("Please fill in all fields correctly =]");
