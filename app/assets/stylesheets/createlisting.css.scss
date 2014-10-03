@@ -1,5 +1,17 @@
 #create-listing-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#listing-description {
+  min-width: 415px;
+}
+
+form li input {
+  min-width: 500px;
+  margin-right: 0 auto;
+}
+
+button.create-ride {
   width: 100%;
-  border-top: 1px outset;
-  border-bottom: 1px inset;
 }

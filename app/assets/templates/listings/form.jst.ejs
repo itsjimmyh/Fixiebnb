@@ -1,11 +1,11 @@
-<div class="panel panel-success">
+<div class="panel panel-success" id="create-listing-form">
   <div class="panel-heading">Create A Listing!</div>
   <div class="panel-body">
     <p>List Your Ride and Make Some Money</p>
   </div>
 
   <ul class="list-group">
-    <form>
+    <form class="float-left">
       <li class="list-group-item">
         <div class="form-inline">
           <label>Ride Title:
@@ -22,9 +22,9 @@
 
       <li class="list-group-item">
         <div class="form-inline">
-          <label>Ride Description:
+          <label>Description:
             <textarea
-              id="list-description"
+              id="listing-description"
               type="text"
               name="list_desc"
               cols="22"
@@ -37,7 +37,7 @@
 
       <li class="list-group-item">
         <div class="form-inline">
-          <label>Ride Rental Price:
+          <label>Rental Price:
             <input
               id="ride-price"
               type="text"
@@ -51,13 +51,13 @@
 
       <li class="list-group-item">
         <div class="form-inline">
-          <label>Pick Up Location:
+          <label>MeetUp Address:
             <input
               id="listing-address"
               type="text"
               name="address"
               class="form-control"
-              placeholder="Your Pickup Address"
+              placeholder="Your MeetUp Address"
               onfocus="this.value = ' '"></label>
         </div>
       </li>
@@ -105,7 +105,7 @@
       </li>
 
       <li class="list-group-item">
-        <button class="create-ride btn btn-success" value="submit">Submit</button>
+        <button class="create-ride btn btn-success" value="submit">Create Listing!</button>
       </li>
     </form>
   </ul>
