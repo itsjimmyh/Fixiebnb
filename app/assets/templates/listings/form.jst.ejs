@@ -1,90 +1,112 @@
-<div class="container-fluid">
-  <form role="form-horizontal">
-    <div class="row form-group col-xs-12">
-      <label>Ride Title:
-        <input
-          id="listing-title"
-          type="text"
-          name="list_title"
-          class="form-control"
-          placeholder="Your Listing Title"
-          onfocus="this.value = ' '"
-          onblur="this.value = 'NaNaNaNaNaNaNaNaNa'"></label>
-    </div>
-  <br>
-    <div class="row form-group col-xs-12">
-      <label>Ride Description:
-        <textarea
-          id="list-description"
-          type="text"
-          name="list_desc"
-          class="form-control"
-          rows="3"
-          cols="150"
-          placeholder="Your Ride Description"
-          onfocus="this.value = ' '"
-          onblur="this.value= 'wat wat wat wat wat'"></textarea></label>
-    </div>
-  <br>
-    <div class="row form-group col-xs-12">
-      <label>Ride Rental Price:
-        <input
-          id="ride-price"
-          type="text"
-          name="price"
-          class="form-control"
-          placeholder="Your Daily Rental Price"
-          onfocus="this.value = ' '"
-          onblur="this.value= '50'"></label>
-    </div>
-  <br>
-    <div class="row form-group col-xs-12">
-      <label>Pick Up Location:
-        <input
-          id="listing-address"
-          type="text"
-          name="address"
-          class="form-control"
-          placeholder="Your Pickup Address"
-          onfocus="this.value = ' '"></label>
-    </div>
-  <br>
-    <div class="row form-group col-xs-12">
-      <label>Picture URL:
-        <input
-          id="listing-image"
-          type="text"
-          name="image1"
-          class="form-control"
-          placeholder="Your Image URL"
-          value="http://i.imgur.com/Nrzg1L5.jpg"
-          onfocus="this.value = ' '"></label>
-    </div>
-  <br>
-    <div class="row form-group col-xs-12">
-      <label>Picture URL:
-        <input
-          id="listing-image"
-          type="text"
-          name="image2"
-          class="form-control"
-          placeholder="Your Image URL"
-          value="http://i.imgur.com/xf6agx8.jpg?1?5638"
-          onfocus="this.value = ' '"></label>
-    </div>
-  <br>
-    <div class="row form-group col-xs-12">
-      <label>Picture URL:
-        <input
-          id="listing-image"
-          type="text"
-          name="image3"
-          class="form-control"
-          placeholder="Your Image URL"
-          value="http://i.imgur.com/u6pAo6A.jpg?1?2312"
-          onfocus="this.value = ' '"></label>
-    </div>
+<div class="panel panel-success">
+  <div class="panel-heading">Create A Listing!</div>
+  <div class="panel-body">
+    <p>List Your Ride and Make Some Money</p>
+  </div>
 
-    <button class="create-ride" value="submit">Submit</button>
-  </form>
+  <ul class="list-group">
+    <form>
+      <li class="list-group-item">
+        <div class="form-inline">
+          <label>Ride Title:
+            <input
+              id="listing-title"
+              type="text"
+              name="list_title"
+              class="form-control"
+              placeholder="Your Listing Title"
+              onfocus="this.value = ' '"
+              onblur="this.value = 'NaNaNaNaNaNaNaNaNa'"></label>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="form-inline">
+          <label>Ride Description:
+            <textarea
+              id="list-description"
+              type="text"
+              name="list_desc"
+              cols="22"
+              class="form-control"
+              placeholder="Your Ride Description"
+              onfocus="this.value = ' '"
+              onblur="this.value= 'wat wat wat wat wat'"></textarea></label>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="form-inline">
+          <label>Ride Rental Price:
+            <input
+              id="ride-price"
+              type="text"
+              name="price"
+              class="form-control"
+              placeholder="Your Daily Rental Price"
+              onfocus="this.value = ' '"
+              onblur="this.value= '50'"></label>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="form-inline">
+          <label>Pick Up Location:
+            <input
+              id="listing-address"
+              type="text"
+              name="address"
+              class="form-control"
+              placeholder="Your Pickup Address"
+              onfocus="this.value = ' '"></label>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="form-inline">
+          <label>Picture URL:
+            <input
+              id="listing-image"
+              type="text"
+              name="image1"
+              class="form-control"
+              placeholder="Your Image URL"
+              value="http://i.imgur.com/Nrzg1L5.jpg"
+              onfocus="this.value = ' '"></label>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="form-inline">
+          <label>Picture URL:
+            <input
+              id="listing-image"
+              type="text"
+              name="image2"
+              class="form-control"
+              placeholder="Your Image URL"
+              value="http://i.imgur.com/xf6agx8.jpg?1?5638"
+              onfocus="this.value = ' '"></label>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="form-inline">
+          <label>Picture URL:
+            <input
+              id="listing-image"
+              type="text"
+              name="image3"
+              class="form-control"
+              placeholder="Your Image URL"
+              value="http://i.imgur.com/u6pAo6A.jpg?1?2312"
+              onfocus="this.value = ' '"></label>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <button class="create-ride btn btn-success" value="submit">Submit</button>
+      </li>
+    </form>
+  </ul>
 </div>
