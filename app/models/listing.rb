@@ -38,7 +38,7 @@ class Listing < ActiveRecord::Base
   private
   def _geocode
     # need sleep to seed / push to heroku
-    # sleep 0.5
+    sleep 0.5
     if self.address.nil?
       reverse_geocode unless self.latitude.nil? || self.longitude.nil?
     else
