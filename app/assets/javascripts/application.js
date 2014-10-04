@@ -17,6 +17,7 @@
 //= require underscore
 //= require backbone
 //= require bootstrap.min
+//= require fontawesome-markers.js
 //= require bootstrap-datepicker.js
 //= require underscore
 //= require backbone

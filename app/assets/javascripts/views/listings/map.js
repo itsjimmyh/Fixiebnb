@@ -68,7 +68,17 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       position: location,
       title: listing.get('list_title'),
       map: this.map,
-      animation: google.maps.Animation.DROP
+      animation: google.maps.Animation.DROP,
+      icon: {
+        path: fontawesome.markers.HAND_O_DOWN,
+        scale: 0.4,
+        strokeWeight: 1,
+        strokeColor: 'black',
+        strokeOpacity: 2,
+        fillColor: '#007a87',
+        fillOpacity: 2,
+    },
+
     });
 
     var infowindow = new google.maps.InfoWindow({
