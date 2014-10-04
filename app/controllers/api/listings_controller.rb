@@ -22,7 +22,7 @@ module Api
 
     def index
       if params["bounds"]
-        @listings = Listing.includes(:images).where(
+        @listings = Listing.includes(:images, :requests).where(
         "latitude >= ? AND latitude <= ?
         AND
         longitude >= ? AND longitude <= ?",
