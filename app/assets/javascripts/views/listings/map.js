@@ -98,7 +98,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   onRender: function () {
     var mapOptions = {
       zoom: 13,
-      mapTypeId: google.maps.MapTypeId.TERRAIN
+      // mapTypeId: google.maps.MapTypeId.TERRAIN
     };
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
     google.maps.event.addListener(this.map, "bounds_changed", this._handleMapUpdate.bind(this));
