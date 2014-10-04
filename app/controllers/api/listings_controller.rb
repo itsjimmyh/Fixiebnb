@@ -31,7 +31,7 @@ module Api
         params["bounds"]["bottom_left_long"],
         params["bounds"]["top_right_long"])
       else
-        @listings = Listing.includes(:images).all
+        @listings = Listing.includes(:images, :requests).all
       end
 
       render :index
