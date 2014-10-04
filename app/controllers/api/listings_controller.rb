@@ -61,8 +61,7 @@ module Api
 
         render json: @listing
       else
-
-        p @listing.errors.full_messages
+        # p @listing.errors.full_messages
         render json: @listing.errors.full_messages, status: :unprocessable_entity
       end
     end
@@ -91,7 +90,7 @@ module Api
     private
 
     def listing_params
-      print params
+      # print params
       params.require(:listing).permit(
         :list_title,
         :list_desc,
