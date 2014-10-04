@@ -2,7 +2,6 @@ FixieBNB.Views.RequestView = Backbone.CompositeView.extend({
   template: JST["listing/request"],
 
   initialize: function () {
-    console.log(this.model.id + " model ID from requestView")
   },
 
   events: {
@@ -22,14 +21,10 @@ FixieBNB.Views.RequestView = Backbone.CompositeView.extend({
 
     request.save({}, {
       success: function (model, response) {
-        console.log(model)
-        console.log(response)
         Backbone.history.navigate("#/users/dashboard/", { trigger: true })
         alert("request successful")
       },
       error: function (model, response) {
-        console.log(model)
-        console.log(response)
         Backbone.history.navigate("#/users/dashboard/", { trigger: true} )
         alert("request overlaps with approved request or it's your own bike")
         //TODO render an error on the screen
