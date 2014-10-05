@@ -9,7 +9,7 @@ FixieBNB.Models.Listing = Backbone.Model.extend({
   },
 
   parse: function (response) {
-    if(response.requests &&response.requests.length >= 1) {
+    if(response.requests && response.requests.length >= 1) {
       this.requests().set(response.requests, { parse: true });
       delete response.requests;
     }
