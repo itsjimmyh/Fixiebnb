@@ -19,8 +19,14 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
   },
 
   activeMarker: function (pubSubMsg, listing) {
-    console.log("activeMarker")
-    console.log(listing.model.id)
+    var marker = _.find(
+      this.arrMarkers,
+      function (marker) {
+        return listing.model.id === marker.listingId
+      }
+    )
+
+    marker.setIcon(this.activeIcon);
   },
 
   removeMarkers: function (map) {
@@ -34,11 +40,21 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
   },
 
   iconChoices: function () {
-    this.tealIcon = {
+    this.inactiveIcon = {
       path: fontawesome.markers.MAP_MARKER,
       scale: 0.5,
       strokeWeight: 1,
       strokeColor: 'grey',
+      strokeOpacity: 0.9,
+      fillColor: 'grey',
+      fillOpacity: 1,
+    },
+
+    this.activeIcon = {
+      path: fontawesome.markers.MAP_MARKER,
+      scale: 0.5,
+      strokeWeight: 1,
+      strokeColor: 'black',
       strokeOpacity: 0.9,
       fillColor: '#007a87',
       fillOpacity: 1,
@@ -88,7 +104,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
       title: listing.get('list_title'),
       map: this.map,
       animation: google.maps.Animation.DROP,
-      icon: this.tealIcon
+      icon: this.inactiveIcon
     });
 
     var infowindow = new google.maps.InfoWindow({
@@ -104,6 +120,8 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
     marker.setMap(this.map);
     this.arrMarkers.push(marker);
+    marker.listingId = listing.id
+
     return marker;
   },
 
