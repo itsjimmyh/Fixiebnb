@@ -7,6 +7,15 @@ FixieBNB.Views.ListingsIndexItem = Backbone.CompositeView.extend({
   initialize: function () {
   },
 
+  events: {
+    "mouseover #bike-listing-mouseover": "handleMouseOver",
+  },
+
+  handleMouseOver: function (event) {
+    console.log(this.model.id)
+    
+  },
+
   render: function () {
     var renderedContent = this.template({
       listing: this.model
