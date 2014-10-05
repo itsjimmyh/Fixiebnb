@@ -21,7 +21,7 @@ FixieBNB.Views.ListingsIndex = Backbone.CompositeView.extend({
   },
 
   addMapView: function () {
-    var mapView = new FixieBNB.Views.ListingsMap({
+    var mapView = new FixieBNB.Views.MapView({
       collection: this.collection,
       city: this.city
     });

@@ -1,4 +1,4 @@
-FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
+FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
   template: JST["listings/map"],
   mapTemplate: JST["listings/map_template_view"],
