@@ -70,13 +70,13 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       map: this.map,
       animation: google.maps.Animation.DROP,
       icon: {
-        path: fontawesome.markers.HAND_O_DOWN,
-        scale: 0.4,
+        path: fontawesome.markers.MAP_MARKER,
+        scale: 0.5,
         strokeWeight: 1,
         strokeColor: 'black',
-        strokeOpacity: 2,
+        strokeOpacity: 0.9,
         fillColor: '#007a87',
-        fillOpacity: 2,
+        fillOpacity: 0.8,
     },
 
     });
