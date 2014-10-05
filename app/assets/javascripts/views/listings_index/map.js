@@ -13,15 +13,14 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
     this.listenTo(this.collection, "sync", this.addMarkers);
     this.listenTo(this.collection, "remove", this.removeMarkers);
+
+    PubSub.subscribe('mouseOverBikeListing', this.activeMarker.bind(this));
+
   },
 
-  events: {
-    "mouseOverBikeListing": "activeMarker",
-  },
-
-  activeMarker: function () {
+  activeMarker: function (pubSubMsg, listing) {
     console.log("activeMarker")
-    console.log(this)
+    console.log(listing.model.id)
   },
 
   removeMarkers: function (map) {
