@@ -4,6 +4,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   mapTemplate: JST["listings/map_template_view"],
 
   initialize: function (options) {
+    this.iconChoices();
     this.city = options.city
     this.moveToSearchCenter();
 
@@ -15,7 +16,6 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   removeMarkers: function (map) {
-    // var markersToRemove = [];
     var currentMarkers = this.collection.pluck("marker")
 
     for (var i = 0; i < this.arrMarkers.length; i++) {
@@ -25,9 +25,20 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     }
   },
 
+  iconChoices: function () {
+    this.tealIcon = {
+      path: fontawesome.markers.MAP_MARKER,
+      scale: 0.5,
+      strokeWeight: 1,
+      strokeColor: 'grey',
+      strokeOpacity: 0.9,
+      fillColor: '#007a87',
+      fillOpacity: 1,
+    }
+  },
+
   moveToSearchCenter: function () {
     var geocoder = new google.maps.Geocoder();
-    var center = { lat: 31.1310, lng: 29.9769 }
     var mapOptions = {
       zoom: 4,
       center: { lat: 122.4167, lng: 37.7833 }
@@ -49,8 +60,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
   },
 
   addMarkers: function () {
-    var that = this,
-        marker;
+    var that = this;
 
     this.collection.each(function (listing) {
       var lat = listing.get('latitude');
@@ -70,16 +80,7 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       title: listing.get('list_title'),
       map: this.map,
       animation: google.maps.Animation.DROP,
-      icon: {
-        path: fontawesome.markers.MAP_MARKER,
-        scale: 0.5,
-        strokeWeight: 1,
-        strokeColor: 'black',
-        strokeOpacity: 0.9,
-        fillColor: '#007a87',
-        fillOpacity: 0.8,
-    },
-
+      icon: this.tealIcon
     });
 
     var infowindow = new google.maps.InfoWindow({
