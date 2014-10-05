@@ -8,13 +8,14 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
     this.moveToSearchCenter();
 
     this.arrMarkers = [];
+    this.infoWindows = [];
 
     this.listenTo(this.collection, "sync", this.addMarkers);
     this.listenTo(this.collection, "remove", this.removeMarkers);
   },
 
   removeMarkers: function (map) {
-    var markersToRemove = [];
+    // var markersToRemove = [];
     var currentMarkers = this.collection.pluck("marker")
 
     for (var i = 0; i < this.arrMarkers.length; i++) {
@@ -85,9 +86,12 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       content: this.mapTemplate({ listing: listing })
     });
 
+    this.infoWindows.push(infowindow);
+
     google.maps.event.addListener(marker, "click", function () {
+      this.closeInfoWindows();
       infowindow.open(this.map, marker);
-    });
+    }.bind(this));
 
     marker.setMap(this.map);
     this.arrMarkers.push(marker);
@@ -122,5 +126,13 @@ FixieBNB.Views.ListingsMap = Backbone.CompositeView.extend({
       success: function (data) {
       }.bind(this)
     })
-  }, 3000)
+  }, 3000),
+
+
+  closeInfoWindows: function () {
+    _(this.infoWindows).each(function (infoWindow) {
+      infoWindow.close();
+    });
+  },
+
 });
