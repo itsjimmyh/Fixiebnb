@@ -1,5 +1,5 @@
 FixieBNB.Views.RequestView = Backbone.CompositeView.extend({
-  template: JST["listing/request"],
+  template: JST["listing_show/request"],
 
   initialize: function () {
   },

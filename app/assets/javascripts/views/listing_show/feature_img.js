@@ -1,5 +1,5 @@
 FixieBNB.Views.ImgView = Backbone.CompositeView.extend({
-  template: JST["listing/img"],
+  template: JST["listing_show/img"],
 
   initialize: function () {
   },

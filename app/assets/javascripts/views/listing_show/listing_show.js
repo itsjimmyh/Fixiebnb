@@ -1,6 +1,6 @@
 FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
 
-  template: JST["listing/show"],
+  template: JST["listing_show/show"],
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)

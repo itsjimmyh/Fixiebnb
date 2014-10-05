@@ -1,5 +1,5 @@
 FixieBNB.Views.CarouselView = Backbone.CompositeView.extend({
-  template: JST["listing/carousel"],
+  template: JST["listing_show/carousel"],
 
   initialize: function () {
     this.listenTo(this.model, 'sync', this.render)

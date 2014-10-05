@@ -1,5 +1,5 @@
 FixieBNB.Views.ListingInfoView = Backbone.CompositeView.extend({
-  template: JST["listing/info"],
+  template: JST["listing_show/info"],
 
   initialize: function () {
   },
