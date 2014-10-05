@@ -13,7 +13,7 @@ FixieBNB.Views.ListingsIndexItem = Backbone.CompositeView.extend({
 
   handleMouseOver: function (event) {
     console.log(this.model.id)
-    
+    this.trigger("mouseOverBikeListing")
   },
 
   render: function () {

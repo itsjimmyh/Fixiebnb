@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require pubsub
 //= require jquery.serializejson.js
 //= require jquery.jscroll.min
 //= require underscore
