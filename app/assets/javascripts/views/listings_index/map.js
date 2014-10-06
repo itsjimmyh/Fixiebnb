@@ -14,8 +14,8 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "sync", this.addMarkers);
     this.listenTo(this.collection, "remove", this.removeMarkers);
 
-    PubSub.subscribe('mouseOverBikeListing', this.activeMarker.bind(this));
-
+    PubSub.subscribe("mouseOverBikeListing", this.activeMarker.bind(this));
+    PubSub.subscribe("mouseOutBikeListing", this.inactiveMarker.bind(this));
   },
 
   activeMarker: function (pubSubMsg, listing) {
@@ -27,6 +27,17 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     )
 
     marker.setIcon(this.activeIcon);
+  },
+
+  inactiveMarker: function (pubSubMsg, listing) {
+    var marker = _.find(
+      this.arrMarkers,
+      function (marker) {
+        return listing.model.id === marker.listingId
+      }
+    )
+
+    marker.setIcon(this.inactiveIcon);
   },
 
   removeMarkers: function (map) {
@@ -52,7 +63,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
     this.activeIcon = {
       path: fontawesome.markers.MAP_MARKER,
-      scale: 0.5,
+      scale: 0.7,
       strokeWeight: 1,
       strokeColor: 'black',
       strokeOpacity: 0.9,
@@ -120,6 +131,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
     marker.setMap(this.map);
     this.arrMarkers.push(marker);
+    
     marker.listingId = listing.id
 
     return marker;

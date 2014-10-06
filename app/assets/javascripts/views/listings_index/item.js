@@ -9,10 +9,15 @@ FixieBNB.Views.ListingsIndexItem = Backbone.CompositeView.extend({
 
   events: {
     "mouseover #bike-listing-mouseover": "handleMouseOver",
+    "mouseout #bike-listing-mouseover": "handleMouseOut"
   },
 
   handleMouseOver: function (event) {
     PubSub.publish("mouseOverBikeListing", this)
+  },
+
+  handleMouseOut: function (event) {
+    PubSub.publish("mouseOutBikeListing", this)
   },
 
   render: function () {
