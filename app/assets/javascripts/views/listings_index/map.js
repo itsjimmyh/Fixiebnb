@@ -31,7 +31,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
     this.activeIcon = {
       path: fontawesome.markers.MAP_MARKER,
-      scale: 0.8,
+      scale: 0.6,
       strokeWeight: 1,
       strokeColor: 'black',
       strokeOpacity: 0.9,
@@ -168,6 +168,14 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
         return listing.model.id === marker.listingId
       }
     )
+
+    var infoWindow = _.find(
+      this.infoWindows,
+      function (boxWindow) {
+        return listing.model.id === boxWindow.listingId
+      }
+    )
+    infoWindow.close();
     marker.setIcon(this.inactiveIcon);
   },
 
