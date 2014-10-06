@@ -1,6 +1,9 @@
 #carousel-example-generic {
-  min-height: 580px;
-  max-height: 580px;
+  // min-height: 580px;
+  // max-height: 580px;
+  height: 580px;
+  // height: 100%;
+  overflow-y: hidden;
 }
 
 .carousel-inner {
