@@ -18,16 +18,6 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     PubSub.subscribe("mouseOutBikeListing", this.inactiveMarker.bind(this));
   },
 
-  removeMarkers: function (map) {
-    var currentMarkers = this.collection.pluck("marker")
-
-    for (var i = 0; i < this.arrMarkers.length; i++) {
-      if (currentMarkers.indexOf(this.arrMarkers[i]) === -1) {
-        this.arrMarkers[i].setMap(null)
-      }
-    }
-  },
-
   iconChoices: function () {
     this.inactiveIcon = {
       path: fontawesome.markers.MAP_MARKER,
@@ -66,6 +56,16 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     }.bind(this))
   },
 
+  removeMarkers: function (map) {
+    var currentMarkers = this.collection.pluck("marker")
+
+    for (var i = 0; i < this.arrMarkers.length; i++) {
+      if (currentMarkers.indexOf(this.arrMarkers[i]) === -1) {
+        this.arrMarkers[i].setMap(null)
+      }
+    }
+  },
+
   addMarkers: function () {
     var that = this;
 
@@ -89,6 +89,9 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
       icon: this.inactiveIcon
     });
 
+    marker.listingId = listing.id
+    this.arrMarkers.push(marker);
+
     var infowindow = new google.maps.InfoWindow({
       content: this.mapTemplate({ listing: listing })
     });
@@ -100,8 +103,6 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     }.bind(this));
 
     marker.setMap(this.map);
-    this.arrMarkers.push(marker);
-    marker.listingId = listing.id
 
     return marker;
   },
@@ -119,6 +120,8 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     };
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
     google.maps.event.addListener(this.map, "bounds_changed", this._handleMapUpdate.bind(this));
+    google.maps.event.addListener(this.map, "dragend", this.closeInfoWindows.bind(this));
+    google.maps.event.addListener(this.map, "click", this.closeInfoWindows.bind(this));
   },
 
   _handleMapUpdate: _.throttle(function () {
