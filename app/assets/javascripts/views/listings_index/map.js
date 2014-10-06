@@ -93,6 +93,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     var infowindow = new google.maps.InfoWindow({
       content: this.mapTemplate({ listing: listing })
     });
+    infowindow.listingId = listing.id
     this.infoWindows.push(infowindow);
 
     google.maps.event.addListener(marker, "click", function () {
@@ -149,9 +150,14 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
         return listing.model.id === marker.listingId
       }
     )
-    // if (marker.map !== this.map) {
-    //   marker.map = this.map
-    // }
+
+    var infoWindow = _.find(
+      this.infoWindows,
+      function (boxWindow) {
+        return listing.model.id === boxWindow.listingId
+      }
+    )
+    infoWindow.open(this.map, marker);
     marker.setIcon(this.activeIcon);
   },
 
