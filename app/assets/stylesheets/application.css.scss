@@ -275,8 +275,10 @@ button.usd {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   border-radius: .25em;
 }
+
 .round-corners:hover, .round-corners:focus, .round-corners:active {
   border-radius: 1em;
+  border: 1px solid #007a87;
 }
 
 @-webkit-keyframes wobble-skew {
