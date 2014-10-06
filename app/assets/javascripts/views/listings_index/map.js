@@ -86,13 +86,13 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
       animation: google.maps.Animation.DROP,
       icon: this.inactiveIcon
     });
+    var infowindow = new google.maps.InfoWindow({
+      content: this.mapTemplate({ listing: listing })
+    });
 
     marker.listingId = listing.id
     this.arrMarkers.push(marker);
 
-    var infowindow = new google.maps.InfoWindow({
-      content: this.mapTemplate({ listing: listing })
-    });
     infowindow.listingId = listing.id
     this.infoWindows.push(infowindow);
 
@@ -150,13 +150,13 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
         return listing.model.id === marker.listingId
       }
     )
-
     var infoWindow = _.find(
       this.infoWindows,
       function (boxWindow) {
         return listing.model.id === boxWindow.listingId
       }
     )
+
     infoWindow.open(this.map, marker);
     marker.setIcon(this.activeIcon);
   },
@@ -168,13 +168,13 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
         return listing.model.id === marker.listingId
       }
     )
-
     var infoWindow = _.find(
       this.infoWindows,
       function (boxWindow) {
         return listing.model.id === boxWindow.listingId
       }
     )
+
     infoWindow.close();
     marker.setIcon(this.inactiveIcon);
   },
