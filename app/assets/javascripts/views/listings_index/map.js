@@ -18,28 +18,6 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     PubSub.subscribe("mouseOutBikeListing", this.inactiveMarker.bind(this));
   },
 
-  activeMarker: function (pubSubMsg, listing) {
-    var marker = _.find(
-      this.arrMarkers,
-      function (marker) {
-        return listing.model.id === marker.listingId
-      }
-    )
-
-    marker.setIcon(this.activeIcon);
-  },
-
-  inactiveMarker: function (pubSubMsg, listing) {
-    var marker = _.find(
-      this.arrMarkers,
-      function (marker) {
-        return listing.model.id === marker.listingId
-      }
-    )
-
-    marker.setIcon(this.inactiveIcon);
-  },
-
   removeMarkers: function (map) {
     var currentMarkers = this.collection.pluck("marker")
 
@@ -55,7 +33,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
       path: fontawesome.markers.MAP_MARKER,
       scale: 0.5,
       strokeWeight: 1,
-      strokeColor: 'grey',
+      strokeColor: 'black',
       strokeOpacity: 0.9,
       fillColor: 'grey',
       fillOpacity: 1,
@@ -63,7 +41,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
     this.activeIcon = {
       path: fontawesome.markers.MAP_MARKER,
-      scale: 0.7,
+      scale: 0.8,
       strokeWeight: 1,
       strokeColor: 'black',
       strokeOpacity: 0.9,
@@ -88,12 +66,6 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     }.bind(this))
   },
 
-  render: function () {
-    var renderedContent = this.template()
-    this.$el.html(renderedContent);
-    return this;
-  },
-
   addMarkers: function () {
     var that = this;
 
@@ -106,7 +78,6 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
         listing.set("marker", that._addMark(listing, mark));
       }
     });
-
   },
 
   _addMark: function (listing, location) {
@@ -121,7 +92,6 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     var infowindow = new google.maps.InfoWindow({
       content: this.mapTemplate({ listing: listing })
     });
-
     this.infoWindows.push(infowindow);
 
     google.maps.event.addListener(marker, "click", function () {
@@ -131,12 +101,16 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
 
     marker.setMap(this.map);
     this.arrMarkers.push(marker);
-    
     marker.listingId = listing.id
 
     return marker;
   },
 
+  render: function () {
+    var renderedContent = this.template()
+    this.$el.html(renderedContent);
+    return this;
+  },
 
   onRender: function () {
     var mapOptions = {
@@ -167,6 +141,25 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     })
   }, 3000),
 
+  activeMarker: function (pubSubMsg, listing) {
+    var marker = _.find(
+      this.arrMarkers,
+      function (marker) {
+        return listing.model.id === marker.listingId
+      }
+    )
+    marker.setIcon(this.activeIcon);
+  },
+
+  inactiveMarker: function (pubSubMsg, listing) {
+    var marker = _.find(
+      this.arrMarkers,
+      function (marker) {
+        return listing.model.id === marker.listingId
+      }
+    )
+    marker.setIcon(this.inactiveIcon);
+  },
 
   closeInfoWindows: function () {
     _(this.infoWindows).each(function (infoWindow) {
