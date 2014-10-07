@@ -103,15 +103,9 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     return marker;
   },
 
-  render: function () {
-    var renderedContent = this.template()
-    this.$el.html(renderedContent);
-    return this;
-  },
-
   onRender: function () {
     var mapOptions = {
-      zoom: 13,
+      zoom: 12,
       // mapTypeId: google.maps.MapTypeId.TERRAIN
     };
     this.map = new google.maps.Map(this.$("#map-canvas")[0], mapOptions);
@@ -181,5 +175,11 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     _(this.infoWindows).each(function (infoWindow) {
       infoWindow.close();
     });
+  },
+
+  render: function () {
+    var renderedContent = this.template()
+    this.$el.html(renderedContent);
+    return this;
   }
 });
