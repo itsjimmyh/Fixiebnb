@@ -81,7 +81,6 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
   _addMark: function (listing, location) {
     var marker = new google.maps.Marker({
       position: location,
-      title: listing.get('list_title'),
       map: this.map,
       animation: google.maps.Animation.DROP,
       icon: this.inactiveIcon,
@@ -100,8 +99,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
       infowindow.open(this.map, marker);
     }.bind(this));
 
-    marker.setMap(this.map);
-
+    // marker.setMap(this.map);
     return marker;
   },
 

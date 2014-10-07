@@ -54,7 +54,7 @@ FixieBNB.Routers.Router = Backbone.Router.extend({
       collection: FixieBNB.Collections.listings,
       city: searchCity
     })
-    
+
     this._swapView(listingIndexView);
   },
 
