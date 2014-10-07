@@ -4,21 +4,21 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
   mapTemplate: JST["listings/map_template_view"],
 
   initialize: function (options) {
-    this.iconChoices();
+    this.initIcons();
     this.city = options.city
     this.moveToSearchCenter();
 
     this.arrMarkers = [];
     this.infoWindows = [];
 
-    this.listenTo(this.collection, "sync", this.addMarkers);
+    this.listenTo(this.collection, "add", this.addMarkers);
     this.listenTo(this.collection, "remove", this.removeMarkers);
 
-    PubSub.subscribe("mouseOverBikeListing", this.activeMarker.bind(this));
-    PubSub.subscribe("mouseOutBikeListing", this.inactiveMarker.bind(this));
+    PubSub.subscribe("mouseOverBikeListing", this.activateMarker.bind(this));
+    PubSub.subscribe("mouseOutBikeListing", this.inactivateMarker.bind(this));
   },
 
-  iconChoices: function () {
+  initIcons: function () {
     this.inactiveIcon = {
       path: fontawesome.markers.MAP_MARKER,
       scale: 0.5,
@@ -70,10 +70,10 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     this.collection.each(function (listing) {
       var lat = listing.get('latitude');
       var lng = listing.get('longitude');
-      var mark = new google.maps.LatLng(lat, lng);
+      var location = new google.maps.LatLng(lat, lng);
 
       if (!listing.get("marker")) {
-        listing.set("marker", this._addMark(listing, mark));
+        listing.set("marker", this._addMark(listing, location));
       }
     }.bind(this));
   },
@@ -84,16 +84,15 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
       title: listing.get('list_title'),
       map: this.map,
       animation: google.maps.Animation.DROP,
-      icon: this.inactiveIcon
+      icon: this.inactiveIcon,
+      listingId: listing.id
     });
     var infowindow = new google.maps.InfoWindow({
-      content: this.mapTemplate({ listing: listing })
+      content: this.mapTemplate({ listing: listing }),
+      listingId: listing.id
     });
 
-    marker.listingId = listing.id
     this.arrMarkers.push(marker);
-
-    infowindow.listingId = listing.id
     this.infoWindows.push(infowindow);
 
     google.maps.event.addListener(marker, "click", function () {
@@ -143,7 +142,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     })
   }, 3000),
 
-  activeMarker: function (pubSubMsg, listing) {
+  activateMarker: function (pubSubMsg, listing) {
     var marker = _.find(
       this.arrMarkers,
       function (marker) {
@@ -161,7 +160,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
     marker.setIcon(this.activeIcon);
   },
 
-  inactiveMarker: function (pubSubMsg, listing) {
+  inactivateMarker: function (pubSubMsg, listing) {
     var marker = _.find(
       this.arrMarkers,
       function (marker) {
