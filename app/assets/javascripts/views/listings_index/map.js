@@ -141,6 +141,7 @@ FixieBNB.Views.MapView = Backbone.CompositeView.extend({
   }, 3000),
 
   activateMarker: function (pubSubMsg, listing) {
+    this.closeInfoWindows();
     var marker = _.find(
       this.arrMarkers,
       function (marker) {
