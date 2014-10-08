@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
 
+  get "sessions/guest", to: "sessions#guest"
+
   namespace :api, defaults: { format: :json } do
 
     resources :listings

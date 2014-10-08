@@ -5,7 +5,6 @@
   <article class="col-xs-6 col-xs-offset-3">
     <%= render partial: "layouts/flasherrors" %>
   </article>
-
 <div class="col-xs-6 col-xs-offset-3">
 
   <div class="form-group" id="new-session-user">
@@ -14,29 +13,35 @@
 
       <!-- <label for="user_username" id="username">Username</label> -->
       <input
-        type="text"
+        type="hidden"
         name="user[username]"
         id="user_username"
-        class="text-downcase form-control text-center"
+        class="text-lowercase form-control text-center"
         placeholder="username"
-        onfocus="this.placeholder = ''"
-        onblur="this.placeholder = 'username'">
+        value="username"
+        onclick="this.value= ''">
 
       <!-- <label for="user_password" id="password">Password</label> -->
       <input
-        type="password"
+        type="hidden"
         name="user[password]"
         id="user_password"
         class="form-control text-center"
         placeholder="password"
-        onfocus="this.placeholder = ''"
-        onblur="this.placeholder= 'password'">
+        value="123456"
+        onclick="this.value= ''">
 
-      <input type="submit" value="Sign In!" class="btn btn-primary col-xs-12 grow">
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="row">
+        <div class="col-xs-12 col-xs-offset-4">
+          <input
+            type="submit"
+            value="Guest Login!"
+            class="guest-login btn btn-success pulse-grow">
+        </div>
+      </div>
     </form>
   </div>
 </div>
 </section>
-
 <%= render partial: "layouts/footer" %>

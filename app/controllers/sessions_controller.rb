@@ -1,4 +1,10 @@
 class SessionsController < ApplicationController
+
+  def guest
+    @user = User.new
+    render :guest
+  end
+
   def new
     @user = User.new
     render :new
