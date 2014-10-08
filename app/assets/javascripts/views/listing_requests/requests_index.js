@@ -8,7 +8,6 @@ FixieBNB.Views.RequestIndexView = Backbone.CompositeView.extend({
   },
 
   addRequestsItems: function () {
-
     this.collection.each(function (request) {
       var requestItem = new FixieBNB.Views.listingRequestItems({
         model: request

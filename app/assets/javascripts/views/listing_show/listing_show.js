@@ -45,9 +45,7 @@ FixieBNB.Views.ListingShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var renderedContent = this.template({
-
-    });
+    var renderedContent = this.template({});
     this.$el.html(renderedContent);
     this.attachSubviews();
     return this;

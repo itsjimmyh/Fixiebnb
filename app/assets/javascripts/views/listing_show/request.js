@@ -27,7 +27,6 @@ FixieBNB.Views.RequestView = Backbone.CompositeView.extend({
       error: function (model, response) {
         Backbone.history.navigate("#/users/dashboard/", { trigger: true} )
         alert("request overlaps with approved request or it's your own bike")
-        //TODO render an error on the screen
       }
     })
   },
