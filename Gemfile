@@ -18,9 +18,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'bcrypt'
-# gem 'boostrap-sass'
 gem 'jquery-ui-rails'
 gem 'backbone-on-rails'
+# gem 'boostrap-sass'
 
 group :development do
   gem 'annotate'
