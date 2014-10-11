@@ -1,5 +1,5 @@
 <a href="/#/listing/<%= listing.id %>"
-  style="background-image: url('<%= listing.get('images')[0].url %>');"
+  style="background-image: url('<%= listing.get('images')[Math.floor ( Math.random() * 3 )].url %>');"
   class="round-corners"
   id="bike-listing-mouseover">
 </a>
