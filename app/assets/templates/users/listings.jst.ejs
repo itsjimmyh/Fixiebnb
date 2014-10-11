@@ -2,9 +2,9 @@
   <div class='row float-left'>
     <h2>Your Listings</h2>
   </div>
-    <% images.forEach(function (image) { %>
-      <a href="/#/listing/requests/<%= image.escape('id') %>">
-        <img src="<%= image.get('images')[Math.floor ( Math.random() * 3 )].url %>" class="img-responsive img-thumbnail" id="your-listings"></img>
+    <% listings.forEach(function (listing) { %>
+      <a href="/#/listing/requests/<%= listing.escape('id') %>">
+        <img src="<%= listing.get('images')[Math.floor ( Math.random() * 3 )].url %>" class="img-responsive img-thumbnail" id="your-listings"></img>
       </a>
     <% }) %>
 </div>
