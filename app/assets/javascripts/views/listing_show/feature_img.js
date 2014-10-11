@@ -5,7 +5,7 @@ FixieBNB.Views.ImgView = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    var image = this.model.get('images')[0].url
+    var image = this.model.get('images')[Math.floor ( Math.random() * 3 )].url
     var renderedContent = this.template({
       image: image
     })
