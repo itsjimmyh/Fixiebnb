@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row infoBox img-responsive">
     <a href="/#/listing/<%= listing.escape('id') %>">
-      <img class="img-responsive img-thumbnail" src="<%= listing.get('images')[0].url %>"></img>
+      <img class="img-responsive img-thumbnail" src="<%= listing.get('images')[Math.floor ( Math.random() * 3 )].url %>"></img>
     </a>
   </div>
 <br>
