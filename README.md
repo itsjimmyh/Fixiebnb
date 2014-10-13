@@ -3,7 +3,6 @@
 
 <h1>A Fixed-Gear Themed AirBNB Clone</h1>
 <h2>Key Features</h2>
-<br>
 <ul>
   <li>Simluates AirBNB as a Single-Page Backbone app consuming RESTful Rails API and custom routes.</li>
   <li>Consumes Google Maps API to query Rails Database for responsive real-time search filtering.</li>
@@ -12,7 +11,7 @@
   <li>User's are able to make a rental request, and the owner can approve/deny the request.</li>
   <li>Reduces n + 1 queries using ActiveRecord :includes</li>
 </ul>
-<br><br>
+<br>
 
 <h2>Roadmap</h2>
 <h4>Phase 0: User Authentication</h4>
