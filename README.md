@@ -1,8 +1,7 @@
 
-www.fixiebnb.com
+<h3>www.fixiebnb.com</h3>
 
 <h1>A Fixed-Gear Themed AirBNB Clone</h1>
-<br>
 <h2>Key Features</h2>
 <br>
 <ul>
@@ -15,57 +14,56 @@ www.fixiebnb.com
 </ul>
 <br><br>
 
-<h3>Roadmap</h3>
-<br>
+<h2>Roadmap</h2>
 <h4>Phase 0: User Authentication</h4>
 <ul>
   <li>Guest account for site visitors.</li>
   <li>Users can register, sign in, and sign out of the application.</li>
   <li>Support restricting access to certain pages based on whether a user is authenticated.</li>
 </ul>
-<br>
+
 <h4>Phase 1: Searching</h4>
 <ul>
   <li>Users should be able to type in any address and search anywhere they want.</li>
   <li>Google Maps should be centered at the users search request.</li>
   <li>Bike Listings should be displayed based on map bounds.</li>
 </ul>
-<br>
+
 <h4>Phase 2: Marker on Map for respective Listing</h4>
 <ul>
   <li>Marker should be responsive to hovering over the listing.</li>
   <li>Marker should only drop upon listing returning from Rails backend.</li>
   <li>Markers should be removed when they are no longer within map bounds.</li>
 </ul>
-<br>
+
 <h4>Phase 3: Info Window on Marker</h4>
 <ul>
   <li>Clicking on a google maps Marker should show an InfoWindow.</li>
   <li>Hovering over a listing should activate the respective Marker and show InfoWindow</li>
 </ul>
-<br>
+
 <h4>Phase 4: Bike Listing Show</h4>
 <ul>
   <li>Clicking on a listing from the Search page should bring user to the selected bikes's info page.</li>
   <li>Listing Show page should show multiple pictures of the listing to entice potential renter.</li>
 </ul>
-<br>
+
 <h4>Phase 5: Requests</h4>
 <ul>
   <li>Users should be able to request the bike from start date to end date.</li>
 </ul>
-<br>
+
 <h4>Phase 6: User Dashboard</h4>
 <ul>  
   <li>Users should be able to see their listings.</li>
   <li>Users should be able to see their requests.</li>
 </ul>
-<br>
+
 <h4>Phase 7: Approve/Deny</h4>
 <ul>
   <li>Owners should be able to approve or deny a request.</li>
 </ul>
-<br>
+
 <h4>Phase 8: Create a listing</h4>
 <ul>
   <li>Users should be able to post a listing of their bike.</li>
