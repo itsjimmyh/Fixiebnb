@@ -1,7 +1,7 @@
 
 <h3>www.fixiebnb.com</h3>
 
-<h1>A Fixed-Gear Themed AirBNB Clone</h1>
+<h1>A Fixed-Gear Themed Airbnb Clone</h1>
 <h2>Key Features</h2>
 <ul>
   <li>Simluates AirBNB as a Single-Page Backbone app consuming RESTful Rails API and custom routes.</li>
