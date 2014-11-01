@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class="navbar-brand">
-        <a href="/">fixie</a><a href="https://www.linkedin.com/in/itsjimmyh" target="_blank">.</a><a href="https://github.com/itsjimmyh" target="_blank">bnb</a>
+        <a href="/">fixiebn</a><a href="http://www.itsjimmyh.com/">b</a>
       </div>
     </div>
 
@@ -19,17 +19,17 @@
             <% current_user.username = 'Guest User' %>
           <% end %>
 
-          <li><a href="#/users/dashboard/" class="btn btn-special grow" id="welcome-username">Welcome <%= current_user.username.titleize %></a></li>
-          <li><%= link_to "Sign Out", session_url, method: :delete, class: "btn btn-special grow" %></li>
+          <li><a href="#/users/dashboard/" class="btn btn-special" id="welcome-username">Welcome <%= current_user.username.titleize %></a></li>
+          <li><%= link_to "Sign Out", session_url, method: :delete, class: "btn btn-special" %></li>
 
         <% else %>
-          <li><a href="/sessions/guest" class="btn btn-special grow">Guest Login</a></li>
-          <li><a href="/session/new" class="btn btn-special grow">Sign In</a></li>
-          <li><a href="/users/new" class="btn btn-special grow">Sign Up</a></li>
+          <li><a href="/sessions/guest" class="btn btn-special">Guest Login</a></li>
+          <li><a href="/session/new" class="btn btn-special">Sign In</a></li>
+          <li><a href="/users/new" class="btn btn-special">Sign Up</a></li>
 
         <% end %>
 
-        <li><a href="/#/listYourRide/" class="btn btn-special list-ride pulse-grow">List Your Ride</a></li>
+        <li><a href="/#/listYourRide/" class="btn btn-special list-ride">List Your Ride</a></li>
       </ul>
     </div>
   </div>

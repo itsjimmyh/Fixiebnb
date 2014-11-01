@@ -4,7 +4,7 @@
 <h1>A Fixed-Gear Themed Airbnb Clone</h1>
 <h2>Key Features</h2>
 <ul>
-  <li>Simluates AirBNB as a Single-Page Backbone app consuming RESTful Rails API and custom routes.</li>
+  <li>Simluates Airbnb as a single page Backbone app consuming RESTful Rails API and custom routes.</li>
   <li>Consumes Google Maps API to query Rails Database for responsive real-time search filtering.</li>
   <li>Consumes Google Maps Geocoder API to allow users to create listings with any address known to Google Maps.</li>
   <li>Overrides Backbone onRender method with custom onRender method to display Google Map properly.</li>

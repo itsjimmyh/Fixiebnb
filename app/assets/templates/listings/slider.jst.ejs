@@ -1,20 +1,18 @@
 <div class="col-xs-12 bubble-top">
   <form class="form-inline" id="search_index_form">
-    <div class="grow">
+    <input
+        type="text"
+        class="form-control location col-xs-12 col-xs-offset-2"
+        autocomplete="off"
+        id="location"
+        name="location"
+        placeholder="Where would you like to ride?"
+        onfocus="this.placeholder = 'Any City or State or Address Here'"
+        size="45">
       <input
-          type="text"
-          class="form-control location col-xs-12 col-xs-offset-2"
-          autocomplete="off"
-          id="location"
-          name="location"
-          placeholder="Where would you like to ride?"
-          onfocus="this.placeholder = 'Any City or State or Address Here'"
-          size="45">
-        <input
-          type="submit"
-          class="form-control btn btn-danger pulse-grow"
-          value="Search"
-          id="submit_location">
-    </div>
+        type="submit"
+        class="form-control btn btn-danger"
+        value="Search"
+        id="submit_location">
   </form>
 </div>
