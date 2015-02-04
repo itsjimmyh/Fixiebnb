@@ -455,7 +455,7 @@ button.usd {
   pointer-events: none;
   position: relative;
   z-index: -1;
-  content: 'Search Anywhere! ';
+  content: 'Look in San Francisco! ';
   // border-style: solid;
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
@@ -475,9 +475,9 @@ button.usd {
   left: -15px;
 }
 
-.bubble-left:active:before {
-  left: -5000px;
-}
+// .bubble-left:active:before {
+//   left: -5000px;
+// }
 
 .bubble-top {
   display: inline-block;
